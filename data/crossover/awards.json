@@ -1,0 +1,3514 @@
+{
+ "awards": {
+  "Allan Houston": {
+   "2000": [
+    "All-Star"
+   ],
+   "2001": [
+    "All-Star"
+   ]
+  },
+  "Allen Iverson": {
+   "1997": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "1999": [
+    "All-NBA First Team",
+    "Scoring Leader"
+   ],
+   "2000": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "2002": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2003": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-Star"
+   ],
+   "2005": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2006": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-Star"
+   ],
+   "2008": [
+    "All-Star"
+   ],
+   "2009": [
+    "All-Star"
+   ],
+   "2010": [
+    "All-Star"
+   ]
+  },
+  "Amar'e Stoudemire": {
+   "2003": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2005": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2009": [
+    "All-Star"
+   ],
+   "2010": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-NBA Second Team",
+    "All-Star"
+   ]
+  },
+  "Andre Iguodala": {
+   "2005": [
+    "All-Rookie First Team"
+   ],
+   "2011": [
+    "All-Defensive Second Team"
+   ],
+   "2012": [
+    "All-Star"
+   ],
+   "2014": [
+    "All-Defensive First Team"
+   ],
+   "2015": [
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2017": [
+    "NBA Champion"
+   ],
+   "2018": [
+    "NBA Champion"
+   ],
+   "2022": [
+    "NBA Champion"
+   ]
+  },
+  "Andrea Bargnani": {
+   "2007": [
+    "All-Rookie First Team"
+   ]
+  },
+  "Anthony Davis": {
+   "2013": [
+    "All-Rookie First Team"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2017": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2018": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-Star"
+   ],
+   "2020": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2024": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Cup Champion"
+   ],
+   "2025": [
+    "All-Star"
+   ]
+  },
+  "Anthony Edwards": {
+   "2021": [
+    "All-Rookie First Team"
+   ],
+   "2023": [
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2025": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star"
+   ]
+  },
+  "Baron Davis": {
+   "2002": [
+    "All-Star"
+   ],
+   "2004": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Ben Gordon": {
+   "2005": [
+    "All-Rookie First Team",
+    "Sixth Man of the Year"
+   ]
+  },
+  "Ben Simmons": {
+   "2018": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2019": [
+    "All-Star"
+   ],
+   "2020": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-Defensive First Team",
+    "All-Star"
+   ]
+  },
+  "Ben Wallace": {
+   "2002": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "Defensive Player of the Year"
+   ],
+   "2003": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2004": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2005": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2006": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2007": [
+    "All-Defensive Second Team"
+   ]
+  },
+  "Blake Griffin": {
+   "2011": [
+    "All-Rookie First Team",
+    "All-Star",
+    "Rookie of the Year"
+   ],
+   "2012": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Boris Diaw": {
+   "2006": [
+    "Most Improved Player"
+   ],
+   "2014": [
+    "NBA Champion"
+   ]
+  },
+  "Brandon Roy": {
+   "2007": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2008": [
+    "All-Star"
+   ],
+   "2009": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Cade Cunningham": {
+   "2022": [
+    "All-Rookie First Team"
+   ],
+   "2025": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA First Team"
+   ]
+  },
+  "Carmelo Anthony": {
+   "2004": [
+    "All-Rookie First Team"
+   ],
+   "2006": [
+    "All-NBA Third Team"
+   ],
+   "2007": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-Star"
+   ],
+   "2009": [
+    "All-NBA Third Team"
+   ],
+   "2010": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-Star"
+   ],
+   "2012": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2017": [
+    "All-Star"
+   ]
+  },
+  "Chris Paul": {
+   "2006": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2008": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2009": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-Star"
+   ],
+   "2011": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-Defensive First Team"
+   ],
+   "2020": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Chris Webber": {
+   "1994": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "1997": [
+    "All-Star"
+   ],
+   "1999": [
+    "All-NBA Second Team"
+   ],
+   "2000": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-NBA Second Team",
+    "All-Star"
+   ]
+  },
+  "Cooper Flagg": {
+   "2026": [
+    "Rookie of the Year",
+    "All-Rookie First Team"
+   ]
+  },
+  "Damian Lillard": {
+   "2013": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2014": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-Star"
+   ],
+   "2016": [
+    "All-NBA Second Team"
+   ],
+   "2018": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-Star"
+   ],
+   "2025": [
+    "All-Star",
+    "NBA Cup Champion"
+   ]
+  },
+  "David Lee": {
+   "2010": [
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2015": [
+    "NBA Champion"
+   ]
+  },
+  "De'Aaron Fox": {
+   "2023": [
+    "All-NBA Third Team",
+    "All-Star",
+    "Clutch Player of the Year"
+   ],
+   "2026": [
+    "All-Star"
+   ]
+  },
+  "DeMar DeRozan": {
+   "2014": [
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2018": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-Star"
+   ]
+  },
+  "Deron Williams": {
+   "2006": [
+    "All-Rookie First Team"
+   ],
+   "2008": [
+    "All-NBA Second Team"
+   ],
+   "2010": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-Star"
+   ],
+   "2012": [
+    "All-Star"
+   ]
+  },
+  "Derrick Rose": {
+   "2009": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2010": [
+    "All-Star"
+   ],
+   "2011": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2012": [
+    "All-Star"
+   ]
+  },
+  "Devin Booker": {
+   "2016": [
+    "All-Rookie First Team"
+   ],
+   "2020": [
+    "All-Star"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star"
+   ]
+  },
+  "Dirk Nowitzki": {
+   "2001": [
+    "All-NBA Third Team"
+   ],
+   "2002": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2008": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2009": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2012": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-Star"
+   ],
+   "2019": [
+    "All-Star"
+   ]
+  },
+  "Donovan Mitchell": {
+   "2018": [
+    "All-Rookie First Team"
+   ],
+   "2020": [
+    "All-Star"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2022": [
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-Star"
+   ],
+   "2025": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA Second Team"
+   ]
+  },
+  "Draymond Green": {
+   "2015": [
+    "All-Defensive First Team",
+    "NBA Champion"
+   ],
+   "2016": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star",
+    "Defensive Player of the Year",
+    "NBA Champion"
+   ],
+   "2018": [
+    "All-Defensive Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2019": [
+    "All-Defensive Second Team"
+   ],
+   "2021": [
+    "All-Defensive First Team"
+   ],
+   "2022": [
+    "All-Defensive Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2023": [
+    "All-Defensive Second Team"
+   ],
+   "2025": [
+    "All-Defensive First Team"
+   ]
+  },
+  "Dwight Howard": {
+   "2005": [
+    "All-Rookie First Team"
+   ],
+   "2007": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2009": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2010": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2011": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2012": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2020": [
+    "NBA Champion"
+   ]
+  },
+  "Dwyane Wade": {
+   "2004": [
+    "All-Rookie First Team"
+   ],
+   "2005": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2007": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-Star"
+   ],
+   "2009": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2010": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2013": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2019": [
+    "All-Star"
+   ]
+  },
+  "Emeka Okafor": {
+   "2005": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ]
+  },
+  "Gary Payton": {
+   "1991": [
+    "All-Rookie Second Team"
+   ],
+   "1994": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "1995": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "1996": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "1997": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "1998": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1999": [
+    "All-Defensive First Team",
+    "All-NBA Second Team"
+   ],
+   "2000": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-Star"
+   ],
+   "2006": [
+    "NBA Champion"
+   ]
+  },
+  "Giannis Antetokounmpo": {
+   "2014": [
+    "All-Rookie Second Team"
+   ],
+   "2017": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2018": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2020": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year",
+    "Most Valuable Player"
+   ],
+   "2021": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2022": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2025": [
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Cup Champion",
+    "NBA Cup MVP"
+   ],
+   "2026": [
+    "All-Star"
+   ]
+  },
+  "Gilbert Arenas": {
+   "2003": [
+    "Most Improved Player"
+   ],
+   "2005": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-NBA Second Team",
+    "All-Star"
+   ]
+  },
+  "Isaiah Thomas": {
+   "2012": [
+    "All-Rookie Second Team"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA Second Team",
+    "All-Star"
+   ]
+  },
+  "Ja Morant": {
+   "2020": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2022": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2023": [
+    "All-Star"
+   ]
+  },
+  "Jalen Brunson": {
+   "2024": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2025": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Clutch Player of the Year"
+   ],
+   "2026": [
+    "All-Star",
+    "NBA Cup Champion",
+    "NBA Cup MVP",
+    "All-NBA Second Team",
+    "NBA Champion",
+    "Finals MVP"
+   ]
+  },
+  "Jalen Rose": {
+   "1995": [
+    "All-Rookie Second Team"
+   ],
+   "2000": [
+    "Most Improved Player"
+   ]
+  },
+  "Jamal Crawford": {
+   "2010": [
+    "Sixth Man of the Year"
+   ],
+   "2014": [
+    "Sixth Man of the Year"
+   ],
+   "2016": [
+    "Sixth Man of the Year"
+   ]
+  },
+  "James Harden": {
+   "2010": [
+    "All-Rookie Second Team"
+   ],
+   "2012": [
+    "Sixth Man of the Year"
+   ],
+   "2013": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2018": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "2019": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2020": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2022": [
+    "All-Star"
+   ],
+   "2025": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Jason Kidd": {
+   "1995": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "1996": [
+    "All-Star"
+   ],
+   "1998": [
+    "All-Star"
+   ],
+   "1999": [
+    "All-Defensive First Team",
+    "All-NBA First Team"
+   ],
+   "2000": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-Defensive Second Team"
+   ],
+   "2006": [
+    "All-Defensive First Team"
+   ],
+   "2007": [
+    "All-Defensive Second Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-Star"
+   ],
+   "2010": [
+    "All-Star"
+   ],
+   "2011": [
+    "NBA Champion"
+   ]
+  },
+  "Jason Richardson": {
+   "2002": [
+    "All-Rookie First Team"
+   ]
+  },
+  "Jaylen Brown": {
+   "2017": [
+    "All-Rookie Second Team"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2025": [
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA Second Team"
+   ]
+  },
+  "Jayson Tatum": {
+   "2018": [
+    "All-Rookie First Team"
+   ],
+   "2020": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2025": [
+    "All-NBA First Team",
+    "All-Star"
+   ]
+  },
+  "Jeremy Lin": {
+   "2019": [
+    "NBA Champion"
+   ]
+  },
+  "Jermaine O'Neal": {
+   "2002": [
+    "All-NBA Third Team",
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2003": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-Star"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2007": [
+    "All-Star"
+   ]
+  },
+  "Jimmy Butler": {
+   "2014": [
+    "All-Defensive Second Team"
+   ],
+   "2015": [
+    "All-Defensive Second Team",
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2016": [
+    "All-Defensive Second Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2018": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team"
+   ],
+   "2022": [
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA Second Team"
+   ]
+  },
+  "Joel Embiid": {
+   "2017": [
+    "All-Rookie First Team"
+   ],
+   "2018": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-Star"
+   ],
+   "2021": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2023": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "2024": [
+    "All-Star"
+   ]
+  },
+  "John Wall": {
+   "2011": [
+    "All-Rookie First Team"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-Defensive Second Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2018": [
+    "All-Star"
+   ]
+  },
+  "Jordan Poole": {
+   "2022": [
+    "NBA Champion"
+   ]
+  },
+  "Kawhi Leonard": {
+   "2012": [
+    "All-Rookie First Team"
+   ],
+   "2014": [
+    "All-Defensive Second Team",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2015": [
+    "All-Defensive First Team",
+    "Defensive Player of the Year"
+   ],
+   "2016": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2017": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2020": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA Second Team"
+   ]
+  },
+  "Kemba Walker": {
+   "2017": [
+    "All-Star"
+   ],
+   "2018": [
+    "All-Star"
+   ],
+   "2019": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-Star"
+   ]
+  },
+  "Kenyon Martin": {
+   "2001": [
+    "All-Rookie First Team"
+   ],
+   "2004": [
+    "All-Star"
+   ]
+  },
+  "Kevin Durant": {
+   "2008": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2010": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2011": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2012": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2013": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "2015": [
+    "All-Star"
+   ],
+   "2016": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2018": [
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2019": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2025": [
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA Second Team"
+   ]
+  },
+  "Kevin Garnett": {
+   "1996": [
+    "All-Rookie Second Team"
+   ],
+   "1997": [
+    "All-Star"
+   ],
+   "1998": [
+    "All-Star"
+   ],
+   "1999": [
+    "All-NBA Third Team"
+   ],
+   "2000": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2005": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-Defensive Second Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year",
+    "NBA Champion"
+   ],
+   "2009": [
+    "All-Defensive First Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-Star"
+   ],
+   "2011": [
+    "All-Defensive First Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-Defensive Second Team"
+   ],
+   "2013": [
+    "All-Star"
+   ]
+  },
+  "Kirk Hinrich": {
+   "2004": [
+    "All-Rookie First Team"
+   ],
+   "2007": [
+    "All-Defensive Second Team"
+   ]
+  },
+  "Klay Thompson": {
+   "2012": [
+    "All-Rookie First Team"
+   ],
+   "2015": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2016": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2018": [
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2019": [
+    "All-Defensive Second Team",
+    "All-Star"
+   ],
+   "2022": [
+    "NBA Champion"
+   ]
+  },
+  "Kobe Bryant": {
+   "1997": [
+    "All-Rookie Second Team"
+   ],
+   "1998": [
+    "All-Star"
+   ],
+   "1999": [
+    "All-NBA Third Team"
+   ],
+   "2000": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2001": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2002": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2003": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2007": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2008": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2009": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2010": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2011": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ]
+  },
+  "Kristaps Porzingis": {
+   "2016": [
+    "All-Rookie First Team"
+   ],
+   "2018": [
+    "All-Star"
+   ],
+   "2024": [
+    "NBA Champion"
+   ]
+  },
+  "Kyle Korver": {
+   "2015": [
+    "All-Star"
+   ]
+  },
+  "Kyrie Irving": {
+   "2012": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2013": [
+    "All-Star"
+   ],
+   "2014": [
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2016": [
+    "NBA Champion"
+   ],
+   "2017": [
+    "All-Star"
+   ],
+   "2018": [
+    "All-Star"
+   ],
+   "2019": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-Star"
+   ],
+   "2025": [
+    "All-Star"
+   ]
+  },
+  "LaMelo Ball": {
+   "2021": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2022": [
+    "All-Star"
+   ]
+  },
+  "Lamar Odom": {
+   "2000": [
+    "All-Rookie First Team"
+   ],
+   "2009": [
+    "NBA Champion"
+   ],
+   "2010": [
+    "NBA Champion"
+   ],
+   "2011": [
+    "Sixth Man of the Year"
+   ]
+  },
+  "Latrell Sprewell": {
+   "1993": [
+    "All-Rookie Second Team"
+   ],
+   "1994": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1995": [
+    "All-Star"
+   ],
+   "1997": [
+    "All-Star"
+   ],
+   "2001": [
+    "All-Star"
+   ]
+  },
+  "LeBron James": {
+   "2004": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2005": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2009": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2010": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2011": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion"
+   ],
+   "2013": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion"
+   ],
+   "2014": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2017": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2018": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2021": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Cup Champion",
+    "NBA Cup MVP"
+   ],
+   "2025": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star"
+   ]
+  },
+  "Lonzo Ball": {
+   "2018": [
+    "All-Rookie Second Team"
+   ]
+  },
+  "Luka Doncic": {
+   "2019": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2020": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2026": [
+    "All-Star",
+    "Scoring Leader",
+    "All-NBA First Team"
+   ]
+  },
+  "Manu Ginobili": {
+   "2003": [
+    "All-Rookie Second Team",
+    "NBA Champion"
+   ],
+   "2005": [
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2007": [
+    "NBA Champion"
+   ],
+   "2008": [
+    "All-NBA Third Team",
+    "Sixth Man of the Year"
+   ],
+   "2011": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2014": [
+    "NBA Champion"
+   ]
+  },
+  "Matthew Dellavedova": {
+   "2016": [
+    "NBA Champion"
+   ]
+  },
+  "Michael Carter-Williams": {
+   "2014": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ]
+  },
+  "Michael Finley": {
+   "1996": [
+    "All-Rookie First Team"
+   ],
+   "2000": [
+    "All-Star"
+   ],
+   "2001": [
+    "All-Star"
+   ],
+   "2007": [
+    "NBA Champion"
+   ]
+  },
+  "Michael Jordan": {
+   "1985": [
+    "All-NBA Second Team",
+    "All-Rookie First Team",
+    "All-Star",
+    "Rookie of the Year"
+   ],
+   "1986": [
+    "All-Star"
+   ],
+   "1987": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "1988": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Defensive Player of the Year",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "1989": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "1990": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "1991": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "1992": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "1993": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "1996": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "1997": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "1998": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "2002": [
+    "All-Star"
+   ],
+   "2003": [
+    "All-Star"
+   ]
+  },
+  "Mike Bibby": {
+   "1999": [
+    "All-Rookie First Team"
+   ]
+  },
+  "Nikola Jokic": {
+   "2016": [
+    "All-Rookie First Team"
+   ],
+   "2019": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2022": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2023": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2024": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2025": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA First Team"
+   ]
+  },
+  "Pau Gasol": {
+   "2002": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2009": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2010": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2011": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-Star"
+   ]
+  },
+  "Paul George": {
+   "2011": [
+    "All-Rookie Second Team"
+   ],
+   "2013": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2014": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2016": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-Star"
+   ],
+   "2018": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2023": [
+    "All-Star"
+   ],
+   "2024": [
+    "All-Star"
+   ]
+  },
+  "Paul Pierce": {
+   "1999": [
+    "All-Rookie First Team"
+   ],
+   "2002": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-Star"
+   ],
+   "2005": [
+    "All-Star"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2008": [
+    "All-NBA Third Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2009": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-Star"
+   ],
+   "2011": [
+    "All-Star"
+   ],
+   "2012": [
+    "All-Star"
+   ]
+  },
+  "Penny Hardaway": {
+   "1994": [
+    "All-Rookie First Team"
+   ],
+   "1995": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1996": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1997": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "1998": [
+    "All-Star"
+   ]
+  },
+  "Rajon Rondo": {
+   "2007": [
+    "All-Rookie Second Team"
+   ],
+   "2008": [
+    "NBA Champion"
+   ],
+   "2009": [
+    "All-Defensive Second Team"
+   ],
+   "2010": [
+    "All-Defensive First Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-Defensive First Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-Star"
+   ],
+   "2020": [
+    "NBA Champion"
+   ]
+  },
+  "Rasheed Wallace": {
+   "1996": [
+    "All-Rookie Second Team"
+   ],
+   "2000": [
+    "All-Star"
+   ],
+   "2001": [
+    "All-Star"
+   ],
+   "2004": [
+    "NBA Champion"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2008": [
+    "All-Star"
+   ]
+  },
+  "Ray Allen": {
+   "1997": [
+    "All-Rookie Second Team"
+   ],
+   "2000": [
+    "All-Star"
+   ],
+   "2001": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-Star"
+   ],
+   "2004": [
+    "All-Star"
+   ],
+   "2005": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2007": [
+    "All-Star"
+   ],
+   "2008": [
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2009": [
+    "All-Star"
+   ],
+   "2011": [
+    "All-Star"
+   ],
+   "2013": [
+    "NBA Champion"
+   ]
+  },
+  "Ron Artest": {
+   "2000": [
+    "All-Rookie Second Team"
+   ],
+   "2003": [
+    "All-Defensive Second Team"
+   ],
+   "2004": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star",
+    "Defensive Player of the Year"
+   ],
+   "2006": [
+    "All-Defensive First Team"
+   ],
+   "2009": [
+    "All-Defensive Second Team"
+   ],
+   "2010": [
+    "NBA Champion"
+   ]
+  },
+  "Russell Westbrook": {
+   "2009": [
+    "All-Rookie First Team"
+   ],
+   "2011": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2016": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2017": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "2018": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2019": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2020": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Scottie Pippen": {
+   "1990": [
+    "All-Star"
+   ],
+   "1991": [
+    "All-Defensive Second Team",
+    "NBA Champion"
+   ],
+   "1992": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "1993": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "1994": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1995": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1996": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "1997": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "1998": [
+    "All-Defensive First Team",
+    "All-NBA Third Team",
+    "NBA Champion"
+   ],
+   "1999": [
+    "All-Defensive First Team"
+   ],
+   "2000": [
+    "All-Defensive Second Team"
+   ]
+  },
+  "Shai Gilgeous-Alexander": {
+   "2019": [
+    "All-Rookie Second Team"
+   ],
+   "2023": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2025": [
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "2026": [
+    "All-Star",
+    "Clutch Player of the Year",
+    "Most Valuable Player",
+    "All-NBA First Team"
+   ]
+  },
+  "Shaquille O'Neal": {
+   "1993": [
+    "All-Rookie First Team",
+    "All-Star",
+    "Rookie of the Year"
+   ],
+   "1994": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "1995": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "1996": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "1997": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "1998": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "1999": [
+    "All-NBA Second Team"
+   ],
+   "2000": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion",
+    "Scoring Leader"
+   ],
+   "2001": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2002": [
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2003": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2007": [
+    "All-Star"
+   ],
+   "2009": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Stephen Curry": {
+   "2010": [
+    "All-Rookie First Team"
+   ],
+   "2014": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2015": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "NBA Champion"
+   ],
+   "2016": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player",
+    "Scoring Leader"
+   ],
+   "2017": [
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2018": [
+    "All-NBA Third Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2019": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2021": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2022": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2023": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-NBA Third Team",
+    "All-Star",
+    "Clutch Player of the Year"
+   ],
+   "2025": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star"
+   ]
+  },
+  "Stephon Marbury": {
+   "1997": [
+    "All-Rookie First Team"
+   ],
+   "2000": [
+    "All-NBA Third Team"
+   ],
+   "2001": [
+    "All-Star"
+   ],
+   "2003": [
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Steve Francis": {
+   "2000": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2002": [
+    "All-Star"
+   ],
+   "2003": [
+    "All-Star"
+   ],
+   "2004": [
+    "All-Star"
+   ]
+  },
+  "Steve Nash": {
+   "2002": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2006": [
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2007": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-Star"
+   ]
+  },
+  "Tim Duncan": {
+   "1998": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Rookie First Team",
+    "All-Star",
+    "Rookie of the Year"
+   ],
+   "1999": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2000": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Most Valuable Player"
+   ],
+   "2003": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "Most Valuable Player",
+    "NBA Champion"
+   ],
+   "2004": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2006": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-Defensive First Team",
+    "All-NBA First Team",
+    "All-Star",
+    "NBA Champion"
+   ],
+   "2008": [
+    "All-Defensive First Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2009": [
+    "All-Defensive Second Team",
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2010": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-Star"
+   ],
+   "2013": [
+    "All-Defensive Second Team",
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2014": [
+    "NBA Champion"
+   ],
+   "2015": [
+    "All-Defensive Second Team",
+    "All-NBA Third Team",
+    "All-Star"
+   ]
+  },
+  "Tony Parker": {
+   "2002": [
+    "All-Rookie First Team"
+   ],
+   "2003": [
+    "NBA Champion"
+   ],
+   "2005": [
+    "NBA Champion"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2007": [
+    "All-Star",
+    "Finals MVP",
+    "NBA Champion"
+   ],
+   "2009": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2012": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2013": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2014": [
+    "All-NBA Second Team",
+    "All-Star",
+    "NBA Champion"
+   ]
+  },
+  "Tracy McGrady": {
+   "2001": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2002": [
+    "All-NBA First Team",
+    "All-Star"
+   ],
+   "2003": [
+    "All-NBA First Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2004": [
+    "All-NBA Second Team",
+    "All-Star",
+    "Scoring Leader"
+   ],
+   "2005": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2007": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-NBA Third Team"
+   ]
+  },
+  "Trae Young": {
+   "2019": [
+    "All-Rookie First Team"
+   ],
+   "2020": [
+    "All-Star"
+   ],
+   "2022": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2024": [
+    "All-Star"
+   ],
+   "2025": [
+    "All-Star"
+   ]
+  },
+  "Tyrese Maxey": {
+   "2024": [
+    "All-Star",
+    "Most Improved Player"
+   ],
+   "2026": [
+    "All-Star",
+    "All-NBA Third Team"
+   ]
+  },
+  "Victor Wembanyama": {
+   "2024": [
+    "All-Defensive First Team",
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2025": [
+    "All-Star"
+   ],
+   "2026": [
+    "All-Star",
+    "Defensive Player of the Year",
+    "All-Defensive First Team",
+    "All-NBA First Team"
+   ]
+  },
+  "Vince Carter": {
+   "1999": [
+    "All-Rookie First Team",
+    "Rookie of the Year"
+   ],
+   "2000": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2001": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2002": [
+    "All-Star"
+   ],
+   "2003": [
+    "All-Star"
+   ],
+   "2004": [
+    "All-Star"
+   ],
+   "2005": [
+    "All-Star"
+   ],
+   "2006": [
+    "All-Star"
+   ],
+   "2007": [
+    "All-Star"
+   ]
+  },
+  "Yao Ming": {
+   "2003": [
+    "All-Rookie First Team",
+    "All-Star"
+   ],
+   "2004": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2005": [
+    "All-Star"
+   ],
+   "2006": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2007": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2008": [
+    "All-NBA Third Team",
+    "All-Star"
+   ],
+   "2009": [
+    "All-NBA Second Team",
+    "All-Star"
+   ],
+   "2011": [
+    "All-Star"
+   ]
+  },
+  "Zion Williamson": {
+   "2020": [
+    "All-Rookie First Team"
+   ],
+   "2021": [
+    "All-Star"
+   ],
+   "2023": [
+    "All-Star"
+   ]
+  }
+ },
+ "mvp_vote_rank": {
+  "Allen Iverson": {
+   "1997": 17,
+   "1999": 4,
+   "2000": 7,
+   "2001": 1,
+   "2002": 9,
+   "2003": 6,
+   "2005": 5,
+   "2006": 10
+  },
+  "Amar'e Stoudemire": {
+   "2005": 9,
+   "2007": 14,
+   "2008": 6,
+   "2010": 10,
+   "2011": 9
+  },
+  "Anthony Davis": {
+   "2015": 5,
+   "2017": 9,
+   "2018": 3,
+   "2020": 6
+  },
+  "Anthony Edwards": {
+   "2024": 7,
+   "2025": 7
+  },
+  "Baron Davis": {
+   "2004": 10,
+   "2007": 15
+  },
+  "Ben Simmons": {
+   "2021": 12
+  },
+  "Ben Wallace": {
+   "2002": 10,
+   "2003": 8,
+   "2004": 7
+  },
+  "Blake Griffin": {
+   "2011": 10,
+   "2014": 3,
+   "2015": 8
+  },
+  "Brandon Roy": {
+   "2009": 9
+  },
+  "Cade Cunningham": {
+   "2025": 7,
+   "2026": 5
+  },
+  "Carmelo Anthony": {
+   "2004": 14,
+   "2007": 15,
+   "2008": 13,
+   "2010": 6,
+   "2013": 3,
+   "2014": 15
+  },
+  "Chris Paul": {
+   "2008": 2,
+   "2009": 5,
+   "2011": 13,
+   "2012": 3,
+   "2013": 4,
+   "2014": 7,
+   "2015": 6,
+   "2016": 6,
+   "2020": 7,
+   "2021": 5,
+   "2022": 9
+  },
+  "Chris Webber": {
+   "1999": 7,
+   "2000": 9,
+   "2001": 4,
+   "2002": 7,
+   "2003": 10
+  },
+  "Damian Lillard": {
+   "2016": 8,
+   "2018": 4,
+   "2019": 6,
+   "2020": 8,
+   "2021": 7
+  },
+  "David Lee": {
+   "2013": 12
+  },
+  "De'Aaron Fox": {
+   "2023": 11
+  },
+  "DeMar DeRozan": {
+   "2017": 11,
+   "2018": 8,
+   "2022": 10
+  },
+  "Deron Williams": {
+   "2008": 12,
+   "2010": 9
+  },
+  "Derrick Rose": {
+   "2011": 1,
+   "2012": 11,
+   "2021": 9
+  },
+  "Devin Booker": {
+   "2022": 4
+  },
+  "Dirk Nowitzki": {
+   "2002": 8,
+   "2003": 7,
+   "2004": 10,
+   "2005": 3,
+   "2006": 3,
+   "2007": 1,
+   "2008": 11,
+   "2009": 10,
+   "2010": 7,
+   "2011": 6,
+   "2012": 12,
+   "2014": 14
+  },
+  "Donovan Mitchell": {
+   "2023": 6,
+   "2025": 5,
+   "2026": 7
+  },
+  "Draymond Green": {
+   "2016": 7
+  },
+  "Dwight Howard": {
+   "2008": 5,
+   "2009": 4,
+   "2010": 4,
+   "2011": 2,
+   "2012": 7
+  },
+  "Dwyane Wade": {
+   "2005": 8,
+   "2006": 6,
+   "2007": 12,
+   "2009": 3,
+   "2010": 5,
+   "2011": 7,
+   "2012": 10,
+   "2013": 10
+  },
+  "Gary Payton": {
+   "1994": 6,
+   "1995": 9,
+   "1996": 6,
+   "1997": 6,
+   "1998": 3,
+   "1999": 9,
+   "2000": 6,
+   "2002": 6
+  },
+  "Giannis Antetokounmpo": {
+   "2017": 7,
+   "2018": 6,
+   "2019": 1,
+   "2020": 1,
+   "2021": 4,
+   "2022": 3,
+   "2023": 3,
+   "2024": 4,
+   "2025": 3
+  },
+  "Gilbert Arenas": {
+   "2005": 12,
+   "2007": 8
+  },
+  "Isaiah Thomas": {
+   "2017": 5
+  },
+  "Ja Morant": {
+   "2022": 7,
+   "2023": 12
+  },
+  "Jalen Brunson": {
+   "2023": 12,
+   "2024": 5,
+   "2025": 10
+  },
+  "Jalen Rose": {
+   "2000": 13
+  },
+  "James Harden": {
+   "2013": 8,
+   "2014": 5,
+   "2015": 2,
+   "2016": 9,
+   "2017": 2,
+   "2018": 1,
+   "2019": 2,
+   "2020": 3,
+   "2021": 13,
+   "2025": 10
+  },
+  "Jason Kidd": {
+   "1995": 13,
+   "1998": 13,
+   "1999": 5,
+   "2000": 11,
+   "2001": 8,
+   "2002": 2,
+   "2003": 9,
+   "2004": 8
+  },
+  "Jaylen Brown": {
+   "2026": 6
+  },
+  "Jayson Tatum": {
+   "2020": 12,
+   "2022": 6,
+   "2023": 4,
+   "2024": 6,
+   "2025": 4
+  },
+  "Jermaine O'Neal": {
+   "2004": 3
+  },
+  "Jimmy Butler": {
+   "2018": 10,
+   "2020": 11,
+   "2023": 10
+  },
+  "Joel Embiid": {
+   "2018": 12,
+   "2019": 7,
+   "2021": 2,
+   "2022": 2,
+   "2023": 1
+  },
+  "John Wall": {
+   "2017": 7
+  },
+  "Kawhi Leonard": {
+   "2015": 10,
+   "2016": 2,
+   "2017": 3,
+   "2019": 9,
+   "2020": 5,
+   "2021": 13,
+   "2026": 7
+  },
+  "Kevin Durant": {
+   "2010": 2,
+   "2011": 5,
+   "2012": 2,
+   "2013": 2,
+   "2014": 1,
+   "2016": 5,
+   "2017": 9,
+   "2018": 7,
+   "2019": 8,
+   "2022": 10,
+   "2024": 9
+  },
+  "Kevin Garnett": {
+   "1999": 10,
+   "2000": 2,
+   "2001": 5,
+   "2002": 12,
+   "2003": 2,
+   "2004": 1,
+   "2005": 11,
+   "2007": 9,
+   "2008": 3,
+   "2013": 12
+  },
+  "Klay Thompson": {
+   "2015": 10
+  },
+  "Kobe Bryant": {
+   "2000": 12,
+   "2001": 9,
+   "2002": 5,
+   "2003": 3,
+   "2004": 5,
+   "2006": 4,
+   "2007": 3,
+   "2008": 1,
+   "2009": 2,
+   "2010": 3,
+   "2011": 4,
+   "2012": 4,
+   "2013": 5
+  },
+  "Latrell Sprewell": {
+   "1994": 11
+  },
+  "LeBron James": {
+   "2004": 9,
+   "2005": 6,
+   "2006": 2,
+   "2007": 5,
+   "2008": 4,
+   "2009": 1,
+   "2010": 1,
+   "2011": 3,
+   "2012": 1,
+   "2013": 1,
+   "2014": 2,
+   "2015": 3,
+   "2016": 3,
+   "2017": 4,
+   "2018": 2,
+   "2019": 11,
+   "2020": 2,
+   "2021": 13,
+   "2022": 10,
+   "2025": 6
+  },
+  "Luka Doncic": {
+   "2020": 4,
+   "2021": 6,
+   "2022": 5,
+   "2023": 8,
+   "2024": 3,
+   "2026": 4
+  },
+  "Manu Ginobili": {
+   "2008": 10,
+   "2010": 11,
+   "2011": 8
+  },
+  "Michael Finley": {
+   "1998": 18,
+   "2000": 13,
+   "2001": 15
+  },
+  "Michael Jordan": {
+   "1985": 6,
+   "1987": 2,
+   "1988": 1,
+   "1989": 2,
+   "1990": 3,
+   "1991": 1,
+   "1992": 1,
+   "1993": 3,
+   "1995": 11,
+   "1996": 1,
+   "1997": 2,
+   "1998": 1,
+   "2002": 13
+  },
+  "Mike Bibby": {
+   "2002": 16
+  },
+  "Nikola Jokic": {
+   "2019": 4,
+   "2020": 9,
+   "2021": 1,
+   "2022": 1,
+   "2023": 2,
+   "2024": 1,
+   "2025": 2,
+   "2026": 2
+  },
+  "Paul George": {
+   "2014": 9,
+   "2019": 3
+  },
+  "Paul Pierce": {
+   "2001": 13,
+   "2002": 11,
+   "2003": 11,
+   "2008": 14,
+   "2009": 7
+  },
+  "Penny Hardaway": {
+   "1995": 10,
+   "1996": 3,
+   "1999": 16
+  },
+  "Rajon Rondo": {
+   "2011": 10,
+   "2012": 8
+  },
+  "Rasheed Wallace": {
+   "1999": 16,
+   "2008": 14
+  },
+  "Ray Allen": {
+   "2001": 11,
+   "2005": 9
+  },
+  "Russell Westbrook": {
+   "2012": 12,
+   "2013": 9,
+   "2015": 4,
+   "2016": 4,
+   "2017": 1,
+   "2018": 5,
+   "2019": 10,
+   "2021": 11
+  },
+  "Scottie Pippen": {
+   "1992": 9,
+   "1994": 3,
+   "1995": 7,
+   "1996": 5,
+   "1997": 11,
+   "1998": 10
+  },
+  "Shai Gilgeous-Alexander": {
+   "2023": 5,
+   "2024": 2,
+   "2025": 1,
+   "2026": 1
+  },
+  "Shaquille O'Neal": {
+   "1993": 7,
+   "1994": 4,
+   "1995": 2,
+   "1996": 9,
+   "1997": 9,
+   "1998": 4,
+   "1999": 6,
+   "2000": 1,
+   "2001": 3,
+   "2002": 3,
+   "2003": 5,
+   "2004": 6,
+   "2005": 2,
+   "2007": 12
+  },
+  "Stephen Curry": {
+   "2013": 11,
+   "2014": 6,
+   "2015": 1,
+   "2016": 1,
+   "2017": 6,
+   "2018": 10,
+   "2019": 5,
+   "2021": 3,
+   "2022": 8,
+   "2023": 9,
+   "2025": 9
+  },
+  "Steve Nash": {
+   "2002": 14,
+   "2003": 11,
+   "2005": 1,
+   "2006": 1,
+   "2007": 2,
+   "2008": 9,
+   "2010": 8,
+   "2012": 9
+  },
+  "Tim Duncan": {
+   "1998": 5,
+   "1999": 3,
+   "2000": 5,
+   "2001": 2,
+   "2002": 1,
+   "2003": 1,
+   "2004": 2,
+   "2005": 4,
+   "2006": 8,
+   "2007": 4,
+   "2008": 7,
+   "2009": 11,
+   "2012": 14,
+   "2013": 7,
+   "2014": 12,
+   "2015": 10
+  },
+  "Tony Parker": {
+   "2006": 9,
+   "2007": 15,
+   "2009": 8,
+   "2011": 12,
+   "2012": 5,
+   "2013": 6,
+   "2014": 12
+  },
+  "Tracy McGrady": {
+   "2001": 6,
+   "2002": 4,
+   "2003": 4,
+   "2005": 7,
+   "2007": 6,
+   "2008": 8
+  },
+  "Victor Wembanyama": {
+   "2026": 3
+  },
+  "Vince Carter": {
+   "1999": 16,
+   "2000": 10,
+   "2001": 11,
+   "2005": 13
+  },
+  "Yao Ming": {
+   "2004": 14,
+   "2009": 12
+  }
+ }
+}

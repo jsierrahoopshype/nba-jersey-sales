@@ -1,0 +1,410 @@
+{
+ "Allan Houston": {
+  "draft_pick": 11,
+  "draft_year": 1993
+ },
+ "Allen Iverson": {
+  "draft_pick": 1,
+  "draft_year": 1996
+ },
+ "Amar'e Stoudemire": {
+  "draft_pick": 9,
+  "draft_year": 2002
+ },
+ "Andre Iguodala": {
+  "draft_pick": 9,
+  "draft_year": 2004
+ },
+ "Andrea Bargnani": {
+  "draft_pick": 1,
+  "draft_year": 2006
+ },
+ "Anthony Davis": {
+  "draft_pick": 1,
+  "draft_year": 2012
+ },
+ "Anthony Edwards": {
+  "draft_pick": 1,
+  "draft_year": 2020
+ },
+ "Baron Davis": {
+  "draft_pick": 3,
+  "draft_year": 1999
+ },
+ "Ben Gordon": {
+  "draft_pick": 3,
+  "draft_year": 2004
+ },
+ "Ben Simmons": {
+  "draft_pick": 1,
+  "draft_year": 2016
+ },
+ "Ben Wallace": {
+  "draft_pick": null,
+  "draft_year": 1996
+ },
+ "Blake Griffin": {
+  "draft_pick": 1,
+  "draft_year": 2009
+ },
+ "Boris Diaw": {
+  "draft_pick": 21,
+  "draft_year": 2003
+ },
+ "Brandon Roy": {
+  "draft_pick": 6,
+  "draft_year": 2006
+ },
+ "Cade Cunningham": {
+  "draft_pick": 1,
+  "draft_year": 2021
+ },
+ "Carmelo Anthony": {
+  "draft_pick": 3,
+  "draft_year": 2003
+ },
+ "Chris Paul": {
+  "draft_pick": 4,
+  "draft_year": 2005
+ },
+ "Chris Webber": {
+  "draft_pick": 1,
+  "draft_year": 1993
+ },
+ "Cooper Flagg": {
+  "draft_pick": 1,
+  "draft_year": 2025
+ },
+ "Damian Lillard": {
+  "draft_pick": 6,
+  "draft_year": 2012
+ },
+ "David Lee": {
+  "draft_pick": 30,
+  "draft_year": 2005
+ },
+ "De'Aaron Fox": {
+  "draft_pick": 5,
+  "draft_year": 2017
+ },
+ "DeMar DeRozan": {
+  "draft_pick": 9,
+  "draft_year": 2009
+ },
+ "Deron Williams": {
+  "draft_pick": 3,
+  "draft_year": 2005
+ },
+ "Derrick Rose": {
+  "draft_pick": 1,
+  "draft_year": 2008
+ },
+ "Devin Booker": {
+  "draft_pick": 13,
+  "draft_year": 2015
+ },
+ "Dirk Nowitzki": {
+  "draft_pick": 9,
+  "draft_year": 1998
+ },
+ "Donovan Mitchell": {
+  "draft_pick": 13,
+  "draft_year": 2017
+ },
+ "Draymond Green": {
+  "draft_pick": 35,
+  "draft_year": 2012
+ },
+ "Dwight Howard": {
+  "draft_pick": 1,
+  "draft_year": 2004
+ },
+ "Dwyane Wade": {
+  "draft_pick": 5,
+  "draft_year": 2003
+ },
+ "Emeka Okafor": {
+  "draft_pick": 2,
+  "draft_year": 2004
+ },
+ "Gary Payton": {
+  "draft_pick": 2,
+  "draft_year": 1990
+ },
+ "Giannis Antetokounmpo": {
+  "draft_pick": 15,
+  "draft_year": 2013
+ },
+ "Gilbert Arenas": {
+  "draft_pick": 30,
+  "draft_year": 2001
+ },
+ "Isaiah Thomas": {
+  "draft_pick": 60,
+  "draft_year": 2011
+ },
+ "Ja Morant": {
+  "draft_pick": 2,
+  "draft_year": 2019
+ },
+ "Jalen Brunson": {
+  "draft_pick": 33,
+  "draft_year": 2018
+ },
+ "Jalen Rose": {
+  "draft_pick": 13,
+  "draft_year": 1994
+ },
+ "Jamal Crawford": {
+  "draft_pick": 8,
+  "draft_year": 2000
+ },
+ "James Harden": {
+  "draft_pick": 3,
+  "draft_year": 2009
+ },
+ "Jason Kidd": {
+  "draft_pick": 2,
+  "draft_year": 1994
+ },
+ "Jason Richardson": {
+  "draft_pick": 5,
+  "draft_year": 2001
+ },
+ "Jaylen Brown": {
+  "draft_pick": 3,
+  "draft_year": 2016
+ },
+ "Jayson Tatum": {
+  "draft_pick": 3,
+  "draft_year": 2017
+ },
+ "Jeremy Lin": {
+  "draft_pick": null,
+  "draft_year": 2010
+ },
+ "Jermaine O'Neal": {
+  "draft_pick": 17,
+  "draft_year": 1996
+ },
+ "Jimmy Butler": {
+  "draft_pick": 30,
+  "draft_year": 2011
+ },
+ "Joel Embiid": {
+  "draft_pick": 3,
+  "draft_year": 2014
+ },
+ "John Wall": {
+  "draft_pick": 1,
+  "draft_year": 2010
+ },
+ "Jordan Poole": {
+  "draft_pick": 28,
+  "draft_year": 2019
+ },
+ "Kawhi Leonard": {
+  "draft_pick": 15,
+  "draft_year": 2011
+ },
+ "Kemba Walker": {
+  "draft_pick": 9,
+  "draft_year": 2011
+ },
+ "Kenyon Martin": {
+  "draft_pick": 1,
+  "draft_year": 2000
+ },
+ "Kevin Durant": {
+  "draft_pick": 2,
+  "draft_year": 2007
+ },
+ "Kevin Garnett": {
+  "draft_pick": 5,
+  "draft_year": 1995
+ },
+ "Kirk Hinrich": {
+  "draft_pick": 7,
+  "draft_year": 2003
+ },
+ "Klay Thompson": {
+  "draft_pick": 11,
+  "draft_year": 2011
+ },
+ "Kobe Bryant": {
+  "draft_pick": 13,
+  "draft_year": 1996
+ },
+ "Kristaps Porzingis": {
+  "draft_pick": 4,
+  "draft_year": 2015
+ },
+ "Kyle Korver": {
+  "draft_pick": 51,
+  "draft_year": 2003
+ },
+ "Kyrie Irving": {
+  "draft_pick": 1,
+  "draft_year": 2011
+ },
+ "LaMelo Ball": {
+  "draft_pick": 3,
+  "draft_year": 2020
+ },
+ "Lamar Odom": {
+  "draft_pick": 4,
+  "draft_year": 1999
+ },
+ "Latrell Sprewell": {
+  "draft_pick": 24,
+  "draft_year": 1992
+ },
+ "LeBron James": {
+  "draft_pick": 1,
+  "draft_year": 2003
+ },
+ "Lonzo Ball": {
+  "draft_pick": 2,
+  "draft_year": 2017
+ },
+ "Luka Doncic": {
+  "draft_pick": 3,
+  "draft_year": 2018
+ },
+ "Manu Ginobili": {
+  "draft_pick": 57,
+  "draft_year": 1999
+ },
+ "Matthew Dellavedova": {
+  "draft_pick": null,
+  "draft_year": 2013
+ },
+ "Michael Carter-Williams": {
+  "draft_pick": 11,
+  "draft_year": 2013
+ },
+ "Michael Finley": {
+  "draft_pick": 21,
+  "draft_year": 1995
+ },
+ "Michael Jordan": {
+  "draft_pick": 3,
+  "draft_year": 1984
+ },
+ "Mike Bibby": {
+  "draft_pick": 2,
+  "draft_year": 1998
+ },
+ "Nate Robinson": {
+  "draft_pick": 21,
+  "draft_year": 2005
+ },
+ "Nikola Jokic": {
+  "draft_pick": 41,
+  "draft_year": 2014
+ },
+ "Pau Gasol": {
+  "draft_pick": 3,
+  "draft_year": 2001
+ },
+ "Paul George": {
+  "draft_pick": 10,
+  "draft_year": 2010
+ },
+ "Paul Pierce": {
+  "draft_pick": 10,
+  "draft_year": 1998
+ },
+ "Penny Hardaway": {
+  "draft_pick": 3,
+  "draft_year": 1993
+ },
+ "RJ Barrett": {
+  "draft_pick": 3,
+  "draft_year": 2019
+ },
+ "Rajon Rondo": {
+  "draft_pick": 21,
+  "draft_year": 2006
+ },
+ "Rasheed Wallace": {
+  "draft_pick": 4,
+  "draft_year": 1995
+ },
+ "Ray Allen": {
+  "draft_pick": 5,
+  "draft_year": 1996
+ },
+ "Ron Artest": {
+  "draft_pick": 16,
+  "draft_year": 1999
+ },
+ "Russell Westbrook": {
+  "draft_pick": 4,
+  "draft_year": 2008
+ },
+ "Scottie Pippen": {
+  "draft_pick": 5,
+  "draft_year": 1987
+ },
+ "Shai Gilgeous-Alexander": {
+  "draft_pick": 11,
+  "draft_year": 2018
+ },
+ "Shaquille O'Neal": {
+  "draft_pick": 1,
+  "draft_year": 1992
+ },
+ "Stephen Curry": {
+  "draft_pick": 7,
+  "draft_year": 2009
+ },
+ "Stephon Marbury": {
+  "draft_pick": 4,
+  "draft_year": 1996
+ },
+ "Steve Francis": {
+  "draft_pick": 2,
+  "draft_year": 1999
+ },
+ "Steve Nash": {
+  "draft_pick": 15,
+  "draft_year": 1996
+ },
+ "Tim Duncan": {
+  "draft_pick": 1,
+  "draft_year": 1997
+ },
+ "Tony Parker": {
+  "draft_pick": 28,
+  "draft_year": 2001
+ },
+ "Tracy McGrady": {
+  "draft_pick": 9,
+  "draft_year": 1997
+ },
+ "Trae Young": {
+  "draft_pick": 5,
+  "draft_year": 2018
+ },
+ "Tyrese Maxey": {
+  "draft_pick": 21,
+  "draft_year": 2020
+ },
+ "Victor Wembanyama": {
+  "draft_pick": 1,
+  "draft_year": 2023
+ },
+ "Vince Carter": {
+  "draft_pick": 5,
+  "draft_year": 1998
+ },
+ "Yao Ming": {
+  "draft_pick": 1,
+  "draft_year": 2002
+ },
+ "Zion Williamson": {
+  "draft_pick": 1,
+  "draft_year": 2019
+ }
+}

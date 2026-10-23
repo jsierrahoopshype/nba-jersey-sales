@@ -1,0 +1,2870 @@
+{
+ "1610612737": {
+  "2001": {
+   "games": 39,
+   "mean_delta": -505.1
+  },
+  "2002": {
+   "games": 35,
+   "mean_delta": -964.0
+  },
+  "2003": {
+   "games": 37,
+   "mean_delta": -891.0
+  },
+  "2004": {
+   "games": 38,
+   "mean_delta": -819.1
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": -839.5
+  },
+  "2006": {
+   "games": 39,
+   "mean_delta": -568.5
+  },
+  "2007": {
+   "games": 38,
+   "mean_delta": -796.8
+  },
+  "2008": {
+   "games": 41,
+   "mean_delta": -618.1
+  },
+  "2009": {
+   "games": 42,
+   "mean_delta": -201.8
+  },
+  "2010": {
+   "games": 41,
+   "mean_delta": -182.7
+  },
+  "2011": {
+   "games": 43,
+   "mean_delta": -275.3
+  },
+  "2012": {
+   "games": 35,
+   "mean_delta": -94.1
+  },
+  "2013": {
+   "games": 3,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 38,
+   "mean_delta": -137.4
+  },
+  "2015": {
+   "games": 47,
+   "mean_delta": -107.9
+  },
+  "2016": {
+   "games": 39,
+   "mean_delta": -347.9
+  },
+  "2017": {
+   "games": 39,
+   "mean_delta": -217.4
+  },
+  "2018": {
+   "games": 38,
+   "mean_delta": -283.8
+  },
+  "2019": {
+   "games": 38,
+   "mean_delta": -218.1
+  },
+  "2020": {
+   "games": 31,
+   "mean_delta": -101.5
+  },
+  "2021": {
+   "games": 13,
+   "mean_delta": 977.4
+  },
+  "2022": {
+   "games": 39,
+   "mean_delta": -277.8
+  },
+  "2023": {
+   "games": 38,
+   "mean_delta": -150.6
+  },
+  "2026": {
+   "games": 44,
+   "mean_delta": -373.9
+  }
+ },
+ "1610612738": {
+  "2001": {
+   "games": 35,
+   "mean_delta": -272.5
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": 631.4
+  },
+  "2003": {
+   "games": 37,
+   "mean_delta": 213.5
+  },
+  "2004": {
+   "games": 40,
+   "mean_delta": -160.8
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": -401.8
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": 217.1
+  },
+  "2007": {
+   "games": 38,
+   "mean_delta": -176.7
+  },
+  "2008": {
+   "games": 44,
+   "mean_delta": 1344.9
+  },
+  "2009": {
+   "games": 43,
+   "mean_delta": 1258.0
+  },
+  "2010": {
+   "games": 44,
+   "mean_delta": 484.6
+  },
+  "2011": {
+   "games": 42,
+   "mean_delta": 1637.3
+  },
+  "2012": {
+   "games": 40,
+   "mean_delta": 792.5
+  },
+  "2013": {
+   "games": 2,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 39,
+   "mean_delta": 301.3
+  },
+  "2015": {
+   "games": 37,
+   "mean_delta": -72.1
+  },
+  "2016": {
+   "games": 41,
+   "mean_delta": -329.1
+  },
+  "2017": {
+   "games": 41,
+   "mean_delta": 371.9
+  },
+  "2018": {
+   "games": 45,
+   "mean_delta": 635.5
+  },
+  "2019": {
+   "games": 38,
+   "mean_delta": 809.7
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": 343.3
+  },
+  "2021": {
+   "games": 7,
+   "mean_delta": -844.4
+  },
+  "2022": {
+   "games": 48,
+   "mean_delta": 438.2
+  },
+  "2023": {
+   "games": 47,
+   "mean_delta": 457.5
+  },
+  "2026": {
+   "games": 44,
+   "mean_delta": 259.4
+  }
+ },
+ "1610612739": {
+  "2001": {
+   "games": 41,
+   "mean_delta": -768.3
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": -1207.6
+  },
+  "2003": {
+   "games": 36,
+   "mean_delta": -1180.7
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": 1722.2
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": 1155.7
+  },
+  "2006": {
+   "games": 40,
+   "mean_delta": 1277.0
+  },
+  "2007": {
+   "games": 46,
+   "mean_delta": 1067.8
+  },
+  "2008": {
+   "games": 44,
+   "mean_delta": 496.6
+  },
+  "2009": {
+   "games": 45,
+   "mean_delta": 1369.5
+  },
+  "2010": {
+   "games": 41,
+   "mean_delta": 2163.9
+  },
+  "2011": {
+   "games": 38,
+   "mean_delta": -976.4
+  },
+  "2012": {
+   "games": 30,
+   "mean_delta": -353.3
+  },
+  "2014": {
+   "games": 39,
+   "mean_delta": 148.6
+  },
+  "2015": {
+   "games": 47,
+   "mean_delta": 1007.3
+  },
+  "2016": {
+   "games": 50,
+   "mean_delta": 981.1
+  },
+  "2017": {
+   "games": 47,
+   "mean_delta": 1045.5
+  },
+  "2018": {
+   "games": 46,
+   "mean_delta": 1110.7
+  },
+  "2019": {
+   "games": 40,
+   "mean_delta": -210.6
+  },
+  "2020": {
+   "games": 26,
+   "mean_delta": 49.7
+  },
+  "2021": {
+   "games": 4,
+   "mean_delta": -220.1
+  },
+  "2022": {
+   "games": 31,
+   "mean_delta": -247.5
+  },
+  "2023": {
+   "games": 35,
+   "mean_delta": 53.2
+  },
+  "2026": {
+   "games": 50,
+   "mean_delta": -102.7
+  }
+ },
+ "1610612740": {
+  "2003": {
+   "games": 39,
+   "mean_delta": -435.9
+  },
+  "2004": {
+   "games": 42,
+   "mean_delta": -252.0
+  },
+  "2005": {
+   "games": 36,
+   "mean_delta": -928.5
+  },
+  "2006": {
+   "games": 38,
+   "mean_delta": -746.3
+  },
+  "2007": {
+   "games": 33,
+   "mean_delta": -930.7
+  },
+  "2008": {
+   "games": 41,
+   "mean_delta": -512.7
+  },
+  "2009": {
+   "games": 38,
+   "mean_delta": 208.6
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": -39.2
+  },
+  "2011": {
+   "games": 41,
+   "mean_delta": -297.5
+  },
+  "2012": {
+   "games": 27,
+   "mean_delta": -638.9
+  },
+  "2014": {
+   "games": 35,
+   "mean_delta": -135.2
+  },
+  "2015": {
+   "games": 40,
+   "mean_delta": -211.8
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": -86.0
+  },
+  "2017": {
+   "games": 38,
+   "mean_delta": 51.1
+  },
+  "2018": {
+   "games": 42,
+   "mean_delta": -47.2
+  },
+  "2019": {
+   "games": 36,
+   "mean_delta": -298.3
+  },
+  "2020": {
+   "games": 29,
+   "mean_delta": 308.2
+  },
+  "2021": {
+   "games": 4,
+   "mean_delta": -272.6
+  },
+  "2022": {
+   "games": 37,
+   "mean_delta": -308.1
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": -22.0
+  },
+  "2026": {
+   "games": 40,
+   "mean_delta": -198.3
+  }
+ },
+ "1610612741": {
+  "2001": {
+   "games": 38,
+   "mean_delta": -110.9
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": -688.9
+  },
+  "2003": {
+   "games": 35,
+   "mean_delta": -439.4
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": -517.7
+  },
+  "2005": {
+   "games": 41,
+   "mean_delta": 136.4
+  },
+  "2006": {
+   "games": 39,
+   "mean_delta": -14.3
+  },
+  "2007": {
+   "games": 44,
+   "mean_delta": 441.2
+  },
+  "2008": {
+   "games": 37,
+   "mean_delta": 219.1
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": 265.9
+  },
+  "2010": {
+   "games": 40,
+   "mean_delta": 713.8
+  },
+  "2011": {
+   "games": 47,
+   "mean_delta": 1196.3
+  },
+  "2012": {
+   "games": 32,
+   "mean_delta": 1093.9
+  },
+  "2013": {
+   "games": 6,
+   "mean_delta": -33.1
+  },
+  "2014": {
+   "games": 41,
+   "mean_delta": 471.9
+  },
+  "2015": {
+   "games": 44,
+   "mean_delta": 795.9
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": 423.4
+  },
+  "2017": {
+   "games": 41,
+   "mean_delta": 396.0
+  },
+  "2018": {
+   "games": 39,
+   "mean_delta": 192.4
+  },
+  "2019": {
+   "games": 34,
+   "mean_delta": 46.4
+  },
+  "2020": {
+   "games": 27,
+   "mean_delta": 206.9
+  },
+  "2021": {
+   "games": 5,
+   "mean_delta": -366.9
+  },
+  "2022": {
+   "games": 38,
+   "mean_delta": 965.3
+  },
+  "2023": {
+   "games": 36,
+   "mean_delta": 368.5
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -53.3
+  }
+ },
+ "1610612742": {
+  "2001": {
+   "games": 39,
+   "mean_delta": -1459.3
+  },
+  "2002": {
+   "games": 37,
+   "mean_delta": 205.4
+  },
+  "2003": {
+   "games": 43,
+   "mean_delta": 783.7
+  },
+  "2004": {
+   "games": 35,
+   "mean_delta": 587.0
+  },
+  "2005": {
+   "games": 42,
+   "mean_delta": 149.8
+  },
+  "2006": {
+   "games": 35,
+   "mean_delta": 85.8
+  },
+  "2007": {
+   "games": 38,
+   "mean_delta": 261.3
+  },
+  "2008": {
+   "games": 39,
+   "mean_delta": 557.0
+  },
+  "2009": {
+   "games": 43,
+   "mean_delta": -126.9
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": 125.8
+  },
+  "2011": {
+   "games": 43,
+   "mean_delta": -359.1
+  },
+  "2012": {
+   "games": 32,
+   "mean_delta": -11.7
+  },
+  "2014": {
+   "games": 42,
+   "mean_delta": -7.3
+  },
+  "2015": {
+   "games": 42,
+   "mean_delta": -104.4
+  },
+  "2016": {
+   "games": 43,
+   "mean_delta": -41.9
+  },
+  "2017": {
+   "games": 36,
+   "mean_delta": -254.9
+  },
+  "2018": {
+   "games": 36,
+   "mean_delta": -492.1
+  },
+  "2019": {
+   "games": 40,
+   "mean_delta": 305.1
+  },
+  "2020": {
+   "games": 26,
+   "mean_delta": 288.4
+  },
+  "2021": {
+   "games": 7,
+   "mean_delta": -1999.7
+  },
+  "2022": {
+   "games": 42,
+   "mean_delta": 267.3
+  },
+  "2023": {
+   "games": 37,
+   "mean_delta": 364.3
+  },
+  "2026": {
+   "games": 40,
+   "mean_delta": 7.1
+  }
+ },
+ "1610612743": {
+  "2001": {
+   "games": 39,
+   "mean_delta": -461.5
+  },
+  "2002": {
+   "games": 36,
+   "mean_delta": -569.2
+  },
+  "2003": {
+   "games": 38,
+   "mean_delta": -565.4
+  },
+  "2004": {
+   "games": 36,
+   "mean_delta": 240.7
+  },
+  "2005": {
+   "games": 39,
+   "mean_delta": 339.6
+  },
+  "2006": {
+   "games": 39,
+   "mean_delta": 135.7
+  },
+  "2007": {
+   "games": 39,
+   "mean_delta": 455.3
+  },
+  "2008": {
+   "games": 40,
+   "mean_delta": 540.7
+  },
+  "2009": {
+   "games": 44,
+   "mean_delta": -284.9
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": 426.6
+  },
+  "2011": {
+   "games": 41,
+   "mean_delta": -198.8
+  },
+  "2012": {
+   "games": 33,
+   "mean_delta": -313.8
+  },
+  "2013": {
+   "games": 2,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 39,
+   "mean_delta": -332.0
+  },
+  "2015": {
+   "games": 40,
+   "mean_delta": -529.4
+  },
+  "2016": {
+   "games": 36,
+   "mean_delta": -260.8
+  },
+  "2017": {
+   "games": 37,
+   "mean_delta": -448.4
+  },
+  "2018": {
+   "games": 39,
+   "mean_delta": -228.1
+  },
+  "2019": {
+   "games": 45,
+   "mean_delta": -208.1
+  },
+  "2020": {
+   "games": 27,
+   "mean_delta": -105.6
+  },
+  "2021": {
+   "games": 6,
+   "mean_delta": -34.8
+  },
+  "2022": {
+   "games": 39,
+   "mean_delta": -71.7
+  },
+  "2023": {
+   "games": 44,
+   "mean_delta": -204.7
+  },
+  "2026": {
+   "games": 43,
+   "mean_delta": -26.3
+  }
+ },
+ "1610612744": {
+  "2001": {
+   "games": 37,
+   "mean_delta": -906.8
+  },
+  "2002": {
+   "games": 40,
+   "mean_delta": -929.7
+  },
+  "2003": {
+   "games": 41,
+   "mean_delta": -666.6
+  },
+  "2004": {
+   "games": 39,
+   "mean_delta": -1312.2
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": -624.2
+  },
+  "2006": {
+   "games": 35,
+   "mean_delta": -748.4
+  },
+  "2007": {
+   "games": 41,
+   "mean_delta": -615.7
+  },
+  "2008": {
+   "games": 40,
+   "mean_delta": 35.3
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": -601.3
+  },
+  "2010": {
+   "games": 38,
+   "mean_delta": -788.9
+  },
+  "2011": {
+   "games": 38,
+   "mean_delta": -342.8
+  },
+  "2012": {
+   "games": 31,
+   "mean_delta": -570.7
+  },
+  "2013": {
+   "games": 6,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 43,
+   "mean_delta": 93.1
+  },
+  "2015": {
+   "games": 45,
+   "mean_delta": 284.6
+  },
+  "2016": {
+   "games": 46,
+   "mean_delta": 1081.0
+  },
+  "2017": {
+   "games": 45,
+   "mean_delta": 1252.1
+  },
+  "2018": {
+   "games": 47,
+   "mean_delta": 726.1
+  },
+  "2019": {
+   "games": 42,
+   "mean_delta": 878.2
+  },
+  "2020": {
+   "games": 29,
+   "mean_delta": -144.9
+  },
+  "2021": {
+   "games": 5,
+   "mean_delta": 480.9
+  },
+  "2022": {
+   "games": 44,
+   "mean_delta": 1073.4
+  },
+  "2023": {
+   "games": 44,
+   "mean_delta": 443.1
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": 341.6
+  }
+ },
+ "1610612745": {
+  "2001": {
+   "games": 37,
+   "mean_delta": -260.3
+  },
+  "2002": {
+   "games": 37,
+   "mean_delta": -801.7
+  },
+  "2003": {
+   "games": 39,
+   "mean_delta": 935.3
+  },
+  "2004": {
+   "games": 36,
+   "mean_delta": 726.2
+  },
+  "2005": {
+   "games": 37,
+   "mean_delta": 707.7
+  },
+  "2006": {
+   "games": 35,
+   "mean_delta": 97.1
+  },
+  "2007": {
+   "games": 40,
+   "mean_delta": 475.2
+  },
+  "2008": {
+   "games": 41,
+   "mean_delta": 130.8
+  },
+  "2009": {
+   "games": 46,
+   "mean_delta": 38.1
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": -544.3
+  },
+  "2011": {
+   "games": 37,
+   "mean_delta": -347.7
+  },
+  "2012": {
+   "games": 31,
+   "mean_delta": -108.9
+  },
+  "2013": {
+   "games": 3,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 42,
+   "mean_delta": -118.5
+  },
+  "2015": {
+   "games": 46,
+   "mean_delta": 11.2
+  },
+  "2016": {
+   "games": 42,
+   "mean_delta": -124.0
+  },
+  "2017": {
+   "games": 43,
+   "mean_delta": 343.1
+  },
+  "2018": {
+   "games": 44,
+   "mean_delta": 336.1
+  },
+  "2019": {
+   "games": 45,
+   "mean_delta": 94.6
+  },
+  "2020": {
+   "games": 28,
+   "mean_delta": 474.6
+  },
+  "2021": {
+   "games": 4,
+   "mean_delta": -59.2
+  },
+  "2022": {
+   "games": 29,
+   "mean_delta": -493.8
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": -331.9
+  },
+  "2026": {
+   "games": 44,
+   "mean_delta": 75.3
+  }
+ },
+ "1610612746": {
+  "2001": {
+   "games": 39,
+   "mean_delta": -931.0
+  },
+  "2002": {
+   "games": 36,
+   "mean_delta": -226.8
+  },
+  "2003": {
+   "games": 35,
+   "mean_delta": -662.3
+  },
+  "2004": {
+   "games": 35,
+   "mean_delta": -788.2
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": -483.3
+  },
+  "2006": {
+   "games": 38,
+   "mean_delta": -417.4
+  },
+  "2007": {
+   "games": 35,
+   "mean_delta": -459.1
+  },
+  "2008": {
+   "games": 40,
+   "mean_delta": -526.1
+  },
+  "2009": {
+   "games": 37,
+   "mean_delta": -289.2
+  },
+  "2010": {
+   "games": 36,
+   "mean_delta": -921.3
+  },
+  "2011": {
+   "games": 38,
+   "mean_delta": 432.4
+  },
+  "2012": {
+   "games": 38,
+   "mean_delta": 860.7
+  },
+  "2013": {
+   "games": 3,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 42,
+   "mean_delta": -173.4
+  },
+  "2015": {
+   "games": 42,
+   "mean_delta": 127.0
+  },
+  "2016": {
+   "games": 40,
+   "mean_delta": -183.4
+  },
+  "2017": {
+   "games": 41,
+   "mean_delta": 94.2
+  },
+  "2018": {
+   "games": 36,
+   "mean_delta": -219.2
+  },
+  "2019": {
+   "games": 39,
+   "mean_delta": -549.8
+  },
+  "2020": {
+   "games": 27,
+   "mean_delta": 60.4
+  },
+  "2021": {
+   "games": 16,
+   "mean_delta": 906.5
+  },
+  "2022": {
+   "games": 38,
+   "mean_delta": -192.0
+  },
+  "2023": {
+   "games": 38,
+   "mean_delta": -320.9
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": 5.8
+  }
+ },
+ "1610612747": {
+  "2001": {
+   "games": 42,
+   "mean_delta": 2515.6
+  },
+  "2002": {
+   "games": 33,
+   "mean_delta": 2922.3
+  },
+  "2003": {
+   "games": 43,
+   "mean_delta": 2017.4
+  },
+  "2004": {
+   "games": 45,
+   "mean_delta": 1884.1
+  },
+  "2005": {
+   "games": 40,
+   "mean_delta": 1476.2
+  },
+  "2006": {
+   "games": 37,
+   "mean_delta": 1282.7
+  },
+  "2007": {
+   "games": 37,
+   "mean_delta": 1289.4
+  },
+  "2008": {
+   "games": 46,
+   "mean_delta": 1145.0
+  },
+  "2009": {
+   "games": 41,
+   "mean_delta": 1665.9
+  },
+  "2010": {
+   "games": 48,
+   "mean_delta": 1696.3
+  },
+  "2011": {
+   "games": 41,
+   "mean_delta": 1647.9
+  },
+  "2012": {
+   "games": 34,
+   "mean_delta": 1314.3
+  },
+  "2013": {
+   "games": 2,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 38,
+   "mean_delta": 405.1
+  },
+  "2015": {
+   "games": 37,
+   "mean_delta": 126.2
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": 1376.1
+  },
+  "2017": {
+   "games": 38,
+   "mean_delta": 328.2
+  },
+  "2018": {
+   "games": 39,
+   "mean_delta": 782.4
+  },
+  "2019": {
+   "games": 36,
+   "mean_delta": 1122.0
+  },
+  "2020": {
+   "games": 29,
+   "mean_delta": 873.1
+  },
+  "2021": {
+   "games": 9,
+   "mean_delta": -602.5
+  },
+  "2022": {
+   "games": 37,
+   "mean_delta": 1161.2
+  },
+  "2023": {
+   "games": 40,
+   "mean_delta": 738.9
+  },
+  "2026": {
+   "games": 46,
+   "mean_delta": 497.2
+  }
+ },
+ "1610612748": {
+  "2001": {
+   "games": 36,
+   "mean_delta": 274.2
+  },
+  "2002": {
+   "games": 39,
+   "mean_delta": -392.2
+  },
+  "2003": {
+   "games": 37,
+   "mean_delta": -981.8
+  },
+  "2004": {
+   "games": 40,
+   "mean_delta": -632.4
+  },
+  "2005": {
+   "games": 43,
+   "mean_delta": 1557.6
+  },
+  "2006": {
+   "games": 33,
+   "mean_delta": 1487.3
+  },
+  "2007": {
+   "games": 41,
+   "mean_delta": 1223.8
+  },
+  "2008": {
+   "games": 37,
+   "mean_delta": 31.0
+  },
+  "2009": {
+   "games": 44,
+   "mean_delta": 554.8
+  },
+  "2010": {
+   "games": 41,
+   "mean_delta": 1006.3
+  },
+  "2011": {
+   "games": 48,
+   "mean_delta": 1686.0
+  },
+  "2012": {
+   "games": 37,
+   "mean_delta": 1617.5
+  },
+  "2013": {
+   "games": 10,
+   "mean_delta": 87.9
+  },
+  "2014": {
+   "games": 46,
+   "mean_delta": 1763.1
+  },
+  "2015": {
+   "games": 36,
+   "mean_delta": 190.3
+  },
+  "2016": {
+   "games": 40,
+   "mean_delta": 237.2
+  },
+  "2017": {
+   "games": 38,
+   "mean_delta": 6.6
+  },
+  "2018": {
+   "games": 39,
+   "mean_delta": 116.8
+  },
+  "2019": {
+   "games": 38,
+   "mean_delta": 370.4
+  },
+  "2020": {
+   "games": 28,
+   "mean_delta": 179.9
+  },
+  "2021": {
+   "games": 6,
+   "mean_delta": -2002.1
+  },
+  "2022": {
+   "games": 45,
+   "mean_delta": 121.9
+  },
+  "2023": {
+   "games": 44,
+   "mean_delta": 103.0
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -15.2
+  }
+ },
+ "1610612749": {
+  "2001": {
+   "games": 48,
+   "mean_delta": -384.8
+  },
+  "2002": {
+   "games": 37,
+   "mean_delta": 174.4
+  },
+  "2003": {
+   "games": 38,
+   "mean_delta": -677.6
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": -886.3
+  },
+  "2005": {
+   "games": 39,
+   "mean_delta": -778.7
+  },
+  "2006": {
+   "games": 37,
+   "mean_delta": -565.9
+  },
+  "2007": {
+   "games": 38,
+   "mean_delta": -587.3
+  },
+  "2008": {
+   "games": 37,
+   "mean_delta": -977.6
+  },
+  "2009": {
+   "games": 39,
+   "mean_delta": -795.1
+  },
+  "2010": {
+   "games": 35,
+   "mean_delta": -485.2
+  },
+  "2011": {
+   "games": 37,
+   "mean_delta": -620.5
+  },
+  "2012": {
+   "games": 29,
+   "mean_delta": -817.6
+  },
+  "2013": {
+   "games": 2,
+   "mean_delta": 160.5
+  },
+  "2014": {
+   "games": 37,
+   "mean_delta": -558.1
+  },
+  "2015": {
+   "games": 42,
+   "mean_delta": -333.0
+  },
+  "2016": {
+   "games": 32,
+   "mean_delta": -481.9
+  },
+  "2017": {
+   "games": 41,
+   "mean_delta": -72.0
+  },
+  "2018": {
+   "games": 37,
+   "mean_delta": 171.1
+  },
+  "2019": {
+   "games": 43,
+   "mean_delta": 352.8
+  },
+  "2020": {
+   "games": 31,
+   "mean_delta": 389.3
+  },
+  "2021": {
+   "games": 16,
+   "mean_delta": 131.5
+  },
+  "2022": {
+   "games": 45,
+   "mean_delta": 232.9
+  },
+  "2023": {
+   "games": 37,
+   "mean_delta": 17.2
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -125.2
+  }
+ },
+ "1610612750": {
+  "2001": {
+   "games": 37,
+   "mean_delta": 523.6
+  },
+  "2002": {
+   "games": 34,
+   "mean_delta": -199.2
+  },
+  "2003": {
+   "games": 38,
+   "mean_delta": -375.4
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": 857.0
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": 586.0
+  },
+  "2006": {
+   "games": 34,
+   "mean_delta": -316.3
+  },
+  "2007": {
+   "games": 36,
+   "mean_delta": 171.5
+  },
+  "2008": {
+   "games": 39,
+   "mean_delta": -598.8
+  },
+  "2009": {
+   "games": 36,
+   "mean_delta": -767.9
+  },
+  "2010": {
+   "games": 36,
+   "mean_delta": -1072.9
+  },
+  "2011": {
+   "games": 35,
+   "mean_delta": -921.3
+  },
+  "2012": {
+   "games": 27,
+   "mean_delta": -747.9
+  },
+  "2014": {
+   "games": 40,
+   "mean_delta": -119.2
+  },
+  "2015": {
+   "games": 39,
+   "mean_delta": -70.8
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": -168.2
+  },
+  "2017": {
+   "games": 36,
+   "mean_delta": 274.5
+  },
+  "2018": {
+   "games": 40,
+   "mean_delta": -253.0
+  },
+  "2019": {
+   "games": 39,
+   "mean_delta": -238.1
+  },
+  "2020": {
+   "games": 32,
+   "mean_delta": -382.1
+  },
+  "2021": {
+   "games": 4,
+   "mean_delta": -850.0
+  },
+  "2022": {
+   "games": 35,
+   "mean_delta": -300.2
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": -321.5
+  },
+  "2026": {
+   "games": 47,
+   "mean_delta": -0.8
+  }
+ },
+ "1610612751": {
+  "2001": {
+   "games": 38,
+   "mean_delta": -930.0
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": -669.8
+  },
+  "2003": {
+   "games": 45,
+   "mean_delta": -113.2
+  },
+  "2004": {
+   "games": 41,
+   "mean_delta": 176.9
+  },
+  "2005": {
+   "games": 42,
+   "mean_delta": -555.4
+  },
+  "2006": {
+   "games": 38,
+   "mean_delta": -16.6
+  },
+  "2007": {
+   "games": 37,
+   "mean_delta": -2.9
+  },
+  "2008": {
+   "games": 36,
+   "mean_delta": 266.9
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": -68.3
+  },
+  "2010": {
+   "games": 40,
+   "mean_delta": -735.0
+  },
+  "2011": {
+   "games": 36,
+   "mean_delta": -398.1
+  },
+  "2012": {
+   "games": 28,
+   "mean_delta": -358.9
+  },
+  "2013": {
+   "games": 3,
+   "mean_delta": -292.9
+  },
+  "2014": {
+   "games": 45,
+   "mean_delta": 73.3
+  },
+  "2015": {
+   "games": 41,
+   "mean_delta": 39.3
+  },
+  "2016": {
+   "games": 37,
+   "mean_delta": 67.6
+  },
+  "2017": {
+   "games": 35,
+   "mean_delta": -270.7
+  },
+  "2018": {
+   "games": 40,
+   "mean_delta": -370.2
+  },
+  "2019": {
+   "games": 40,
+   "mean_delta": 12.5
+  },
+  "2020": {
+   "games": 31,
+   "mean_delta": 164.7
+  },
+  "2021": {
+   "games": 10,
+   "mean_delta": 353.1
+  },
+  "2022": {
+   "games": 36,
+   "mean_delta": 34.6
+  },
+  "2023": {
+   "games": 37,
+   "mean_delta": 114.3
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -38.4
+  }
+ },
+ "1610612752": {
+  "2001": {
+   "games": 39,
+   "mean_delta": 1242.7
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": 484.1
+  },
+  "2003": {
+   "games": 38,
+   "mean_delta": 107.8
+  },
+  "2004": {
+   "games": 38,
+   "mean_delta": 523.1
+  },
+  "2005": {
+   "games": 39,
+   "mean_delta": 232.0
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": -38.9
+  },
+  "2007": {
+   "games": 34,
+   "mean_delta": 408.1
+  },
+  "2008": {
+   "games": 38,
+   "mean_delta": -2.6
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": 299.1
+  },
+  "2010": {
+   "games": 38,
+   "mean_delta": 214.3
+  },
+  "2011": {
+   "games": 38,
+   "mean_delta": 939.5
+  },
+  "2012": {
+   "games": 30,
+   "mean_delta": 1366.2
+  },
+  "2013": {
+   "games": 6,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 36,
+   "mean_delta": 236.5
+  },
+  "2015": {
+   "games": 36,
+   "mean_delta": -277.3
+  },
+  "2016": {
+   "games": 34,
+   "mean_delta": 804.4
+  },
+  "2017": {
+   "games": 32,
+   "mean_delta": 157.0
+  },
+  "2018": {
+   "games": 38,
+   "mean_delta": 136.0
+  },
+  "2019": {
+   "games": 40,
+   "mean_delta": -223.1
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": 154.8
+  },
+  "2021": {
+   "games": 6,
+   "mean_delta": 935.2
+  },
+  "2022": {
+   "games": 33,
+   "mean_delta": 365.7
+  },
+  "2023": {
+   "games": 40,
+   "mean_delta": 151.2
+  },
+  "2026": {
+   "games": 52,
+   "mean_delta": 60.0
+  }
+ },
+ "1610612753": {
+  "2001": {
+   "games": 35,
+   "mean_delta": 98.7
+  },
+  "2002": {
+   "games": 33,
+   "mean_delta": 557.9
+  },
+  "2003": {
+   "games": 41,
+   "mean_delta": 326.7
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": -266.3
+  },
+  "2005": {
+   "games": 38,
+   "mean_delta": 59.2
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": -700.3
+  },
+  "2007": {
+   "games": 36,
+   "mean_delta": -546.9
+  },
+  "2008": {
+   "games": 43,
+   "mean_delta": -61.4
+  },
+  "2009": {
+   "games": 40,
+   "mean_delta": 416.2
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": 627.7
+  },
+  "2011": {
+   "games": 42,
+   "mean_delta": 230.2
+  },
+  "2012": {
+   "games": 31,
+   "mean_delta": 241.6
+  },
+  "2014": {
+   "games": 34,
+   "mean_delta": -775.5
+  },
+  "2015": {
+   "games": 37,
+   "mean_delta": -241.7
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": -534.9
+  },
+  "2017": {
+   "games": 38,
+   "mean_delta": -785.4
+  },
+  "2018": {
+   "games": 40,
+   "mean_delta": -362.6
+  },
+  "2019": {
+   "games": 41,
+   "mean_delta": -194.6
+  },
+  "2020": {
+   "games": 32,
+   "mean_delta": -431.9
+  },
+  "2021": {
+   "games": 4,
+   "mean_delta": -137.2
+  },
+  "2022": {
+   "games": 35,
+   "mean_delta": -555.3
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": -155.2
+  },
+  "2026": {
+   "games": 43,
+   "mean_delta": 24.2
+  }
+ },
+ "1610612754": {
+  "2001": {
+   "games": 34,
+   "mean_delta": -243.6
+  },
+  "2002": {
+   "games": 39,
+   "mean_delta": -322.6
+  },
+  "2003": {
+   "games": 40,
+   "mean_delta": -118.4
+  },
+  "2004": {
+   "games": 43,
+   "mean_delta": 483.1
+  },
+  "2005": {
+   "games": 36,
+   "mean_delta": -488.1
+  },
+  "2006": {
+   "games": 39,
+   "mean_delta": -63.2
+  },
+  "2007": {
+   "games": 36,
+   "mean_delta": -134.3
+  },
+  "2008": {
+   "games": 35,
+   "mean_delta": -600.0
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": -646.7
+  },
+  "2010": {
+   "games": 38,
+   "mean_delta": -402.8
+  },
+  "2011": {
+   "games": 43,
+   "mean_delta": -545.2
+  },
+  "2012": {
+   "games": 34,
+   "mean_delta": -652.9
+  },
+  "2013": {
+   "games": 10,
+   "mean_delta": 2.8
+  },
+  "2014": {
+   "games": 46,
+   "mean_delta": 418.3
+  },
+  "2015": {
+   "games": 39,
+   "mean_delta": 60.7
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": -127.2
+  },
+  "2017": {
+   "games": 35,
+   "mean_delta": -212.0
+  },
+  "2018": {
+   "games": 42,
+   "mean_delta": -473.7
+  },
+  "2019": {
+   "games": 39,
+   "mean_delta": -149.9
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": -263.3
+  },
+  "2021": {
+   "games": 5,
+   "mean_delta": -225.2
+  },
+  "2022": {
+   "games": 37,
+   "mean_delta": -539.0
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": -347.0
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -234.5
+  }
+ },
+ "1610612755": {
+  "2001": {
+   "games": 46,
+   "mean_delta": 1644.3
+  },
+  "2002": {
+   "games": 36,
+   "mean_delta": 2065.7
+  },
+  "2003": {
+   "games": 43,
+   "mean_delta": 1510.4
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": 753.3
+  },
+  "2005": {
+   "games": 42,
+   "mean_delta": 573.3
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": 1076.0
+  },
+  "2007": {
+   "games": 39,
+   "mean_delta": 29.7
+  },
+  "2008": {
+   "games": 39,
+   "mean_delta": -510.6
+  },
+  "2009": {
+   "games": 40,
+   "mean_delta": -445.0
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": -365.1
+  },
+  "2011": {
+   "games": 41,
+   "mean_delta": -345.6
+  },
+  "2012": {
+   "games": 37,
+   "mean_delta": -154.8
+  },
+  "2014": {
+   "games": 38,
+   "mean_delta": 34.5
+  },
+  "2015": {
+   "games": 39,
+   "mean_delta": -310.7
+  },
+  "2016": {
+   "games": 36,
+   "mean_delta": -599.7
+  },
+  "2017": {
+   "games": 39,
+   "mean_delta": -685.9
+  },
+  "2018": {
+   "games": 37,
+   "mean_delta": -105.5
+  },
+  "2019": {
+   "games": 46,
+   "mean_delta": 201.2
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": -115.6
+  },
+  "2021": {
+   "games": 8,
+   "mean_delta": -102.1
+  },
+  "2022": {
+   "games": 43,
+   "mean_delta": -352.7
+  },
+  "2023": {
+   "games": 41,
+   "mean_delta": -146.5
+  },
+  "2026": {
+   "games": 47,
+   "mean_delta": 60.2
+  }
+ },
+ "1610612756": {
+  "2001": {
+   "games": 36,
+   "mean_delta": 360.3
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": 40.6
+  },
+  "2003": {
+   "games": 36,
+   "mean_delta": -564.7
+  },
+  "2004": {
+   "games": 38,
+   "mean_delta": -614.4
+  },
+  "2005": {
+   "games": 46,
+   "mean_delta": 259.6
+  },
+  "2006": {
+   "games": 37,
+   "mean_delta": 226.1
+  },
+  "2007": {
+   "games": 40,
+   "mean_delta": 808.3
+  },
+  "2008": {
+   "games": 42,
+   "mean_delta": 874.3
+  },
+  "2009": {
+   "games": 36,
+   "mean_delta": 708.4
+  },
+  "2010": {
+   "games": 42,
+   "mean_delta": 222.8
+  },
+  "2011": {
+   "games": 41,
+   "mean_delta": -3.9
+  },
+  "2012": {
+   "games": 28,
+   "mean_delta": 20.4
+  },
+  "2014": {
+   "games": 39,
+   "mean_delta": -352.0
+  },
+  "2015": {
+   "games": 39,
+   "mean_delta": -295.0
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": -568.9
+  },
+  "2017": {
+   "games": 38,
+   "mean_delta": -374.4
+  },
+  "2018": {
+   "games": 36,
+   "mean_delta": -490.3
+  },
+  "2019": {
+   "games": 37,
+   "mean_delta": -67.6
+  },
+  "2020": {
+   "games": 26,
+   "mean_delta": -135.1
+  },
+  "2021": {
+   "games": 14,
+   "mean_delta": 2097.6
+  },
+  "2022": {
+   "games": 44,
+   "mean_delta": 441.2
+  },
+  "2023": {
+   "games": 44,
+   "mean_delta": 371.0
+  },
+  "2026": {
+   "games": 43,
+   "mean_delta": -96.4
+  }
+ },
+ "1610612757": {
+  "2001": {
+   "games": 39,
+   "mean_delta": 415.7
+  },
+  "2002": {
+   "games": 37,
+   "mean_delta": -352.0
+  },
+  "2003": {
+   "games": 39,
+   "mean_delta": -187.4
+  },
+  "2004": {
+   "games": 31,
+   "mean_delta": -778.6
+  },
+  "2005": {
+   "games": 36,
+   "mean_delta": -637.4
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": -566.6
+  },
+  "2007": {
+   "games": 37,
+   "mean_delta": -67.8
+  },
+  "2008": {
+   "games": 36,
+   "mean_delta": -444.9
+  },
+  "2009": {
+   "games": 40,
+   "mean_delta": -439.1
+  },
+  "2010": {
+   "games": 39,
+   "mean_delta": -450.3
+  },
+  "2011": {
+   "games": 38,
+   "mean_delta": -893.6
+  },
+  "2012": {
+   "games": 32,
+   "mean_delta": -273.1
+  },
+  "2014": {
+   "games": 43,
+   "mean_delta": -109.2
+  },
+  "2015": {
+   "games": 37,
+   "mean_delta": -153.1
+  },
+  "2016": {
+   "games": 43,
+   "mean_delta": -108.0
+  },
+  "2017": {
+   "games": 37,
+   "mean_delta": -301.0
+  },
+  "2018": {
+   "games": 41,
+   "mean_delta": -234.6
+  },
+  "2019": {
+   "games": 45,
+   "mean_delta": 77.5
+  },
+  "2020": {
+   "games": 32,
+   "mean_delta": 94.9
+  },
+  "2021": {
+   "games": 8,
+   "mean_delta": -1498.5
+  },
+  "2022": {
+   "games": 37,
+   "mean_delta": -404.1
+  },
+  "2023": {
+   "games": 37,
+   "mean_delta": -7.6
+  },
+  "2026": {
+   "games": 44,
+   "mean_delta": -191.8
+  }
+ },
+ "1610612758": {
+  "2001": {
+   "games": 42,
+   "mean_delta": 1595.0
+  },
+  "2002": {
+   "games": 36,
+   "mean_delta": 559.2
+  },
+  "2003": {
+   "games": 40,
+   "mean_delta": 933.0
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": 672.3
+  },
+  "2005": {
+   "games": 40,
+   "mean_delta": 371.2
+  },
+  "2006": {
+   "games": 35,
+   "mean_delta": -334.0
+  },
+  "2007": {
+   "games": 34,
+   "mean_delta": -347.1
+  },
+  "2008": {
+   "games": 37,
+   "mean_delta": -379.2
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": -120.3
+  },
+  "2010": {
+   "games": 34,
+   "mean_delta": -517.0
+  },
+  "2011": {
+   "games": 38,
+   "mean_delta": -42.9
+  },
+  "2012": {
+   "games": 31,
+   "mean_delta": -908.2
+  },
+  "2014": {
+   "games": 37,
+   "mean_delta": -737.9
+  },
+  "2015": {
+   "games": 36,
+   "mean_delta": -250.6
+  },
+  "2016": {
+   "games": 40,
+   "mean_delta": -467.2
+  },
+  "2017": {
+   "games": 40,
+   "mean_delta": -401.7
+  },
+  "2018": {
+   "games": 39,
+   "mean_delta": -490.5
+  },
+  "2019": {
+   "games": 34,
+   "mean_delta": -681.3
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": -179.4
+  },
+  "2021": {
+   "games": 7,
+   "mean_delta": 132.6
+  },
+  "2022": {
+   "games": 36,
+   "mean_delta": -499.7
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": -210.2
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -263.4
+  }
+ },
+ "1610612759": {
+  "2001": {
+   "games": 40,
+   "mean_delta": 16.2
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": 419.8
+  },
+  "2003": {
+   "games": 41,
+   "mean_delta": -199.1
+  },
+  "2004": {
+   "games": 41,
+   "mean_delta": 240.0
+  },
+  "2005": {
+   "games": 48,
+   "mean_delta": 46.4
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": 1088.5
+  },
+  "2007": {
+   "games": 39,
+   "mean_delta": -294.6
+  },
+  "2008": {
+   "games": 45,
+   "mean_delta": 752.0
+  },
+  "2009": {
+   "games": 40,
+   "mean_delta": 235.2
+  },
+  "2010": {
+   "games": 42,
+   "mean_delta": 455.0
+  },
+  "2011": {
+   "games": 41,
+   "mean_delta": 54.2
+  },
+  "2012": {
+   "games": 36,
+   "mean_delta": -22.4
+  },
+  "2013": {
+   "games": 9,
+   "mean_delta": -55.3
+  },
+  "2014": {
+   "games": 41,
+   "mean_delta": -37.2
+  },
+  "2015": {
+   "games": 39,
+   "mean_delta": 235.8
+  },
+  "2016": {
+   "games": 39,
+   "mean_delta": 247.7
+  },
+  "2017": {
+   "games": 43,
+   "mean_delta": 159.9
+  },
+  "2018": {
+   "games": 40,
+   "mean_delta": 466.5
+  },
+  "2019": {
+   "games": 43,
+   "mean_delta": -287.3
+  },
+  "2020": {
+   "games": 29,
+   "mean_delta": -401.5
+  },
+  "2021": {
+   "games": 6,
+   "mean_delta": 220.6
+  },
+  "2022": {
+   "games": 36,
+   "mean_delta": -197.3
+  },
+  "2023": {
+   "games": 34,
+   "mean_delta": -334.4
+  },
+  "2026": {
+   "games": 53,
+   "mean_delta": 279.9
+  }
+ },
+ "1610612760": {
+  "2001": {
+   "games": 36,
+   "mean_delta": -301.6
+  },
+  "2002": {
+   "games": 34,
+   "mean_delta": -1045.9
+  },
+  "2003": {
+   "games": 36,
+   "mean_delta": -631.7
+  },
+  "2004": {
+   "games": 34,
+   "mean_delta": -480.1
+  },
+  "2005": {
+   "games": 43,
+   "mean_delta": -333.2
+  },
+  "2006": {
+   "games": 38,
+   "mean_delta": -268.1
+  },
+  "2007": {
+   "games": 35,
+   "mean_delta": -506.6
+  },
+  "2008": {
+   "games": 34,
+   "mean_delta": -240.7
+  },
+  "2009": {
+   "games": 37,
+   "mean_delta": -864.6
+  },
+  "2010": {
+   "games": 42,
+   "mean_delta": -363.0
+  },
+  "2011": {
+   "games": 46,
+   "mean_delta": 545.5
+  },
+  "2012": {
+   "games": 35,
+   "mean_delta": 725.4
+  },
+  "2013": {
+   "games": 5,
+   "mean_delta": 0.0
+  },
+  "2014": {
+   "games": 46,
+   "mean_delta": 667.8
+  },
+  "2015": {
+   "games": 35,
+   "mean_delta": 313.9
+  },
+  "2016": {
+   "games": 47,
+   "mean_delta": 318.7
+  },
+  "2017": {
+   "games": 40,
+   "mean_delta": 524.7
+  },
+  "2018": {
+   "games": 37,
+   "mean_delta": 788.6
+  },
+  "2019": {
+   "games": 37,
+   "mean_delta": -91.1
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": 73.0
+  },
+  "2021": {
+   "games": 3,
+   "mean_delta": -38.9
+  },
+  "2022": {
+   "games": 37,
+   "mean_delta": -591.3
+  },
+  "2023": {
+   "games": 39,
+   "mean_delta": 13.8
+  },
+  "2026": {
+   "games": 47,
+   "mean_delta": 55.8
+  }
+ },
+ "1610612761": {
+  "2001": {
+   "games": 43,
+   "mean_delta": 798.1
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": 661.1
+  },
+  "2003": {
+   "games": 39,
+   "mean_delta": -207.5
+  },
+  "2004": {
+   "games": 37,
+   "mean_delta": -444.3
+  },
+  "2005": {
+   "games": 36,
+   "mean_delta": -658.3
+  },
+  "2006": {
+   "games": 38,
+   "mean_delta": -983.7
+  },
+  "2007": {
+   "games": 40,
+   "mean_delta": -547.2
+  },
+  "2008": {
+   "games": 40,
+   "mean_delta": -716.2
+  },
+  "2009": {
+   "games": 34,
+   "mean_delta": -841.4
+  },
+  "2010": {
+   "games": 38,
+   "mean_delta": -659.8
+  },
+  "2011": {
+   "games": 37,
+   "mean_delta": -522.2
+  },
+  "2012": {
+   "games": 32,
+   "mean_delta": -548.3
+  },
+  "2014": {
+   "games": 35,
+   "mean_delta": -890.1
+  },
+  "2015": {
+   "games": 40,
+   "mean_delta": -351.9
+  },
+  "2016": {
+   "games": 44,
+   "mean_delta": -593.4
+  },
+  "2017": {
+   "games": 45,
+   "mean_delta": -35.9
+  },
+  "2018": {
+   "games": 44,
+   "mean_delta": -209.5
+  },
+  "2019": {
+   "games": 46,
+   "mean_delta": 327.6
+  },
+  "2020": {
+   "games": 31,
+   "mean_delta": 123.5
+  },
+  "2021": {
+   "games": 3,
+   "mean_delta": -284.0
+  },
+  "2022": {
+   "games": 39,
+   "mean_delta": -118.1
+  },
+  "2023": {
+   "games": 37,
+   "mean_delta": -349.1
+  },
+  "2026": {
+   "games": 45,
+   "mean_delta": 48.9
+  }
+ },
+ "1610612762": {
+  "2001": {
+   "games": 37,
+   "mean_delta": 282.0
+  },
+  "2002": {
+   "games": 34,
+   "mean_delta": -205.3
+  },
+  "2003": {
+   "games": 35,
+   "mean_delta": -95.8
+  },
+  "2004": {
+   "games": 34,
+   "mean_delta": -493.2
+  },
+  "2005": {
+   "games": 33,
+   "mean_delta": -323.8
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": -471.1
+  },
+  "2007": {
+   "games": 45,
+   "mean_delta": -19.5
+  },
+  "2008": {
+   "games": 39,
+   "mean_delta": 163.4
+  },
+  "2009": {
+   "games": 36,
+   "mean_delta": -198.2
+  },
+  "2010": {
+   "games": 45,
+   "mean_delta": -113.6
+  },
+  "2011": {
+   "games": 36,
+   "mean_delta": 104.3
+  },
+  "2012": {
+   "games": 29,
+   "mean_delta": -453.2
+  },
+  "2014": {
+   "games": 38,
+   "mean_delta": -298.6
+  },
+  "2015": {
+   "games": 36,
+   "mean_delta": -505.6
+  },
+  "2016": {
+   "games": 36,
+   "mean_delta": -411.2
+  },
+  "2017": {
+   "games": 42,
+   "mean_delta": -628.0
+  },
+  "2018": {
+   "games": 40,
+   "mean_delta": -262.7
+  },
+  "2019": {
+   "games": 39,
+   "mean_delta": -250.7
+  },
+  "2020": {
+   "games": 27,
+   "mean_delta": -327.9
+  },
+  "2021": {
+   "games": 11,
+   "mean_delta": 663.4
+  },
+  "2022": {
+   "games": 41,
+   "mean_delta": -70.7
+  },
+  "2023": {
+   "games": 40,
+   "mean_delta": 74.8
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -132.4
+  }
+ },
+ "1610612763": {
+  "2001": {
+   "games": 38,
+   "mean_delta": -1202.7
+  },
+  "2002": {
+   "games": 40,
+   "mean_delta": -1360.7
+  },
+  "2003": {
+   "games": 36,
+   "mean_delta": -725.5
+  },
+  "2004": {
+   "games": 38,
+   "mean_delta": -478.4
+  },
+  "2005": {
+   "games": 40,
+   "mean_delta": -805.7
+  },
+  "2006": {
+   "games": 34,
+   "mean_delta": -420.3
+  },
+  "2007": {
+   "games": 36,
+   "mean_delta": -544.1
+  },
+  "2008": {
+   "games": 34,
+   "mean_delta": -693.3
+  },
+  "2009": {
+   "games": 37,
+   "mean_delta": -743.5
+  },
+  "2010": {
+   "games": 36,
+   "mean_delta": -695.2
+  },
+  "2011": {
+   "games": 46,
+   "mean_delta": -848.0
+  },
+  "2012": {
+   "games": 34,
+   "mean_delta": -345.8
+  },
+  "2013": {
+   "games": 7,
+   "mean_delta": 49.6
+  },
+  "2014": {
+   "games": 38,
+   "mean_delta": -176.2
+  },
+  "2015": {
+   "games": 43,
+   "mean_delta": 101.8
+  },
+  "2016": {
+   "games": 40,
+   "mean_delta": -294.9
+  },
+  "2017": {
+   "games": 37,
+   "mean_delta": -205.2
+  },
+  "2018": {
+   "games": 32,
+   "mean_delta": -472.3
+  },
+  "2019": {
+   "games": 39,
+   "mean_delta": -187.4
+  },
+  "2020": {
+   "games": 31,
+   "mean_delta": -263.2
+  },
+  "2021": {
+   "games": 7,
+   "mean_delta": -1218.4
+  },
+  "2022": {
+   "games": 43,
+   "mean_delta": 352.9
+  },
+  "2023": {
+   "games": 40,
+   "mean_delta": 258.8
+  },
+  "2026": {
+   "games": 40,
+   "mean_delta": -205.8
+  }
+ },
+ "1610612764": {
+  "2001": {
+   "games": 35,
+   "mean_delta": -913.6
+  },
+  "2002": {
+   "games": 35,
+   "mean_delta": 3204.2
+  },
+  "2003": {
+   "games": 36,
+   "mean_delta": 2793.0
+  },
+  "2004": {
+   "games": 35,
+   "mean_delta": -1110.7
+  },
+  "2005": {
+   "games": 32,
+   "mean_delta": -375.3
+  },
+  "2006": {
+   "games": 36,
+   "mean_delta": -414.1
+  },
+  "2007": {
+   "games": 38,
+   "mean_delta": -552.4
+  },
+  "2008": {
+   "games": 35,
+   "mean_delta": -444.0
+  },
+  "2009": {
+   "games": 40,
+   "mean_delta": -533.7
+  },
+  "2010": {
+   "games": 34,
+   "mean_delta": -592.3
+  },
+  "2011": {
+   "games": 36,
+   "mean_delta": -179.3
+  },
+  "2012": {
+   "games": 31,
+   "mean_delta": -580.7
+  },
+  "2014": {
+   "games": 43,
+   "mean_delta": -159.8
+  },
+  "2015": {
+   "games": 41,
+   "mean_delta": 269.0
+  },
+  "2016": {
+   "games": 38,
+   "mean_delta": -40.3
+  },
+  "2017": {
+   "games": 44,
+   "mean_delta": 112.8
+  },
+  "2018": {
+   "games": 41,
+   "mean_delta": -344.5
+  },
+  "2019": {
+   "games": 40,
+   "mean_delta": -436.7
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": -418.9
+  },
+  "2021": {
+   "games": 9,
+   "mean_delta": -1121.3
+  },
+  "2022": {
+   "games": 35,
+   "mean_delta": -384.5
+  },
+  "2023": {
+   "games": 40,
+   "mean_delta": -429.9
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": -261.9
+  }
+ },
+ "1610612765": {
+  "2001": {
+   "games": 36,
+   "mean_delta": -325.2
+  },
+  "2002": {
+   "games": 37,
+   "mean_delta": -511.4
+  },
+  "2003": {
+   "games": 44,
+   "mean_delta": -522.8
+  },
+  "2004": {
+   "games": 44,
+   "mean_delta": 500.2
+  },
+  "2005": {
+   "games": 45,
+   "mean_delta": 615.3
+  },
+  "2006": {
+   "games": 33,
+   "mean_delta": 1293.5
+  },
+  "2007": {
+   "games": 43,
+   "mean_delta": 332.4
+  },
+  "2008": {
+   "games": 45,
+   "mean_delta": 349.1
+  },
+  "2009": {
+   "games": 41,
+   "mean_delta": 564.8
+  },
+  "2010": {
+   "games": 37,
+   "mean_delta": 116.0
+  },
+  "2011": {
+   "games": 36,
+   "mean_delta": -529.6
+  },
+  "2012": {
+   "games": 29,
+   "mean_delta": -555.1
+  },
+  "2014": {
+   "games": 36,
+   "mean_delta": -104.4
+  },
+  "2015": {
+   "games": 38,
+   "mean_delta": 63.2
+  },
+  "2016": {
+   "games": 40,
+   "mean_delta": -53.0
+  },
+  "2017": {
+   "games": 37,
+   "mean_delta": -473.8
+  },
+  "2018": {
+   "games": 38,
+   "mean_delta": -153.5
+  },
+  "2019": {
+   "games": 36,
+   "mean_delta": -184.1
+  },
+  "2020": {
+   "games": 29,
+   "mean_delta": -35.2
+  },
+  "2021": {
+   "games": 4,
+   "mean_delta": 106.4
+  },
+  "2022": {
+   "games": 36,
+   "mean_delta": -822.3
+  },
+  "2023": {
+   "games": 37,
+   "mean_delta": -244.2
+  },
+  "2026": {
+   "games": 47,
+   "mean_delta": 247.5
+  }
+ },
+ "1610612766": {
+  "2001": {
+   "games": 42,
+   "mean_delta": -532.0
+  },
+  "2002": {
+   "games": 38,
+   "mean_delta": -795.1
+  },
+  "2005": {
+   "games": 36,
+   "mean_delta": -715.6
+  },
+  "2006": {
+   "games": 38,
+   "mean_delta": -414.6
+  },
+  "2007": {
+   "games": 37,
+   "mean_delta": -489.1
+  },
+  "2008": {
+   "games": 40,
+   "mean_delta": -468.8
+  },
+  "2009": {
+   "games": 35,
+   "mean_delta": -415.6
+  },
+  "2010": {
+   "games": 37,
+   "mean_delta": -392.7
+  },
+  "2011": {
+   "games": 39,
+   "mean_delta": -743.3
+  },
+  "2012": {
+   "games": 31,
+   "mean_delta": -622.8
+  },
+  "2014": {
+   "games": 38,
+   "mean_delta": -161.7
+  },
+  "2015": {
+   "games": 37,
+   "mean_delta": -175.0
+  },
+  "2016": {
+   "games": 43,
+   "mean_delta": -167.8
+  },
+  "2017": {
+   "games": 38,
+   "mean_delta": -335.5
+  },
+  "2018": {
+   "games": 39,
+   "mean_delta": -482.4
+  },
+  "2019": {
+   "games": 38,
+   "mean_delta": -283.6
+  },
+  "2020": {
+   "games": 30,
+   "mean_delta": -367.3
+  },
+  "2021": {
+   "games": 2,
+   "mean_delta": -568.1
+  },
+  "2022": {
+   "games": 39,
+   "mean_delta": 226.9
+  },
+  "2023": {
+   "games": 36,
+   "mean_delta": -193.5
+  },
+  "2026": {
+   "games": 41,
+   "mean_delta": 175.2
+  }
+ }
+}
