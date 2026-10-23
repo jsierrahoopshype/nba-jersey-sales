@@ -1,0 +1,477 @@
+{
+ "Allan Houston": {
+  "full_name": "Allan Houston",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/275-allan-houston.webp",
+  "nba_id": 275
+ },
+ "Allen Iverson": {
+  "full_name": "Allen Iverson",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/947-allen-iverson.webp",
+  "nba_id": 947
+ },
+ "Amar'e Stoudemire": {
+  "full_name": "Amar'e Stoudemire",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2405-amare-stoudemire.webp",
+  "nba_id": 2405
+ },
+ "Andre Iguodala": {
+  "full_name": "Andre Iguodala",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2738-andre-iguodala.webp",
+  "nba_id": 2738
+ },
+ "Andrea Bargnani": {
+  "full_name": "Andrea Bargnani",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/200745-andrea-bargnani.webp",
+  "nba_id": 200745
+ },
+ "Anthony Davis": {
+  "full_name": "Anthony Davis",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203076-anthony-davis.webp",
+  "nba_id": 203076
+ },
+ "Anthony Edwards": {
+  "full_name": "Anthony Edwards",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1630162-anthony-edwards.webp",
+  "nba_id": 1630162
+ },
+ "Baron Davis": {
+  "full_name": "Baron Davis",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1884-baron-davis.webp",
+  "nba_id": 1884
+ },
+ "Ben Gordon": {
+  "full_name": "Ben Gordon",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2732-ben-gordon.webp",
+  "nba_id": 2732
+ },
+ "Ben Simmons": {
+  "full_name": "Ben Simmons",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1627732-ben-simmons.webp",
+  "nba_id": 1627732
+ },
+ "Ben Wallace": {
+  "full_name": "Ben Wallace",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1112-ben-wallace.webp",
+  "nba_id": 1112
+ },
+ "Blake Griffin": {
+  "full_name": "Blake Griffin",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201933-blake-griffin.webp",
+  "nba_id": 201933
+ },
+ "Boris Diaw": {
+  "full_name": "Boris Diaw",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2564-boris-diaw.webp",
+  "nba_id": 2564
+ },
+ "Cade Cunningham": {
+  "full_name": "Cade Cunningham",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1630595-cade-cunningham.webp",
+  "nba_id": 1630595
+ },
+ "Carmelo Anthony": {
+  "full_name": "Carmelo Anthony",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2546-carmelo-anthony.webp",
+  "nba_id": 2546
+ },
+ "Chris Paul": {
+  "full_name": "Chris Paul",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/101108-chris-paul.webp",
+  "nba_id": 101108
+ },
+ "Chris Webber": {
+  "full_name": "Chris Webber",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/185-chris-webber.webp",
+  "nba_id": 185
+ },
+ "Cooper Flagg": {
+  "full_name": "Cooper Flagg",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1642843-cooper-flagg.webp",
+  "nba_id": 1642843
+ },
+ "Damian Lillard": {
+  "full_name": "Damian Lillard",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203081-damian-lillard.webp",
+  "nba_id": 203081
+ },
+ "David Lee": {
+  "full_name": "David Lee",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/101135-david-lee.webp",
+  "nba_id": 101135
+ },
+ "De'Aaron Fox": {
+  "full_name": "De'Aaron Fox",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1628368-deaaron-fox.webp",
+  "nba_id": 1628368
+ },
+ "DeMar DeRozan": {
+  "full_name": "DeMar DeRozan",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201942-demar-derozan.webp",
+  "nba_id": 201942
+ },
+ "Deron Williams": {
+  "full_name": "Deron Williams",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/101114-deron-williams.webp",
+  "nba_id": 101114
+ },
+ "Derrick Rose": {
+  "full_name": "Derrick Rose",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201565-derrick-rose.webp",
+  "nba_id": 201565
+ },
+ "Devin Booker": {
+  "full_name": "Devin Booker",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1626164-devin-booker.webp",
+  "nba_id": 1626164
+ },
+ "Dirk Nowitzki": {
+  "full_name": "Dirk Nowitzki",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1717-dirk-nowitzki.webp",
+  "nba_id": 1717
+ },
+ "Donovan Mitchell": {
+  "full_name": "Donovan Mitchell",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1628378-donovan-mitchell.webp",
+  "nba_id": 1628378
+ },
+ "Draymond Green": {
+  "full_name": "Draymond Green",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203110-draymond-green.webp",
+  "nba_id": 203110
+ },
+ "Dwight Howard": {
+  "full_name": "Dwight Howard",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2730-dwight-howard.webp",
+  "nba_id": 2730
+ },
+ "Dwyane Wade": {
+  "full_name": "Dwyane Wade",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2548-dwyane-wade.webp",
+  "nba_id": 2548
+ },
+ "Emeka Okafor": {
+  "full_name": "Emeka Okafor",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2731-emeka-okafor.webp",
+  "nba_id": 2731
+ },
+ "Gary Payton": {
+  "full_name": "Gary Payton",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/56-gary-payton.webp",
+  "nba_id": 56
+ },
+ "Giannis Antetokounmpo": {
+  "full_name": "Giannis Antetokounmpo",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203507-giannis-antetokounmpo.webp",
+  "nba_id": 203507
+ },
+ "Gilbert Arenas": {
+  "full_name": "Gilbert Arenas",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2240-gilbert-arenas.webp",
+  "nba_id": 2240
+ },
+ "Isaiah Thomas": {
+  "full_name": "Isaiah Thomas",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202738-isaiah-thomas.webp",
+  "nba_id": 202738
+ },
+ "Ja Morant": {
+  "full_name": "Ja Morant",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1629630-ja-morant.webp",
+  "nba_id": 1629630
+ },
+ "Jalen Brunson": {
+  "full_name": "Jalen Brunson",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1628973-jalen-brunson.webp",
+  "nba_id": 1628973
+ },
+ "Jalen Rose": {
+  "full_name": "Jalen Rose",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/147-jalen-rose.webp",
+  "nba_id": 147
+ },
+ "Jamal Crawford": {
+  "full_name": "Jamal Crawford",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2037-jamal-crawford.webp",
+  "nba_id": 2037
+ },
+ "James Harden": {
+  "full_name": "James Harden",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201935-james-harden.webp",
+  "nba_id": 201935
+ },
+ "Jason Kidd": {
+  "full_name": "Jason Kidd",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/467-jason-kidd.webp",
+  "nba_id": 467
+ },
+ "Jaylen Brown": {
+  "full_name": "Jaylen Brown",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1627759-jaylen-brown.webp",
+  "nba_id": 1627759
+ },
+ "Jayson Tatum": {
+  "full_name": "Jayson Tatum",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1628369-jayson-tatum.webp",
+  "nba_id": 1628369
+ },
+ "Jeremy Lin": {
+  "full_name": "Jeremy Lin",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202391-jeremy-lin.webp",
+  "nba_id": 202391
+ },
+ "Jimmy Butler": {
+  "full_name": "Jimmy Butler III",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202710-jimmy-butler-iii.webp",
+  "nba_id": 202710
+ },
+ "Joel Embiid": {
+  "full_name": "Joel Embiid",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203954-joel-embiid.webp",
+  "nba_id": 203954
+ },
+ "John Wall": {
+  "full_name": "John Wall",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202322-john-wall.webp",
+  "nba_id": 202322
+ },
+ "Jordan Poole": {
+  "full_name": "Jordan Poole",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1629673-jordan-poole.webp",
+  "nba_id": 1629673
+ },
+ "Kawhi Leonard": {
+  "full_name": "Kawhi Leonard",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202695-kawhi-leonard.webp",
+  "nba_id": 202695
+ },
+ "Kemba Walker": {
+  "full_name": "Kemba Walker",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202689-kemba-walker.webp",
+  "nba_id": 202689
+ },
+ "Kenyon Martin": {
+  "full_name": "Kenyon Martin",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2030-kenyon-martin.webp",
+  "nba_id": 2030
+ },
+ "Kevin Durant": {
+  "full_name": "Kevin Durant",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201142-kevin-durant.webp",
+  "nba_id": 201142
+ },
+ "Kevin Garnett": {
+  "full_name": "Kevin Garnett",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/708-kevin-garnett.webp",
+  "nba_id": 708
+ },
+ "Kirk Hinrich": {
+  "full_name": "Kirk Hinrich",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2550-kirk-hinrich.webp",
+  "nba_id": 2550
+ },
+ "Klay Thompson": {
+  "full_name": "Klay Thompson",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202691-klay-thompson.webp",
+  "nba_id": 202691
+ },
+ "Kobe Bryant": {
+  "full_name": "Kobe Bryant",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/977-kobe-bryant.webp",
+  "nba_id": 977
+ },
+ "Kristaps Porzingis": {
+  "full_name": "Kristaps Porziņģis",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/204001-kristaps-porziis.webp",
+  "nba_id": 204001
+ },
+ "Kyle Korver": {
+  "full_name": "Kyle Korver",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2594-kyle-korver.webp",
+  "nba_id": 2594
+ },
+ "Kyrie Irving": {
+  "full_name": "Kyrie Irving",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202681-kyrie-irving.webp",
+  "nba_id": 202681
+ },
+ "LaMelo Ball": {
+  "full_name": "LaMelo Ball",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1630163-lamelo-ball.webp",
+  "nba_id": 1630163
+ },
+ "LeBron James": {
+  "full_name": "LeBron James",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2544-lebron-james.webp",
+  "nba_id": 2544
+ },
+ "Lonzo Ball": {
+  "full_name": "Lonzo Ball",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1628366-lonzo-ball.webp",
+  "nba_id": 1628366
+ },
+ "Luka Doncic": {
+  "full_name": "Luka Dončić",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1629029-luka-doni.webp",
+  "nba_id": 1629029
+ },
+ "Manu Ginobili": {
+  "full_name": "Manu Ginobili",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1938-manu-ginobili.webp",
+  "nba_id": 1938
+ },
+ "Matthew Dellavedova": {
+  "full_name": "Matthew Dellavedova",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203521-matthew-dellavedova.webp",
+  "nba_id": 203521
+ },
+ "Michael Carter-Williams": {
+  "full_name": "Michael Carter-Williams",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203487-michael-carter-williams.webp",
+  "nba_id": 203487
+ },
+ "Michael Jordan": {
+  "full_name": "Michael Jordan",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/893-michael-jordan.webp",
+  "nba_id": 893
+ },
+ "Mike Bibby": {
+  "full_name": "Mike Bibby",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1710-mike-bibby.webp",
+  "nba_id": 1710
+ },
+ "Nikola Jokic": {
+  "full_name": "Nikola Jokić",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/203999-nikola-joki.webp",
+  "nba_id": 203999
+ },
+ "Pau Gasol": {
+  "full_name": "Pau Gasol",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2200-pau-gasol.webp",
+  "nba_id": 2200
+ },
+ "Paul George": {
+  "full_name": "Paul George",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/202331-paul-george.webp",
+  "nba_id": 202331
+ },
+ "Paul Pierce": {
+  "full_name": "Paul Pierce",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1718-paul-pierce.webp",
+  "nba_id": 1718
+ },
+ "Penny Hardaway": {
+  "full_name": "Anfernee Hardaway",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/358-anfernee-hardaway.webp",
+  "nba_id": 358
+ },
+ "RJ Barrett": {
+  "full_name": "RJ Barrett",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1629628-rj-barrett.webp",
+  "nba_id": 1629628
+ },
+ "Rajon Rondo": {
+  "full_name": "Rajon Rondo",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/200765-rajon-rondo.webp",
+  "nba_id": 200765
+ },
+ "Rasheed Wallace": {
+  "full_name": "Rasheed Wallace",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/739-rasheed-wallace.webp",
+  "nba_id": 739
+ },
+ "Ray Allen": {
+  "full_name": "Ray Allen",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/951-ray-allen.webp",
+  "nba_id": 951
+ },
+ "Ron Artest": {
+  "full_name": "Metta World Peace",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1897-metta-world-peace.webp",
+  "nba_id": 1897
+ },
+ "Russell Westbrook": {
+  "full_name": "Russell Westbrook",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201566-russell-westbrook.webp",
+  "nba_id": 201566
+ },
+ "Scottie Pippen": {
+  "full_name": "Scottie Pippen",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/937-scottie-pippen.webp",
+  "nba_id": 937
+ },
+ "Shai Gilgeous-Alexander": {
+  "full_name": "Shai Gilgeous-Alexander",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1628983-shai-gilgeous-alexander.webp",
+  "nba_id": 1628983
+ },
+ "Shaquille O'Neal": {
+  "full_name": "Shaquille O'Neal",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/406-shaquille-oneal.webp",
+  "nba_id": 406
+ },
+ "Stephen Curry": {
+  "full_name": "Stephen Curry",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/201939-stephen-curry.webp",
+  "nba_id": 201939
+ },
+ "Stephon Marbury": {
+  "full_name": "Stephon Marbury",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/950-stephon-marbury.webp",
+  "nba_id": 950
+ },
+ "Steve Francis": {
+  "full_name": "Steve Francis",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1883-steve-francis.webp",
+  "nba_id": 1883
+ },
+ "Steve Nash": {
+  "full_name": "Steve Nash",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/959-steve-nash.webp",
+  "nba_id": 959
+ },
+ "Tim Duncan": {
+  "full_name": "Tim Duncan",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1495-tim-duncan.webp",
+  "nba_id": 1495
+ },
+ "Tony Parker": {
+  "full_name": "Tony Parker",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2225-tony-parker.webp",
+  "nba_id": 2225
+ },
+ "Tracy McGrady": {
+  "full_name": "Tracy McGrady",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1503-tracy-mcgrady.webp",
+  "nba_id": 1503
+ },
+ "Trae Young": {
+  "full_name": "Trae Young",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1629027-trae-young.webp",
+  "nba_id": 1629027
+ },
+ "Tyrese Maxey": {
+  "full_name": "Tyrese Maxey",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1630178-tyrese-maxey.webp",
+  "nba_id": 1630178
+ },
+ "Victor Wembanyama": {
+  "full_name": "Victor Wembanyama",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1641705-victor-wembanyama.webp",
+  "nba_id": 1641705
+ },
+ "Vince Carter": {
+  "full_name": "Vince Carter",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1713-vince-carter.webp",
+  "nba_id": 1713
+ },
+ "Yao Ming": {
+  "full_name": "Yao Ming",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/2397-yao-ming.webp",
+  "nba_id": 2397
+ },
+ "Zion Williamson": {
+  "full_name": "Zion Williamson",
+  "image": "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/1629627-zion-williamson.webp",
+  "nba_id": 1629627
+ }
+}

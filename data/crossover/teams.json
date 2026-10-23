@@ -1,0 +1,352 @@
+[
+ {
+  "abbrev": "ATL",
+  "city": "Atlanta",
+  "color": "#E03A3E",
+  "full_name": "Atlanta Hawks",
+  "historical_names": [
+   "Tri-Cities Blackhawks",
+   "Milwaukee Hawks",
+   "St. Louis Hawks"
+  ],
+  "nickname": "Hawks",
+  "slug": "atlanta-hawks",
+  "team_id": 1610612737
+ },
+ {
+  "abbrev": "BOS",
+  "city": "Boston",
+  "color": "#007A33",
+  "full_name": "Boston Celtics",
+  "historical_names": [],
+  "nickname": "Celtics",
+  "slug": "boston-celtics",
+  "team_id": 1610612738
+ },
+ {
+  "abbrev": "BKN",
+  "city": "Brooklyn",
+  "color": "#000000",
+  "full_name": "Brooklyn Nets",
+  "historical_names": [
+   "New Jersey Americans",
+   "New York Nets",
+   "New Jersey Nets"
+  ],
+  "nickname": "Nets",
+  "slug": "brooklyn-nets",
+  "team_id": 1610612751
+ },
+ {
+  "abbrev": "CHA",
+  "city": "Charlotte",
+  "color": "#1D1160",
+  "full_name": "Charlotte Hornets",
+  "historical_names": [
+   "Charlotte Bobcats"
+  ],
+  "nickname": "Hornets",
+  "slug": "charlotte-hornets",
+  "team_id": 1610612766
+ },
+ {
+  "abbrev": "CHI",
+  "city": "Chicago",
+  "color": "#CE1141",
+  "full_name": "Chicago Bulls",
+  "historical_names": [],
+  "nickname": "Bulls",
+  "slug": "chicago-bulls",
+  "team_id": 1610612741
+ },
+ {
+  "abbrev": "CLE",
+  "city": "Cleveland",
+  "color": "#860038",
+  "full_name": "Cleveland Cavaliers",
+  "historical_names": [],
+  "nickname": "Cavaliers",
+  "slug": "cleveland-cavaliers",
+  "team_id": 1610612739
+ },
+ {
+  "abbrev": "DAL",
+  "city": "Dallas",
+  "color": "#00538C",
+  "full_name": "Dallas Mavericks",
+  "historical_names": [],
+  "nickname": "Mavericks",
+  "slug": "dallas-mavericks",
+  "team_id": 1610612742
+ },
+ {
+  "abbrev": "DEN",
+  "city": "Denver",
+  "color": "#0E2240",
+  "full_name": "Denver Nuggets",
+  "historical_names": [
+   "Denver Rockets"
+  ],
+  "nickname": "Nuggets",
+  "slug": "denver-nuggets",
+  "team_id": 1610612743
+ },
+ {
+  "abbrev": "DET",
+  "city": "Detroit",
+  "color": "#C8102E",
+  "full_name": "Detroit Pistons",
+  "historical_names": [
+   "Fort Wayne Zollner Pistons",
+   "Fort Wayne Pistons"
+  ],
+  "nickname": "Pistons",
+  "slug": "detroit-pistons",
+  "team_id": 1610612765
+ },
+ {
+  "abbrev": "GSW",
+  "city": "San Francisco",
+  "color": "#1D428A",
+  "full_name": "Golden State Warriors",
+  "historical_names": [
+   "Philadelphia Warriors",
+   "San Francisco Warriors"
+  ],
+  "nickname": "Warriors",
+  "slug": "golden-state-warriors",
+  "team_id": 1610612744
+ },
+ {
+  "abbrev": "HOU",
+  "city": "Houston",
+  "color": "#CE1141",
+  "full_name": "Houston Rockets",
+  "historical_names": [
+   "San Diego Rockets"
+  ],
+  "nickname": "Rockets",
+  "slug": "houston-rockets",
+  "team_id": 1610612745
+ },
+ {
+  "abbrev": "IND",
+  "city": "Indianapolis",
+  "color": "#002D62",
+  "full_name": "Indiana Pacers",
+  "historical_names": [],
+  "nickname": "Pacers",
+  "slug": "indiana-pacers",
+  "team_id": 1610612754
+ },
+ {
+  "abbrev": "LAC",
+  "city": "Los Angeles",
+  "color": "#C8102E",
+  "full_name": "LA Clippers",
+  "historical_names": [
+   "Buffalo Braves",
+   "San Diego Clippers"
+  ],
+  "nickname": "Clippers",
+  "slug": "la-clippers",
+  "team_id": 1610612746
+ },
+ {
+  "abbrev": "LAL",
+  "city": "Los Angeles",
+  "color": "#FDB927",
+  "full_name": "Los Angeles Lakers",
+  "historical_names": [
+   "Minneapolis Lakers"
+  ],
+  "nickname": "Lakers",
+  "slug": "los-angeles-lakers",
+  "team_id": 1610612747
+ },
+ {
+  "abbrev": "MEM",
+  "city": "Memphis",
+  "color": "#5D76A9",
+  "full_name": "Memphis Grizzlies",
+  "historical_names": [
+   "Vancouver Grizzlies"
+  ],
+  "nickname": "Grizzlies",
+  "slug": "memphis-grizzlies",
+  "team_id": 1610612763
+ },
+ {
+  "abbrev": "MIA",
+  "city": "Miami",
+  "color": "#98002E",
+  "full_name": "Miami Heat",
+  "historical_names": [],
+  "nickname": "Heat",
+  "slug": "miami-heat",
+  "team_id": 1610612748
+ },
+ {
+  "abbrev": "MIL",
+  "city": "Milwaukee",
+  "color": "#00471B",
+  "full_name": "Milwaukee Bucks",
+  "historical_names": [],
+  "nickname": "Bucks",
+  "slug": "milwaukee-bucks",
+  "team_id": 1610612749
+ },
+ {
+  "abbrev": "MIN",
+  "city": "Minneapolis",
+  "color": "#0C2340",
+  "full_name": "Minnesota Timberwolves",
+  "historical_names": [],
+  "nickname": "Timberwolves",
+  "slug": "minnesota-timberwolves",
+  "team_id": 1610612750
+ },
+ {
+  "abbrev": "NOP",
+  "city": "New Orleans",
+  "color": "#0C2340",
+  "full_name": "New Orleans Pelicans",
+  "historical_names": [
+   "New Orleans Hornets",
+   "New Orleans/Oklahoma City Hornets"
+  ],
+  "nickname": "Pelicans",
+  "slug": "new-orleans-pelicans",
+  "team_id": 1610612740
+ },
+ {
+  "abbrev": "NYK",
+  "city": "New York",
+  "color": "#006BB6",
+  "full_name": "New York Knicks",
+  "historical_names": [],
+  "nickname": "Knicks",
+  "slug": "new-york-knicks",
+  "team_id": 1610612752
+ },
+ {
+  "abbrev": "OKC",
+  "city": "Oklahoma City",
+  "color": "#007AC1",
+  "full_name": "Oklahoma City Thunder",
+  "historical_names": [
+   "Seattle SuperSonics"
+  ],
+  "nickname": "Thunder",
+  "slug": "oklahoma-city-thunder",
+  "team_id": 1610612760
+ },
+ {
+  "abbrev": "ORL",
+  "city": "Orlando",
+  "color": "#0077C0",
+  "full_name": "Orlando Magic",
+  "historical_names": [],
+  "nickname": "Magic",
+  "slug": "orlando-magic",
+  "team_id": 1610612753
+ },
+ {
+  "abbrev": "PHI",
+  "city": "Philadelphia",
+  "color": "#006BB6",
+  "full_name": "Philadelphia 76ers",
+  "historical_names": [
+   "Syracuse Nationals"
+  ],
+  "nickname": "76ers",
+  "slug": "philadelphia-76ers",
+  "team_id": 1610612755
+ },
+ {
+  "abbrev": "PHX",
+  "city": "Phoenix",
+  "color": "#1D1160",
+  "full_name": "Phoenix Suns",
+  "historical_names": [],
+  "nickname": "Suns",
+  "slug": "phoenix-suns",
+  "team_id": 1610612756
+ },
+ {
+  "abbrev": "POR",
+  "city": "Portland",
+  "color": "#E03A3E",
+  "full_name": "Portland Trail Blazers",
+  "historical_names": [],
+  "nickname": "Trail Blazers",
+  "slug": "portland-trail-blazers",
+  "team_id": 1610612757
+ },
+ {
+  "abbrev": "SAC",
+  "city": "Sacramento",
+  "color": "#5A2D81",
+  "full_name": "Sacramento Kings",
+  "historical_names": [
+   "Rochester Royals",
+   "Cincinnati Royals",
+   "Kansas City-Omaha Kings",
+   "Kansas City Kings"
+  ],
+  "nickname": "Kings",
+  "slug": "sacramento-kings",
+  "team_id": 1610612758
+ },
+ {
+  "abbrev": "SAS",
+  "city": "San Antonio",
+  "color": "#C4CED4",
+  "full_name": "San Antonio Spurs",
+  "historical_names": [
+   "Dallas Chaparrals",
+   "Texas Chaparrals"
+  ],
+  "nickname": "Spurs",
+  "slug": "san-antonio-spurs",
+  "team_id": 1610612759
+ },
+ {
+  "abbrev": "TOR",
+  "city": "Toronto",
+  "color": "#CE1141",
+  "full_name": "Toronto Raptors",
+  "historical_names": [],
+  "nickname": "Raptors",
+  "slug": "toronto-raptors",
+  "team_id": 1610612761
+ },
+ {
+  "abbrev": "UTA",
+  "city": "Salt Lake City",
+  "color": "#002B5C",
+  "full_name": "Utah Jazz",
+  "historical_names": [
+   "New Orleans Jazz"
+  ],
+  "nickname": "Jazz",
+  "slug": "utah-jazz",
+  "team_id": 1610612762
+ },
+ {
+  "abbrev": "WAS",
+  "city": "Washington",
+  "color": "#002B5C",
+  "full_name": "Washington Wizards",
+  "historical_names": [
+   "Chicago Packers",
+   "Chicago Zephyrs",
+   "Baltimore Bullets",
+   "Capital Bullets",
+   "Washington Bullets"
+  ],
+  "nickname": "Wizards",
+  "slug": "washington-wizards",
+  "team_id": 1610612764
+ }
+]

@@ -1,0 +1,30 @@
+{
+ "bar-chart-race": {
+  "commit": "bb86fda2bd33e5df03a03c92fa549d0151a22931",
+  "date": "2026-09-22"
+ },
+ "nba-attendance": {
+  "commit": "6eef4a2df8bbcfddcd2c956d3c9493623b17da57",
+  "date": "2026-09-29"
+ },
+ "nba-career-map": {
+  "commit": "948c3938d187265438c4ce7e24cc646067f3b8a5",
+  "date": "2026-10-23"
+ },
+ "nba-headshots": {
+  "commit": "1f074cfb480ff92b94faf9c32745fe7e0cf7ba9c",
+  "date": "2026-10-20"
+ },
+ "nba-player-data": {
+  "commit": "808a4324e575b0d4455df4373c0c15eaf88ee0a3",
+  "date": "2026-10-23"
+ },
+ "nba-polymarket": {
+  "commit": "31c783131b262f66bb55338886e04155c7180966",
+  "date": "2026-10-23"
+ },
+ "salary-season-finder": {
+  "commit": "15305b0b4385181fc5d584156fab5a5358906077",
+  "date": "2026-10-22"
+ }
+}

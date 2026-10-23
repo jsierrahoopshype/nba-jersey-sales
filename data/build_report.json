@@ -1,0 +1,106 @@
+{
+ "player_ranks_rows": 768,
+ "grid_vs_player_ranks": {
+  "grid_columns": 51,
+  "matched_columns": 50,
+  "mismatches": [],
+  "grid_columns_without_player_ranks_release": [
+   "2005-01 Midseason"
+  ],
+  "grid_includes_international_types": [
+   "Worldwide release (U.S. top 10)"
+  ],
+  "us_releases_missing_from_grid": []
+ },
+ "counts": {
+  "releases_total": 53,
+  "releases_with_entries": 52,
+  "us_lists_with_entries": 49,
+  "players": 102,
+  "player_pages_indexable": 62,
+  "player_pages_noindex": 40,
+  "team_pages": 30,
+  "team_pages_noindex": [
+   "utah-jazz"
+  ],
+  "season_pages": 26,
+  "season_pages_noindex": [
+   "2000-01",
+   "2001-02"
+  ],
+  "sitemap_urls": 117,
+  "release_sources_found": 32,
+  "release_sources_blank": [
+   "R01",
+   "R02",
+   "R03",
+   "R04",
+   "R06",
+   "R07",
+   "R08",
+   "R09",
+   "R10",
+   "R11",
+   "R12",
+   "R13",
+   "R14",
+   "R15",
+   "R16",
+   "R17",
+   "R18",
+   "R26",
+   "R30",
+   "R50"
+  ]
+ },
+ "crossover_misses": {
+  "career-map": [
+   {
+    "player": "Gilbert Arenas",
+    "reason": "birth place empty"
+   }
+  ],
+  "headshots": [
+   {
+    "player": "Brandon Roy",
+    "reason": "no match"
+   },
+   {
+    "player": "Jason Richardson",
+    "reason": "no match"
+   },
+   {
+    "player": "Jermaine O'Neal",
+    "reason": "no match"
+   },
+   {
+    "player": "Lamar Odom",
+    "reason": "no match"
+   },
+   {
+    "player": "Latrell Sprewell",
+    "reason": "no match"
+   },
+   {
+    "player": "Michael Finley",
+    "reason": "no match"
+   },
+   {
+    "player": "Nate Robinson",
+    "reason": "no match"
+   }
+  ]
+ },
+ "salary_mismatches_left_out": [
+  "Damian Lillard 2026",
+  "Damian Lillard 2027",
+  "DeMar DeRozan 2027",
+  "James Harden 2026",
+  "Kevin Durant 2026",
+  "Klay Thompson 2027",
+  "Victor Wembanyama 2026"
+ ],
+ "polymarket_mvp_seasons": {
+  "2026-27": 60
+ }
+}

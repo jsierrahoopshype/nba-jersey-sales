@@ -1,0 +1,512 @@
+{
+ "Allan Houston": {
+  "birth_place": "Louisville",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/allan-houston.html",
+  "nationality": "United States"
+ },
+ "Allen Iverson": {
+  "birth_place": "Hampton",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/allen-iverson.html",
+  "nationality": "United States"
+ },
+ "Amar'e Stoudemire": {
+  "birth_place": "Lake Wales",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/amare-stoudemire.html",
+  "nationality": "United States"
+ },
+ "Andre Iguodala": {
+  "birth_place": "Springfield",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/andre-iguodala.html",
+  "nationality": "United States"
+ },
+ "Andrea Bargnani": {
+  "birth_place": "Rome",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/andrea-bargnani.html",
+  "nationality": "Italy"
+ },
+ "Anthony Davis": {
+  "birth_place": "Chicago",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/anthony-davis.html",
+  "nationality": "United States"
+ },
+ "Anthony Edwards": {
+  "birth_place": "Atlanta",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/anthony-edwards.html",
+  "nationality": "United States"
+ },
+ "Baron Davis": {
+  "birth_place": "Los Angeles",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/baron-davis.html",
+  "nationality": "United States"
+ },
+ "Ben Gordon": {
+  "birth_place": "London",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/ben-gordon.html",
+  "nationality": "Great Britain"
+ },
+ "Ben Simmons": {
+  "birth_place": "Melbourne",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/ben-simmons.html",
+  "nationality": "Australia"
+ },
+ "Ben Wallace": {
+  "birth_place": "White Hall",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/ben-wallace.html",
+  "nationality": "United States"
+ },
+ "Blake Griffin": {
+  "birth_place": "Oklahoma City",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/blake-griffin.html",
+  "nationality": "United States"
+ },
+ "Boris Diaw": {
+  "birth_place": "Cormeilles-en-Parisis",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/boris-diaw.html",
+  "nationality": "France"
+ },
+ "Brandon Roy": {
+  "birth_place": "Seattle",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/brandon-roy.html",
+  "nationality": "United States"
+ },
+ "Cade Cunningham": {
+  "birth_place": "Arlington",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/cade-cunningham.html",
+  "nationality": "United States"
+ },
+ "Carmelo Anthony": {
+  "birth_place": "Brooklyn",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/carmelo-anthony.html",
+  "nationality": "United States"
+ },
+ "Chris Paul": {
+  "birth_place": "Winston-Salem",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/chris-paul.html",
+  "nationality": "United States"
+ },
+ "Chris Webber": {
+  "birth_place": "Detroit",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/chris-webber.html",
+  "nationality": "United States"
+ },
+ "Cooper Flagg": {
+  "birth_place": "Newport",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/cooper-flagg.html",
+  "nationality": "United States"
+ },
+ "Damian Lillard": {
+  "birth_place": "Oakland",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/damian-lillard.html",
+  "nationality": "United States"
+ },
+ "David Lee": {
+  "birth_place": "St. Louis",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/david-lee.html",
+  "nationality": "United States"
+ },
+ "De'Aaron Fox": {
+  "birth_place": "New Orleans",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/de-aaron-fox.html",
+  "nationality": "United States"
+ },
+ "DeMar DeRozan": {
+  "birth_place": "Compton",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/demar-derozan.html",
+  "nationality": "United States"
+ },
+ "Deron Williams": {
+  "birth_place": "Parkersburg",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/deron-williams.html",
+  "nationality": "United States"
+ },
+ "Derrick Rose": {
+  "birth_place": "Chicago",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/derrick-rose.html",
+  "nationality": "United States"
+ },
+ "Devin Booker": {
+  "birth_place": "Grand Rapids",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/devin-booker.html",
+  "nationality": "United States"
+ },
+ "Dirk Nowitzki": {
+  "birth_place": "Würzburg",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/dirk-nowitzki.html",
+  "nationality": "Germany"
+ },
+ "Donovan Mitchell": {
+  "birth_place": "Elmsford",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/donovan-mitchell.html",
+  "nationality": "United States"
+ },
+ "Draymond Green": {
+  "birth_place": "Saginaw",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/draymond-green.html",
+  "nationality": "United States"
+ },
+ "Dwight Howard": {
+  "birth_place": "Atlanta",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/dwight-howard.html",
+  "nationality": "United States"
+ },
+ "Dwyane Wade": {
+  "birth_place": "Chicago",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/dwyane-wade.html",
+  "nationality": "United States"
+ },
+ "Emeka Okafor": {
+  "birth_place": "Houston",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/emeka-okafor.html",
+  "nationality": "United States"
+ },
+ "Gary Payton": {
+  "birth_place": "Oakland",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/gary-payton.html",
+  "nationality": "United States"
+ },
+ "Giannis Antetokounmpo": {
+  "birth_place": "Athens",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/giannis-antetokounmpo.html",
+  "nationality": "Greek / Nigerian"
+ },
+ "Gilbert Arenas": {
+  "birth_place": null,
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/gilbert-arenas.html",
+  "nationality": "United States"
+ },
+ "Isaiah Thomas": {
+  "birth_place": "Tacoma",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/isaiah-thomas.html",
+  "nationality": "United States"
+ },
+ "Ja Morant": {
+  "birth_place": "Dalzell",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/ja-morant.html",
+  "nationality": "United States"
+ },
+ "Jalen Brunson": {
+  "birth_place": "New Brunswick",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jalen-brunson.html",
+  "nationality": "United States"
+ },
+ "Jalen Rose": {
+  "birth_place": "Detroit",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jalen-rose.html",
+  "nationality": "United States"
+ },
+ "Jamal Crawford": {
+  "birth_place": "Seattle",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jamal-crawford.html",
+  "nationality": "United States"
+ },
+ "James Harden": {
+  "birth_place": "Los Angeles",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/james-harden.html",
+  "nationality": "United States"
+ },
+ "Jason Kidd": {
+  "birth_place": "San Francisco",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jason-kidd.html",
+  "nationality": "United States"
+ },
+ "Jason Richardson": {
+  "birth_place": "Saginaw",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jason-richardson.html",
+  "nationality": "United States"
+ },
+ "Jaylen Brown": {
+  "birth_place": "Marietta",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jaylen-brown.html",
+  "nationality": "United States"
+ },
+ "Jayson Tatum": {
+  "birth_place": "St. Louis",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jayson-tatum.html",
+  "nationality": "United States"
+ },
+ "Jeremy Lin": {
+  "birth_place": "Torrance",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jeremy-lin.html",
+  "nationality": "United States"
+ },
+ "Jermaine O'Neal": {
+  "birth_place": "Columbia",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jermaine-o-neal.html",
+  "nationality": "United States"
+ },
+ "Jimmy Butler": {
+  "birth_place": "Houston",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jimmy-butler.html",
+  "nationality": "United States"
+ },
+ "Joel Embiid": {
+  "birth_place": "Yaoundé",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/joel-embiid.html",
+  "nationality": "Cameroonian / French / American"
+ },
+ "John Wall": {
+  "birth_place": "Raleigh",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/john-wall.html",
+  "nationality": "United States"
+ },
+ "Jordan Poole": {
+  "birth_place": "Milwaukee",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/jordan-poole.html",
+  "nationality": "United States"
+ },
+ "Kawhi Leonard": {
+  "birth_place": "Riverside",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kawhi-leonard.html",
+  "nationality": "United States"
+ },
+ "Kemba Walker": {
+  "birth_place": "The Bronx",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kemba-walker.html",
+  "nationality": "United States"
+ },
+ "Kenyon Martin": {
+  "birth_place": "Saginaw",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kenyon-martin.html",
+  "nationality": "United States"
+ },
+ "Kevin Durant": {
+  "birth_place": "Suitland",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kevin-durant.html",
+  "nationality": "United States"
+ },
+ "Kevin Garnett": {
+  "birth_place": "Greenville",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kevin-garnett.html",
+  "nationality": "United States"
+ },
+ "Kirk Hinrich": {
+  "birth_place": "Sioux City",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kirk-hinrich.html",
+  "nationality": "United States"
+ },
+ "Klay Thompson": {
+  "birth_place": "Los Angeles",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/klay-thompson.html",
+  "nationality": "United States"
+ },
+ "Kobe Bryant": {
+  "birth_place": "Philadelphia",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kobe-bryant.html",
+  "nationality": "United States"
+ },
+ "Kristaps Porzingis": {
+  "birth_place": "Liepāja",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kristaps-porzingis.html",
+  "nationality": "Latvia"
+ },
+ "Kyle Korver": {
+  "birth_place": "Lakewood",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kyle-korver.html",
+  "nationality": "United States"
+ },
+ "Kyrie Irving": {
+  "birth_place": "Melbourne",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/kyrie-irving.html",
+  "nationality": "American"
+ },
+ "LaMelo Ball": {
+  "birth_place": "Chino Hills",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/lamelo-ball.html",
+  "nationality": "United States"
+ },
+ "Lamar Odom": {
+  "birth_place": "Queens",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/lamar-odom.html",
+  "nationality": "United States"
+ },
+ "Latrell Sprewell": {
+  "birth_place": "Milwaukee",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/latrell-sprewell.html",
+  "nationality": "United States"
+ },
+ "LeBron James": {
+  "birth_place": "Akron",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/lebron-james.html",
+  "nationality": "United States"
+ },
+ "Lonzo Ball": {
+  "birth_place": "Anaheim",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/lonzo-ball.html",
+  "nationality": "United States"
+ },
+ "Luka Doncic": {
+  "birth_place": "Ljubljana",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/luka-doncic.html",
+  "nationality": "Slovenia"
+ },
+ "Manu Ginobili": {
+  "birth_place": "Bahía Blanca",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/manu-ginobili.html",
+  "nationality": "Argentina"
+ },
+ "Matthew Dellavedova": {
+  "birth_place": "Maryborough",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/matthew-dellavedova.html",
+  "nationality": "Australia"
+ },
+ "Michael Carter-Williams": {
+  "birth_place": "Hamilton",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/michael-carter-williams.html",
+  "nationality": "United States"
+ },
+ "Michael Finley": {
+  "birth_place": "Melrose Park",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/michael-finley.html",
+  "nationality": "United States"
+ },
+ "Michael Jordan": {
+  "birth_place": "Brooklyn",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/michael-jordan.html",
+  "nationality": "United States"
+ },
+ "Mike Bibby": {
+  "birth_place": "Cherry Hill",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/mike-bibby.html",
+  "nationality": "United States"
+ },
+ "Nate Robinson": {
+  "birth_place": "Seattle",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/nate-robinson.html",
+  "nationality": "United States"
+ },
+ "Nikola Jokic": {
+  "birth_place": "Sombor",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/nikola-jokic.html",
+  "nationality": "Serbian"
+ },
+ "Pau Gasol": {
+  "birth_place": "Barcelona",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/pau-gasol.html",
+  "nationality": "Spain"
+ },
+ "Paul George": {
+  "birth_place": "Palmdale",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/paul-george.html",
+  "nationality": "United States"
+ },
+ "Paul Pierce": {
+  "birth_place": "Oakland",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/paul-pierce.html",
+  "nationality": "United States"
+ },
+ "Penny Hardaway": {
+  "birth_place": "Memphis",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/anfernee-hardaway.html",
+  "nationality": "United States"
+ },
+ "RJ Barrett": {
+  "birth_place": "Toronto",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/rj-barrett.html",
+  "nationality": "Canada"
+ },
+ "Rajon Rondo": {
+  "birth_place": "Louisville",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/rajon-rondo.html",
+  "nationality": "United States"
+ },
+ "Rasheed Wallace": {
+  "birth_place": "Philadelphia",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/rasheed-wallace.html",
+  "nationality": "United States"
+ },
+ "Ray Allen": {
+  "birth_place": "Merced",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/ray-allen.html",
+  "nationality": "United States"
+ },
+ "Ron Artest": {
+  "birth_place": "Queens",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/metta-world-peace.html",
+  "nationality": "United States"
+ },
+ "Russell Westbrook": {
+  "birth_place": "Long Beach",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/russell-westbrook.html",
+  "nationality": "United States"
+ },
+ "Scottie Pippen": {
+  "birth_place": "Hamburg",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/scottie-pippen.html",
+  "nationality": "United States"
+ },
+ "Shai Gilgeous-Alexander": {
+  "birth_place": "Toronto",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/shai-gilgeous-alexander.html",
+  "nationality": "Canada"
+ },
+ "Shaquille O'Neal": {
+  "birth_place": "Newark",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/shaquille-o-neal.html",
+  "nationality": "United States"
+ },
+ "Stephen Curry": {
+  "birth_place": "Akron",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/stephen-curry.html",
+  "nationality": "United States"
+ },
+ "Stephon Marbury": {
+  "birth_place": "Brooklyn",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/stephon-marbury.html",
+  "nationality": "United States"
+ },
+ "Steve Francis": {
+  "birth_place": "Takoma Park",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/steve-francis.html",
+  "nationality": "United States"
+ },
+ "Steve Nash": {
+  "birth_place": "Johannesburg",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/steve-nash.html",
+  "nationality": "Canada"
+ },
+ "Tim Duncan": {
+  "birth_place": "Christiansted",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/tim-duncan.html",
+  "nationality": "United States"
+ },
+ "Tony Parker": {
+  "birth_place": "Bruges",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/tony-parker.html",
+  "nationality": "France"
+ },
+ "Tracy McGrady": {
+  "birth_place": "Bartow",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/tracy-mcgrady.html",
+  "nationality": "United States"
+ },
+ "Trae Young": {
+  "birth_place": "Lubbock",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/trae-young.html",
+  "nationality": "United States"
+ },
+ "Tyrese Maxey": {
+  "birth_place": "Dallas",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/tyrese-maxey.html",
+  "nationality": "United States"
+ },
+ "Victor Wembanyama": {
+  "birth_place": "Le Chesnay",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/victor-wembanyama.html",
+  "nationality": "France"
+ },
+ "Vince Carter": {
+  "birth_place": "Daytona Beach",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/vince-carter.html",
+  "nationality": "United States"
+ },
+ "Yao Ming": {
+  "birth_place": "Shanghai",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/yao-ming.html",
+  "nationality": "China"
+ },
+ "Zion Williamson": {
+  "birth_place": "Salisbury",
+  "career_map_url": "https://hoopsmatic.com/nba-career-map/player/zion-williamson.html",
+  "nationality": "United States"
+ }
+}

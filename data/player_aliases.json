@@ -1,0 +1,8 @@
+{
+ "note": "Same person listed under a different name in a sibling repo. Keys are names as published in the jersey lists. 'all' applies to every source unless a source-specific entry exists. Headshot matches are confirmed by NBA id.",
+ "aliases": {
+  "Penny Hardaway": {"all": "Anfernee Hardaway", "nba_id": 358},
+  "Ron Artest": {"all": "Metta World Peace", "nba_id": 1897},
+  "Jimmy Butler": {"headshots": "Jimmy Butler III", "nba_id": 202710}
+ }
+}

@@ -1,0 +1,642 @@
+{
+ "https://hoopsmatic.com/jerseys/": {
+  "hash": "275adbaf8a12e62a9aea94c5619b84a79254faff6c3f5dc90792c51adf1b4670",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/allan-houston/": {
+  "hash": "df1068a1895a12f6dee2060371371ab4b097598b04470783aa6502fe407853f8",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/allen-iverson/": {
+  "hash": "4317c8588b3ebfcc76c4f6099025d5ad45a4463552ddef05371d90d9e0bf029d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/amare-stoudemire/": {
+  "hash": "81e091c6b8006c20d5a349d6b284ed7884331122d089f515e9a5bd72457cc873",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/andre-iguodala/": {
+  "hash": "31e4a5aa2c717bcd0c2968dfb3c5cf2655ad2bde8b0f63737849b4299761134b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/andrea-bargnani/": {
+  "hash": "bf8c1d72e9b9ddcc8651647633234869aafba89f82c4562f1a0bb058e2af3687",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/anthony-davis/": {
+  "hash": "8f4452dc8358e86771545fc02bdb48166a98408686fd5590bc8f63436e510212",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/anthony-edwards/": {
+  "hash": "eb1cf058a0dabc1c2ad5cdf23db6d054cc81a1fa1ef7b61e11b6c3fc35c981aa",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/baron-davis/": {
+  "hash": "6d16d81a37f76b72f39ba3c345d7a5a0d934a17234db7159d8aa8fdd47f4885d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/ben-gordon/": {
+  "hash": "638ddff36aeaee6d0e0fdce7025215d763c2840c881ddd793a54fe4a407e3c37",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/ben-simmons/": {
+  "hash": "29f3d8f2c94369e941662d9896192e05878f3e7b8bd75c611a345e7dfe384191",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/ben-wallace/": {
+  "hash": "7de91861645ee55b268a445457582724a490e95ec6ded5412d70461a715c41d5",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/blake-griffin/": {
+  "hash": "5b0d3cdec888e0d3d763d02f6e88bf2ee19dc7240401911941c939284abe5ffc",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/boris-diaw/": {
+  "hash": "885d3ec274c29d8c90f06c0a1ffe5421e96a673f2d84d55fd06cbbe27e4aaf15",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/brandon-roy/": {
+  "hash": "b6f54c105a849226db8463338f4b2753029e4aca4e9194ce6ded294e5f524e41",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/cade-cunningham/": {
+  "hash": "51bfb0953412e8828c11d0e9043ee278d233368a5b130f64aa9cb1595d2384a1",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/carmelo-anthony/": {
+  "hash": "67e759ded8e07da3d02e2ba29000f5e2d51e9c86c0523d4519bd7ea142434c4c",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/chris-paul/": {
+  "hash": "af1937504ecc06b612b01a3a33c1284a4ecb4baeccabf54af5cae2c8688bd25e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/chris-webber/": {
+  "hash": "1aace8b93db14a2e2fc251d65fb7c5d57485682e4cf31c48aa37204294eed9cf",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/cooper-flagg/": {
+  "hash": "e2fb831b3c2b57efbd1c55931a08fca659093742319404326c9a305b8098fa17",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/damian-lillard/": {
+  "hash": "0567a837ef72f2028dce9ccfe22efbd6cc5226f403f595544ebda3903ae55e72",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/david-lee/": {
+  "hash": "138bf0cc380cd778a313699429483479a963f5960ce1a091271b0f72829a9c2e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/deaaron-fox/": {
+  "hash": "80e7722c243cd4e3770c5bbd48e1c4aac51f0cab6e51737f182d5909836de36f",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/demar-derozan/": {
+  "hash": "453b95ffc5caeec24bce3d432b69d09315640008b763242dfe3a84755a0629ec",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/deron-williams/": {
+  "hash": "35443a2a97b97a5a150a482ce923e803d8134087672ce9541daf5d057789c338",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/derrick-rose/": {
+  "hash": "d1f0803827c2daa79d3227ed6f9e58d96a270959fa86a1df175bf10d411b98e9",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/devin-booker/": {
+  "hash": "06f21e767bbdba299883838dfd83c9cc2d08159ed06600d4da1cbc5edb6e6436",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/dirk-nowitzki/": {
+  "hash": "4eba5e838ba805cd13abb8f3c8317cd34ec1a513312f127b1eff42b4fce667c5",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/donovan-mitchell/": {
+  "hash": "18f265903c3bbb12500baf0fa8964d37d1b9ec60ba1bf2d663e3ed600c266f6b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/draymond-green/": {
+  "hash": "aba996041d1a76a681781ab920f3664cf7be483ec21c4aa4f5244a6c2a26f105",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/dwight-howard/": {
+  "hash": "df522115145bcd1950fa84bd3592895b3f0ff5e917ecde27e32359a8ff2af7b0",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/dwyane-wade/": {
+  "hash": "8b65b731797b459f07e687953d041f7dfbb3ae6b581595b3687377c749134edd",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/emeka-okafor/": {
+  "hash": "af85f46b15b26dc4d734cfe28940b06ecc08b8f5c535bd87b1b54dcda05e0a06",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/gary-payton/": {
+  "hash": "3fab3b3689ef5d7a7b3464ba7e085f5f58083fbe9139f5bc1092619b7a2a6454",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/giannis-antetokounmpo/": {
+  "hash": "87a6e77761e8430745ff374296a36da027114b71e02e33ae545a84c4f754cff7",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/gilbert-arenas/": {
+  "hash": "3f61736d2d180e960c1d71148d15091587c943ab0c2074fbdb3eca9ae4efaa95",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/isaiah-thomas/": {
+  "hash": "b5f1ce67a53716c99597dd156e30a043fc6e140e129bfb1660ed6eae82310ec9",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/ja-morant/": {
+  "hash": "43872f79cd9229c079007b4458cb5689d49fda1c54c110aa0b9ccd8400471a25",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jalen-brunson/": {
+  "hash": "b02e388388462c4daacb792a3e807109ee982c950e75a66918da33800b5c4ba5",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jalen-rose/": {
+  "hash": "3697f7c796c36a931d53055b24e7301ade2878e133cf1e646a81269ad5093130",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jamal-crawford/": {
+  "hash": "2cffed2880d62c8deea5319c0ce23d5a14c01e42f4487a7d306f6f7ac23893b1",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/james-harden/": {
+  "hash": "7550e8e91223a707688ff49c1647e9024c5204a2b856375145b6c6d473649a58",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jason-kidd/": {
+  "hash": "8061985ed423dfdcc7e634b746cad963ef22512573275aac88f4ea0169fdabfe",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jason-richardson/": {
+  "hash": "2d1089b3053282862c88eaab583ebbaa660472ec814ff36ea240d52975c167f2",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jaylen-brown/": {
+  "hash": "7e22c12757b59511273fffff2f758523ca4503db129d15b3389115f2a5a00783",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jayson-tatum/": {
+  "hash": "670194e3cbf0f0a8dbacc3f7e7ecf3be5a72e4d8630b50abd95f39846bb2295f",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jeremy-lin/": {
+  "hash": "e354f029fab743bdd8c851ef1ef5bf865d1a12339d13d62cdb16ec1a5c828bda",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jermaine-oneal/": {
+  "hash": "c7ec5397c486518cbe8d3d59aa3a40d37b17c6eafe1f1ad81b017baaf088f35a",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jimmy-butler/": {
+  "hash": "f18afa261b314eb2b5764125d01efa565f44e8e64c7a328047726c32d4e60afb",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/joel-embiid/": {
+  "hash": "1df777183587e1905f1c2d78bf627f9f3e7fd53b5d76f245f818d9362537670d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/john-wall/": {
+  "hash": "2907605e3a1950b68f89ecd75b3e32655ae92ea813c8ff52cfba5c7dfa718ce4",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/jordan-poole/": {
+  "hash": "20a6446f845faf449cec233db2180ebde58da25683709be56f98a27e4d4be33f",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kawhi-leonard/": {
+  "hash": "c233bd184be45f8b895e6dd2dda2424e67803d080d3e69b84da3cec2570f6fbf",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kemba-walker/": {
+  "hash": "7d6a70937f10bb9ad2c8a027ab5ce8952438a36c99965ca1812ad242fa8831f3",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kenyon-martin/": {
+  "hash": "f067f0841b012ae951a3178fa8815945f8933f476af69e59deddba80e93c3ead",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kevin-durant/": {
+  "hash": "bc734f12a943432c8a27520cd27ae106ceb1c247816aa975989cbc2f1d93219e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kevin-garnett/": {
+  "hash": "a9351feca3f11b2bc90cd022dd811b89d8ccae8a2fac17286728a250eccf0440",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kirk-hinrich/": {
+  "hash": "8e660c442b43f5eff6e7a567c162fff560b2be721ecca56de8ccc86b1960f956",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/klay-thompson/": {
+  "hash": "e2f2d158130287ffd9409b3ab17f64846e3e64603cffad9e15a4d3cbb902596d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kobe-bryant/": {
+  "hash": "9aa441c3c05f7e22fa11f013c38ac732dea04aa5d49c1f9dda606a68f7e3d340",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kristaps-porzingis/": {
+  "hash": "db2b7e81e0cd75adb247ae0199eef5406a3018a678efa53a048bb7d6491508d6",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kyle-korver/": {
+  "hash": "4e1246d8156b2ade546fd9f2de10717952cc42c26923552b60babdd10c9a4783",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/kyrie-irving/": {
+  "hash": "3b8ded6428e9e5c89cf414c7bd15fa3e7e213d85320a259a330f16e7ca3e6afe",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/lamar-odom/": {
+  "hash": "056834505575149cd12c297e82f16206a414442bc83f07353f099cb56f928da6",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/lamelo-ball/": {
+  "hash": "96234e832fbb662e841649e53a75823c25409a08330be5c002e87ec9f3e66114",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/latrell-sprewell/": {
+  "hash": "4a358858537cbfc77b3e729ba317405cdd6fb5667d2ad26ec1d01a2810ef0632",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/lebron-james/": {
+  "hash": "57a18a1a1f4d66c7b7efc323076d07731c5da449e33b5293e324ebb39377bf34",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/lonzo-ball/": {
+  "hash": "7a30d6b7236f1d232098aadfd36ea74f0c0a31bdfc98b5ee41677d39b68854b6",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/luka-doncic/": {
+  "hash": "2c01327f4c6d5ecdb21a9c5c7f2d31d3544f661082dba08798ab8370ac3d84e2",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/manu-ginobili/": {
+  "hash": "fb4b30f63d2d0c2e132c3b8cb27dcc21c00180154d1ae6245407b3aa3c69839a",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/matthew-dellavedova/": {
+  "hash": "9ca880db82bbc399788c1477b8570791536826dc8c7393385d686a476bfe24b3",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/michael-carter-williams/": {
+  "hash": "d971dd4e35931d59fb60e4f6ddbdd2247cc8233e150a2375bd99bdba343ced5b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/michael-finley/": {
+  "hash": "c75a873bc556d48970507d33432528db13b98eb03a5402e012dedd02bb64d055",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/michael-jordan/": {
+  "hash": "cb597a01b577fa26ea96d1f2165230b8a535db264459dd518c3b8a885eac861e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/mike-bibby/": {
+  "hash": "e7a7504fa4300d2585acb0c67de749131db99a4c83f09bc5fbb34263b480d123",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/nate-robinson/": {
+  "hash": "45529c8940075cd6cd7e3abb7062eacfab29dba7c9c57833e6b70e28cd75de10",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/nikola-jokic/": {
+  "hash": "fd8c8b254d26c31ff5973fa297940c35394d7a11af309259537eaa8c84bfb189",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/pau-gasol/": {
+  "hash": "1dd3f77753a8a56a85754ac5d7d3883132b2a82ea218b15b8b36579b7865aae4",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/paul-george/": {
+  "hash": "8df058a26d8c80016baae3a5db3cdc9eae2dd1e6726fedb7842c0a54bdd39274",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/paul-pierce/": {
+  "hash": "ebef45c1aa76db0db252917911c98edb21d24b592ab09ef2e5c23e8518ae22df",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/penny-hardaway/": {
+  "hash": "fd1208ccc8d184f377a0d9dc8c2fe5a6a4ab9f7c264c2ef50316ec7819f017e2",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/rajon-rondo/": {
+  "hash": "59e49e641a836b11137bcde28d8c88d86ce3453a0d66661847c2e44bdfe05b29",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/rasheed-wallace/": {
+  "hash": "829a5758c8658639b64dde01c16b246f31d0014647bfc2d7389e7461c4cd30ba",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/ray-allen/": {
+  "hash": "019293985c07bce6b10fab4c5339bb6570287b2a737885b3a78a8c33a7cc85c4",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/rj-barrett/": {
+  "hash": "337aa826a725e482eacee86a0f160f707ea03e23d1f369471e539c9e156296d8",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/ron-artest/": {
+  "hash": "00c5dcbc30b1be6f613c8d2d82240e121bc159da0cf8fdfdcd9b9cb019a9ad0e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/russell-westbrook/": {
+  "hash": "d00d2ea38d8a50315d54a5ed99ec9067d49ae6d9a65c86518d3851ff75ba51ee",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/scottie-pippen/": {
+  "hash": "536bc3087e39a2e4bc2ce13740e0debc04dba389c25d1d6b7528e3c985a1c16d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/shai-gilgeous-alexander/": {
+  "hash": "71011c414c53099f5f4fedb032acb2f295d2cfb36adf351331e6959c29eeb9a6",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/shaquille-oneal/": {
+  "hash": "39534e6ac2ac16bc43042ecaf24f262310eef1d31cb1ea29e3df09b017337314",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/stephen-curry/": {
+  "hash": "eeb803dfe655b7f61bdf62680581f1e8823d723aea9a34018d0ed4c24e2450ef",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/stephon-marbury/": {
+  "hash": "1bcdaec89a1999b9d703d1803cec3e9bc4d78f3139bcc8b71f5dd330150b9755",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/steve-francis/": {
+  "hash": "3239c3b02fd92b37531197ef97bef1ecac1c0de80b3d6a0dd4e1b21ecdcfb101",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/steve-nash/": {
+  "hash": "4e0fe89c508ca68d7c03b303c8012377af49f4b2abc3e79d5ee6978ea2188e0e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/tim-duncan/": {
+  "hash": "6af7db2201b33b739f112cf94ab522b472bdf300e180f043b08e8f42c337e215",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/tony-parker/": {
+  "hash": "d02214655ba634f6a0a9052ec5ae2b2c1c04ff79a77a3a88bed22a436b025f17",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/tracy-mcgrady/": {
+  "hash": "9d6999fde189dcf5a43f0e54ceeb85e1f7310d0004f947ad715103deecd35d80",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/trae-young/": {
+  "hash": "d55f5e9edb14a86676836276fb0eac79b37cb0c4f18f45ad461fec9ca8a4fd6a",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/tyrese-maxey/": {
+  "hash": "e2b58fe4ef9e2b0a2fb52f23adbea5f2a17582ab4dd8c4db4414ac9246c3de2d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/victor-wembanyama/": {
+  "hash": "d8b1fd89c9dccbe41c60950d77f95ef8b6476d37acdc04aede1110ca41510135",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/vince-carter/": {
+  "hash": "4ee2d744a7beb04dbf41753cd5373900bd73e97f17898bab627522f27f6c2645",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/yao-ming/": {
+  "hash": "79d882944950047bd74e61b5694348ee95b4dbe5bd55967d436a952512fd9fde",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/player/zion-williamson/": {
+  "hash": "c5a6c40f23dbd54f4d77237c2e1f2b05c9e799e6a4ad0091475ebe516b8cca9b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/records/": {
+  "hash": "d301d8a5807893800a7906a27648b8e817074bc26ff4f3a07956390bcfe38aaf",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2000-01/": {
+  "hash": "92a1e1a5e793bce5476775fbe11a66bff404c5291747e1f9025d08e3eaabedfa",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2001-02/": {
+  "hash": "5a0d66094cce6e0912623987d36da13194ca3409e562b60afa90c378156d87f5",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2002-03/": {
+  "hash": "b91ed96a1fb1a8f1fd78c47373741952d6a70a08491c3c904be2dd0f1cdc3e2b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2003-04/": {
+  "hash": "0c927e09cfaca8b2db347f008a74502c1b24d75caab9baa2d9c971b57cbe20a2",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2004-05/": {
+  "hash": "18566588229f5444fd3fbb9a9f2437b27eb01d0b285131de42945d119617da1b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2005-06/": {
+  "hash": "74aa544349132a6dd7e09f36ec4dfab184d92fa9598fb89ddd1bd77e9a613918",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2006-07/": {
+  "hash": "2ebc56b4554552f7c309653bafd757a79b1e9989a578737a25fe32e34fa438f4",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2007-08/": {
+  "hash": "516f5ea74579ea3c738cf9864fe6b659a747bc1ba9dadfef56040fb182ad9afc",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2008-09/": {
+  "hash": "02fa8dbf397be0982a1ca5b98d8ca3393c86ff30480dc66808a60f04d6a59e14",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2009-10/": {
+  "hash": "6dbf462d147631daba35f128eba1bbb6c60abea25bfdbc893a8c60cd565c6ecf",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2010-11/": {
+  "hash": "9222669c265373820a929a579ae2aaeaa538f88eeb168e45c038dcef315f16aa",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2011-12/": {
+  "hash": "888b4ec19fe5d174ed2c1956545330a97213dcd2165144ddc736f2e88dd51b31",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2012-13/": {
+  "hash": "ce3a6fcc99ebb32e2a2b1092c45078fdea01f082ac2d562e4b5579e543ab1b98",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2013-14/": {
+  "hash": "e5e50db39f6c09fa101bb9ae1766d3e53a4350cb2935fd19877b71022a6a5273",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2014-15/": {
+  "hash": "9901c335f823c2d6e5d4f5860e3e64f62e31540daac4adb408141c244228e023",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2015-16/": {
+  "hash": "3bf59da95a988fd29f7f4b2374d78a566b8b63da6382b7e48e6f92c17bfc1eb6",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2016-17/": {
+  "hash": "9619cfa42eb694117d20b3e57256accb6fcdd364dcd3fe5dd4f92c393ec5eaa0",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2017-18/": {
+  "hash": "c5fcd03abbd871a975ccdf8b7c3d403f21f5045ed51d1c4968b252060a3e2efc",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2018-19/": {
+  "hash": "34a6d363cff820fc500800ffa832bb4f2f71cdb9d347dbbd4a099437dfccbcdc",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2019-20/": {
+  "hash": "e270e1e81722d9ce27ef6c90911d04a639375e0010a588870433f9df2455fce0",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2020-21/": {
+  "hash": "58f9d3bdefe06e8b36907614b86a6bf3189616f9e1547719e8ea2d2056426de2",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2021-22/": {
+  "hash": "dfb297470cc13742468481982774f123f51557ab873545915e6edf1effe6f57a",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2022-23/": {
+  "hash": "5160d03489aa1e114e07a9a321f8d54e962fe81c5b36f804c75de47a49f010ab",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2023-24/": {
+  "hash": "5c37fcfd2bef3100e96555ef5abffc7e638ca453b19ce45cedc40a5999176cb8",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2024-25/": {
+  "hash": "17c22078d589c0b9a824bbe9f4ed439d3d6f71242eede10f0970e509f6fdfa2d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/season/2025-26/": {
+  "hash": "0e13fe3fe75a1c1711caf2fb343ff0f16735b29f8bbed6ba6867bbce34591301",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/atlanta-hawks/": {
+  "hash": "4dd9a0a875fb909ee30af33a38372e0f5c96aa7d5ef39ed9522f54012f2b9daf",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/boston-celtics/": {
+  "hash": "9dad7640db26e2aa1d196f00ed6a8bc416079bff26a05e6dbcfbb33901ea3a3a",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/brooklyn-nets/": {
+  "hash": "22c54b9b6d825cd9a9b944edbcd09b52652202639ba359646167e90ef4022efe",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/charlotte-hornets/": {
+  "hash": "3779768af689214a2754a2aaf56ee50036601425b8f0696206c1801d22f690eb",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/chicago-bulls/": {
+  "hash": "60d8bea8b042fd6efcf5e45e27adee557c5d8632a5842899dd1f333b2baed645",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/cleveland-cavaliers/": {
+  "hash": "793deca116512e2bda3f6901a5f955dd272fe703c112e47dbf21bf0a92290b02",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/dallas-mavericks/": {
+  "hash": "6398fe2fc285a42812a20a2749799abe97051ec349c58e6f6b292424f0399a4d",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/denver-nuggets/": {
+  "hash": "92d3f319375ea2deea388eae1bdb642afc92ce98e06ba220c21e365dde68ace9",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/detroit-pistons/": {
+  "hash": "f558e76a60e2a86d3b131c5f4fc58341ae5c9d77790e3c5ef8253ccd85f13e84",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/golden-state-warriors/": {
+  "hash": "fdb596e8d506b1a7864ab534a486af813bbf6a5ca65ffb044ef1a5ada8743acc",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/houston-rockets/": {
+  "hash": "94989c840fd154b32a0306e2d482ae65e55b45752c1bf97afd9cac5710632b39",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/indiana-pacers/": {
+  "hash": "2f6d1858ac554d35ac691b3fa4b43146d93936f9e2af417907f9016f5a8ce8a8",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/la-clippers/": {
+  "hash": "941f873d9567ba70c41d55c09247c96954feb14883f3d5ba680cc4a4923503e1",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/los-angeles-lakers/": {
+  "hash": "ecf2593ce700a8756a852ebbb5f5c364253ae3d274bcf38c8e5a4ca7cb15bc66",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/memphis-grizzlies/": {
+  "hash": "5926833f033f50af04b0ea0db2da9c663f618597063d692c21c1e97d53d7543b",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/miami-heat/": {
+  "hash": "8f6c0364d836eb0063155075b9407a7a5b7a221dce76451d9e996d3451a9d814",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/milwaukee-bucks/": {
+  "hash": "2d5e0c5917481c692203e8428f4766646d5645e3c3e8d7d599027d565ac89cfd",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/minnesota-timberwolves/": {
+  "hash": "145ccefd5a3997dfe7a988e4572dee36d812d92a92d03eb0bb3cadf19955d990",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/new-orleans-pelicans/": {
+  "hash": "e94a6ad584e0a89592af6f4bbcd8e1633613871fdf1d4d96ed23ca57b6e3fe81",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/new-york-knicks/": {
+  "hash": "da3dfcdd8a8eeb65b4d016dedd647c1cf5dcdb6e40eabdd5b3fcfd6096cff0fb",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/oklahoma-city-thunder/": {
+  "hash": "93dfc2e42938a6f9b0bd7a1a1462255db320e52070a9f19c820e7d32ca00ac09",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/orlando-magic/": {
+  "hash": "85944e8db18b5acf6af16dbcbfcabe58d3aabac8920cb8a2cd9155d6281e529e",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/philadelphia-76ers/": {
+  "hash": "cb99f3a0b5d05e98a9444ca2eb16af3716d2c56dbccdc22e76f22829fdea0891",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/phoenix-suns/": {
+  "hash": "abc9ad18bde37ff8e3685ce34dc95ffb5681d25c11f7eb7a257abf5c3df11977",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/portland-trail-blazers/": {
+  "hash": "04c9916130e20f60d470bcf9097d27e94fda60c71d4ad36cbc15b46b767b0db8",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/sacramento-kings/": {
+  "hash": "b5a3ccb43378acefc27ec65af031266cd83864eddd662db248260d09597371de",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/san-antonio-spurs/": {
+  "hash": "d2c446cac620300103818ac4d7492c4e15a66c9b3d68eb35c451fd532e26a165",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/toronto-raptors/": {
+  "hash": "8abfbc1e28c67c8ca6268846c1d807ab463a3006efd459bd7699bb0d67282f49",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/utah-jazz/": {
+  "hash": "5785a7db7b67b3e759ab34755a5e81307c1d39785009f0d3f5af8aa038fc2b5f",
+  "lastmod": "2026-10-23"
+ },
+ "https://hoopsmatic.com/jerseys/team/washington-wizards/": {
+  "hash": "0722a95e3b1d9ad739e449d389ae2bbb91746452fad2240090c90408716fdd23",
+  "lastmod": "2026-10-23"
+ }
+}
