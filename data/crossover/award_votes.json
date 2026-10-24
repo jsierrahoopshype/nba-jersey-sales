@@ -1,0 +1,1937 @@
+{
+ "coverage": {
+  "2001": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2002": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 18
+  },
+  "2003": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2004": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 16
+  },
+  "2005": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 16
+  },
+  "2006": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 11
+  },
+  "2007": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2008": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2009": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2010": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 15
+  },
+  "2011": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2012": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 15
+  },
+  "2013": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 16
+  },
+  "2014": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2015": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2016": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 10
+  },
+  "2017": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 11
+  },
+  "2018": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2019": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2020": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2021": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 15
+  },
+  "2022": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2023": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2024": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 9
+  },
+  "2025": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2026": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 8
+  }
+ },
+ "note": "awardVotes.json carries the MVP vote rank (RNK), not the vote share.",
+ "seasons": {
+  "2001": {
+   "Allen Iverson": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Anthony Mason": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Chris Webber": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "David Robinson": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Dikembe Mutombo": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Gary Payton": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Jason Kidd": {
+    "all_nba": 1,
+    "mvp_rank": 8
+   },
+   "Jerry Stackhouse": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "John Stockton": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Karl Malone": {
+    "all_nba": 3,
+    "mvp_rank": 7
+   },
+   "Kevin Garnett": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Kobe Bryant": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Michael Finley": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Paul Pierce": {
+    "all_nba": null,
+    "mvp_rank": 13
+   },
+   "Ray Allen": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Tracy McGrady": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Vince Carter": {
+    "all_nba": 2,
+    "mvp_rank": 11
+   }
+  },
+  "2002": {
+   "Allen Iverson": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Ben Wallace": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Chris Webber": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Dikembe Mutombo": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Elton Brand": {
+    "all_nba": null,
+    "mvp_rank": 16
+   },
+   "Gary Payton": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Jason Kidd": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Jermaine O'Neal": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Jerry Stackhouse": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Kevin Garnett": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Michael Jordan": {
+    "all_nba": null,
+    "mvp_rank": 13
+   },
+   "Mike Bibby": {
+    "all_nba": null,
+    "mvp_rank": 16
+   },
+   "Paul Pierce": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Predrag Stojakovic": {
+    "all_nba": null,
+    "mvp_rank": 16
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Steve Nash": {
+    "all_nba": 3,
+    "mvp_rank": 14
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Tracy McGrady": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   }
+  },
+  "2003": {
+   "Allen Iverson": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Ben Wallace": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Chris Webber": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Jamal Mashburn": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Jason Kidd": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Jermaine O'Neal": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Kevin Garnett": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Paul Pierce": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Stephon Marbury": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Steve Nash": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Tracy McGrady": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   }
+  },
+  "2004": {
+   "Andrei Kirilenko": {
+    "all_nba": null,
+    "mvp_rank": 13
+   },
+   "Baron Davis": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Ben Wallace": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Carmelo Anthony": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Jason Kidd": {
+    "all_nba": 1,
+    "mvp_rank": 8
+   },
+   "Jermaine O'Neal": {
+    "all_nba": 2,
+    "mvp_rank": 3
+   },
+   "Kevin Garnett": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "LeBron James": {
+    "all_nba": null,
+    "mvp_rank": 9
+   },
+   "Michael Redd": {
+    "all_nba": 3,
+    "mvp_rank": 14
+   },
+   "Predrag Stojakovic": {
+    "all_nba": 2,
+    "mvp_rank": 4
+   },
+   "Ron Artest": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Sam Cassell": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 1,
+    "mvp_rank": 6
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Tracy McGrady": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Yao Ming": {
+    "all_nba": 3,
+    "mvp_rank": 14
+   }
+  },
+  "2005": {
+   "Allen Iverson": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Amar'e Stoudemire": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Ben Wallace": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Dwyane Wade": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Gilbert Arenas": {
+    "all_nba": 3,
+    "mvp_rank": 12
+   },
+   "Kevin Garnett": {
+    "all_nba": 2,
+    "mvp_rank": 11
+   },
+   "Kobe Bryant": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Marcus Camby": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "PJ Brown": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "Ray Allen": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Shawn Marion": {
+    "all_nba": 3,
+    "mvp_rank": 14
+   },
+   "Steve Nash": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Tracy McGrady": {
+    "all_nba": 3,
+    "mvp_rank": 7
+   },
+   "Vince Carter": {
+    "all_nba": null,
+    "mvp_rank": 13
+   }
+  },
+  "2006": {
+   "Allen Iverson": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Ben Wallace": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Carmelo Anthony": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Chauncey Billups": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Dwyane Wade": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Elton Brand": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Gilbert Arenas": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 1,
+    "mvp_rank": null
+   },
+   "Shawn Marion": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Steve Nash": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Tim Duncan": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Tony Parker": {
+    "all_nba": null,
+    "mvp_rank": 9
+   },
+   "Yao Ming": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2007": {
+   "Amar'e Stoudemire": {
+    "all_nba": 1,
+    "mvp_rank": 14
+   },
+   "Baron Davis": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Carlos Boozer": {
+    "all_nba": null,
+    "mvp_rank": 9
+   },
+   "Carmelo Anthony": {
+    "all_nba": 3,
+    "mvp_rank": 15
+   },
+   "Chauncey Billups": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Chris Bosh": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Dwight Howard": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Dwyane Wade": {
+    "all_nba": 3,
+    "mvp_rank": 12
+   },
+   "Gilbert Arenas": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Kevin Garnett": {
+    "all_nba": 3,
+    "mvp_rank": 9
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "LeBron James": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Shaquille O'Neal": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Steve Nash": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Tony Parker": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Tracy McGrady": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Yao Ming": {
+    "all_nba": 2,
+    "mvp_rank": null
+   }
+  },
+  "2008": {
+   "Amar'e Stoudemire": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Antawn Jamison": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "Carlos Boozer": {
+    "all_nba": 3,
+    "mvp_rank": 14
+   },
+   "Carmelo Anthony": {
+    "all_nba": null,
+    "mvp_rank": 13
+   },
+   "Chris Paul": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Deron Williams": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 2,
+    "mvp_rank": 11
+   },
+   "Dwight Howard": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Kevin Garnett": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Manu Ginobili": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Paul Pierce": {
+    "all_nba": 3,
+    "mvp_rank": 14
+   },
+   "Rasheed Wallace": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "Steve Nash": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Tim Duncan": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Tracy McGrady": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Yao Ming": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2009": {
+   "Brandon Roy": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Carmelo Anthony": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Chauncey Billups": {
+    "all_nba": 3,
+    "mvp_rank": 6
+   },
+   "Chris Paul": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 1,
+    "mvp_rank": 10
+   },
+   "Dwight Howard": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Dwyane Wade": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Pau Gasol": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Paul Pierce": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Shaquille O'Neal": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Tim Duncan": {
+    "all_nba": 2,
+    "mvp_rank": 11
+   },
+   "Tony Parker": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Yao Ming": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   }
+  },
+  "2010": {
+   "Amar'e Stoudemire": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Andrew Bogut": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Brandon Roy": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Carmelo Anthony": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Chauncey Billups": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Chris Bosh": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Deron Williams": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Dwight Howard": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Dwyane Wade": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Joe Johnson": {
+    "all_nba": 3,
+    "mvp_rank": 12
+   },
+   "Kevin Durant": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Manu Ginobili": {
+    "all_nba": null,
+    "mvp_rank": 11
+   },
+   "Pau Gasol": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Stephen Jackson": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Steve Nash": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Tim Duncan": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2011": {
+   "Al Horford": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Amar'e Stoudemire": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Blake Griffin": {
+    "all_nba": null,
+    "mvp_rank": 10
+   },
+   "Chris Paul": {
+    "all_nba": 3,
+    "mvp_rank": 13
+   },
+   "Derrick Rose": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Dwight Howard": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Dwyane Wade": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Kevin Durant": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "LaMarcus Aldridge": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Manu Ginobili": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Pau Gasol": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Rajon Rondo": {
+    "all_nba": null,
+    "mvp_rank": 10
+   },
+   "Russell Westbrook": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Tony Parker": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Zach Randolph": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2012": {
+   "Andrew Bynum": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Blake Griffin": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Carmelo Anthony": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Chris Paul": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Derrick Rose": {
+    "all_nba": null,
+    "mvp_rank": 11
+   },
+   "Dirk Nowitzki": {
+    "all_nba": 3,
+    "mvp_rank": 12
+   },
+   "Dwight Howard": {
+    "all_nba": 1,
+    "mvp_rank": 7
+   },
+   "Dwyane Wade": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Joe Johnson": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Kevin Durant": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Kevin Love": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Rajon Rondo": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Russell Westbrook": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   },
+   "Steve Nash": {
+    "all_nba": null,
+    "mvp_rank": 9
+   },
+   "Tim Duncan": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "Tony Parker": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Tyson Chandler": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2013": {
+   "Blake Griffin": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Carmelo Anthony": {
+    "all_nba": 2,
+    "mvp_rank": 3
+   },
+   "Chris Paul": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "David Lee": {
+    "all_nba": 3,
+    "mvp_rank": 12
+   },
+   "Dwight Howard": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Dwyane Wade": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "James Harden": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Joakim Noah": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Kevin Durant": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Kevin Garnett": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Kobe Bryant": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Marc Gasol": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   },
+   "Paul George": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Russell Westbrook": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Stephen Curry": {
+    "all_nba": null,
+    "mvp_rank": 11
+   },
+   "Tim Duncan": {
+    "all_nba": 1,
+    "mvp_rank": 7
+   },
+   "Tony Parker": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Ty Lawson": {
+    "all_nba": null,
+    "mvp_rank": 12
+   }
+  },
+  "2014": {
+   "Al Jefferson": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Blake Griffin": {
+    "all_nba": 2,
+    "mvp_rank": 3
+   },
+   "Carmelo Anthony": {
+    "all_nba": null,
+    "mvp_rank": 15
+   },
+   "Chris Paul": {
+    "all_nba": 1,
+    "mvp_rank": 7
+   },
+   "Damian Lillard": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Dirk Nowitzki": {
+    "all_nba": null,
+    "mvp_rank": 14
+   },
+   "Dwight Howard": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Goran Dragic": {
+    "all_nba": 3,
+    "mvp_rank": 16
+   },
+   "James Harden": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Joakim Noah": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Kevin Durant": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Kevin Love": {
+    "all_nba": 2,
+    "mvp_rank": 11
+   },
+   "LaMarcus Aldridge": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Mike Conley": {
+    "all_nba": null,
+    "mvp_rank": 17
+   },
+   "Paul George": {
+    "all_nba": 3,
+    "mvp_rank": 9
+   },
+   "Stephen Curry": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Tim Duncan": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Tony Parker": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   }
+  },
+  "2015": {
+   "Anthony Davis": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Blake Griffin": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Chris Paul": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "DeAndre Jordan": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "DeMarcus Cousins": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "James Harden": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Kawhi Leonard": {
+    "all_nba": null,
+    "mvp_rank": 10
+   },
+   "Klay Thompson": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Kyrie Irving": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LaMarcus Aldridge": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Marc Gasol": {
+    "all_nba": 1,
+    "mvp_rank": 8
+   },
+   "Pau Gasol": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Russell Westbrook": {
+    "all_nba": 2,
+    "mvp_rank": 4
+   },
+   "Stephen Curry": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Tim Duncan": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   }
+  },
+  "2016": {
+   "Andre Drummond": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Chris Paul": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Damian Lillard": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "DeAndre Jordan": {
+    "all_nba": 1,
+    "mvp_rank": null
+   },
+   "DeMarcus Cousins": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Draymond Green": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "James Harden": {
+    "all_nba": null,
+    "mvp_rank": 9
+   },
+   "Kawhi Leonard": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Kevin Durant": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Klay Thompson": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Kyle Lowry": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "LaMarcus Aldridge": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Paul George": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Russell Westbrook": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Stephen Curry": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   }
+  },
+  "2017": {
+   "Anthony Davis": {
+    "all_nba": 1,
+    "mvp_rank": 9
+   },
+   "DeAndre Jordan": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "DeMar DeRozan": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Draymond Green": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Isaiah Thomas": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "James Harden": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Jimmy Butler": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "John Wall": {
+    "all_nba": 3,
+    "mvp_rank": 7
+   },
+   "Kawhi Leonard": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Kevin Durant": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Rudy Gobert": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Russell Westbrook": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Stephen Curry": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   }
+  },
+  "2018": {
+   "Anthony Davis": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Damian Lillard": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "DeMar DeRozan": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "James Harden": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Jimmy Butler": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Joel Embiid": {
+    "all_nba": 2,
+    "mvp_rank": 12
+   },
+   "Karl-Anthony Towns": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Kevin Durant": {
+    "all_nba": 1,
+    "mvp_rank": 7
+   },
+   "LaMarcus Aldridge": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Paul George": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Russell Westbrook": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Stephen Curry": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Victor Oladipo": {
+    "all_nba": 3,
+    "mvp_rank": 13
+   }
+  },
+  "2019": {
+   "Blake Griffin": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Damian Lillard": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "James Harden": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Joel Embiid": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Kawhi Leonard": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Kemba Walker": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Kevin Durant": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Kyrie Irving": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Nikola Jokic": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Paul George": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Rudy Gobert": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Russell Westbrook": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Stephen Curry": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   }
+  },
+  "2020": {
+   "Anthony Davis": {
+    "all_nba": 1,
+    "mvp_rank": 6
+   },
+   "Ben Simmons": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Chris Paul": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Damian Lillard": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "James Harden": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Jayson Tatum": {
+    "all_nba": 3,
+    "mvp_rank": 12
+   },
+   "Jimmy Butler": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Kawhi Leonard": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "LeBron James": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Luka Doncic": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Nikola Jokic": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Pascal Siakam": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Rudy Gobert": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Russell Westbrook": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2021": {
+   "Ben Simmons": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Bradley Beal": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Chris Paul": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Damian Lillard": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Derrick Rose": {
+    "all_nba": null,
+    "mvp_rank": 9
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "James Harden": {
+    "all_nba": null,
+    "mvp_rank": 13
+   },
+   "Jimmy Butler": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Joel Embiid": {
+    "all_nba": 2,
+    "mvp_rank": 2
+   },
+   "Julius Randle": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Kawhi Leonard": {
+    "all_nba": 1,
+    "mvp_rank": 13
+   },
+   "Kyrie Irving": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 2,
+    "mvp_rank": 13
+   },
+   "Luka Doncic": {
+    "all_nba": 1,
+    "mvp_rank": 6
+   },
+   "Nikola Jokic": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Paul George": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Rudy Gobert": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Russell Westbrook": {
+    "all_nba": null,
+    "mvp_rank": 11
+   },
+   "Stephen Curry": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   }
+  },
+  "2022": {
+   "Chris Paul": {
+    "all_nba": 3,
+    "mvp_rank": 9
+   },
+   "DeMar DeRozan": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Devin Booker": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Ja Morant": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Jayson Tatum": {
+    "all_nba": 1,
+    "mvp_rank": 6
+   },
+   "Joel Embiid": {
+    "all_nba": 2,
+    "mvp_rank": 2
+   },
+   "Karl-Anthony Towns": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Kevin Durant": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "LeBron James": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Luka Doncic": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Nikola Jokic": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Pascal Siakam": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Stephen Curry": {
+    "all_nba": 2,
+    "mvp_rank": 8
+   },
+   "Trae Young": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2023": {
+   "Damian Lillard": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "De'Aaron Fox": {
+    "all_nba": 3,
+    "mvp_rank": 11
+   },
+   "Domantas Sabonis": {
+    "all_nba": 3,
+    "mvp_rank": 7
+   },
+   "Donovan Mitchell": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Ja Morant": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Jalen Brunson": {
+    "all_nba": null,
+    "mvp_rank": 12
+   },
+   "Jaylen Brown": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Jayson Tatum": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Jimmy Butler": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Joel Embiid": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Julius Randle": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Luka Doncic": {
+    "all_nba": 1,
+    "mvp_rank": 8
+   },
+   "Nikola Jokic": {
+    "all_nba": 2,
+    "mvp_rank": 2
+   },
+   "Shai Gilgeous-Alexander": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Stephen Curry": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   }
+  },
+  "2024": {
+   "Anthony Davis": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Anthony Edwards": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Devin Booker": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Domantas Sabonis": {
+    "all_nba": 3,
+    "mvp_rank": 8
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Jalen Brunson": {
+    "all_nba": 2,
+    "mvp_rank": 5
+   },
+   "Jayson Tatum": {
+    "all_nba": 1,
+    "mvp_rank": 6
+   },
+   "Kawhi Leonard": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Kevin Durant": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "LeBron James": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Luka Doncic": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Nikola Jokic": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Shai Gilgeous-Alexander": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Stephen Curry": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Tyrese Haliburton": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2025": {
+   "Anthony Edwards": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Cade Cunningham": {
+    "all_nba": 3,
+    "mvp_rank": 7
+   },
+   "Donovan Mitchell": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Evan Mobley": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Giannis Antetokounmpo": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   },
+   "Jalen Brunson": {
+    "all_nba": 2,
+    "mvp_rank": 10
+   },
+   "Jalen Williams": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "James Harden": {
+    "all_nba": 3,
+    "mvp_rank": 10
+   },
+   "Jayson Tatum": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Karl-Anthony Towns": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "LeBron James": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Nikola Jokic": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Shai Gilgeous-Alexander": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Stephen Curry": {
+    "all_nba": 2,
+    "mvp_rank": 9
+   },
+   "Tyrese Haliburton": {
+    "all_nba": 3,
+    "mvp_rank": null
+   }
+  },
+  "2026": {
+   "Cade Cunningham": {
+    "all_nba": 1,
+    "mvp_rank": 5
+   },
+   "Chet Holmgren": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Donovan Mitchell": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Jalen Brunson": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Jalen Duren": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Jalen Johnson": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Jamal Murray": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Jaylen Brown": {
+    "all_nba": 2,
+    "mvp_rank": 6
+   },
+   "Kawhi Leonard": {
+    "all_nba": 2,
+    "mvp_rank": 7
+   },
+   "Kevin Durant": {
+    "all_nba": 2,
+    "mvp_rank": null
+   },
+   "Luka Doncic": {
+    "all_nba": 1,
+    "mvp_rank": 4
+   },
+   "Nikola Jokic": {
+    "all_nba": 1,
+    "mvp_rank": 2
+   },
+   "Shai Gilgeous-Alexander": {
+    "all_nba": 1,
+    "mvp_rank": 1
+   },
+   "Tyrese Maxey": {
+    "all_nba": 3,
+    "mvp_rank": null
+   },
+   "Victor Wembanyama": {
+    "all_nba": 1,
+    "mvp_rank": 3
+   }
+  }
+ },
+ "source": {
+  "files": [
+   "awards.json",
+   "awardVotes.json"
+  ],
+  "nba-player-data": {
+   "commit": "808a4324e575b0d4455df4373c0c15eaf88ee0a3",
+   "date": "2026-10-23"
+  }
+ }
+}
