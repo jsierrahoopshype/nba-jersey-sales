@@ -318,3 +318,4 @@ table.sx td.name{min-width:9rem}
 .pp{display:flex;align-items:center;min-width:0}
 ol.top5 li,ol.reigns li{align-items:center}
 @media (max-width:640px){table.sx td.name .face{display:none}table.sx td.name{min-width:7.5rem}}
+.chart-frame .yaxis.wide{width:40px}

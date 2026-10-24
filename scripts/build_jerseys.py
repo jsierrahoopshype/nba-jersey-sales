@@ -1180,17 +1180,19 @@ def bar_chart(values, label_fn, aria, unit=""):
     nums = [v for _, v in values if v is not None]
     vmax = max([1] + [abs(v) for v in nums])
     vmin = min([0] + nums)
-    colw, top, h, left = 30, 14, 150, 40
+    # The y-axis is its own small SVG outside the scroller, so it stays pinned on phones.
+    colw, top, h, left, axw = 30, 14, 150, 4, 40
     width = left + colw * len(values) + 10
     height = top + h + 58
     neg = vmin < 0
     zero = top + (h * (vmax / (vmax - vmin)) if neg else h)
     scale = (h / (vmax - vmin)) if neg else h / vmax
+    axis = ('<svg class="yax" width="%d" height="%d" viewBox="0 0 %d %d" aria-hidden="true">'
+            '<text class="ytk" x="%d" y="%.1f">0</text><text class="ytk" x="%d" y="%.1f">%s</text></svg>') % (
+        axw, height, axw, height, axw - 4, zero + 4, axw - 4, top + 8, esc(label_fn(vmax)))
     parts = ['<svg class="bchart" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (
         width, height, width, height, esc(aria))]
-    parts.append('<line class="grid" x1="%d" x2="%d" y1="%.1f" y2="%.1f"/>' % (left, width - 10, zero, zero))
-    parts.append('<text class="ytk" x="%d" y="%.1f">0</text>' % (left - 6, zero + 4))
-    parts.append('<text class="ytk" x="%d" y="%.1f">%s</text>' % (left - 6, top + 8, esc(label_fn(vmax))))
+    parts.append('<line class="grid" x1="0" x2="%d" y1="%.1f" y2="%.1f"/>' % (width - 10, zero, zero))
     for i, (lab, v) in enumerate(values):
         cx = left + colw * i + 3
         if v is None:
@@ -1203,7 +1205,7 @@ def bar_chart(values, label_fn, aria, unit=""):
                 " neg" if v < 0 else "", cx, yy, colw - 6, max(bh, 0.5), esc("%s: %s%s" % (lab, label_fn(v), unit))))
         parts.append('<text class="xtk" transform="translate(%d,%d) rotate(-60)">%s</text>' % (cx + 14, top + h + 12, esc(lab)))
     parts.append("</svg>")
-    return '<div class="chart-scroll">%s</div>' % "".join(parts)
+    return '<div class="chart-frame"><div class="yaxis wide">%s</div><div class="chart-scroll">%s</div></div>' % (axis, "".join(parts))
 
 
 def build_team_page(site, t, ctx, m, team_entries, tp_season, tp_lists):
