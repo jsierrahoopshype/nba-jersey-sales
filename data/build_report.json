@@ -7,18 +7,22 @@
   "grid_columns_without_player_ranks_release": [
    "2005-01 Midseason"
   ],
-  "grid_includes_international_types": [
-   "Worldwide release (U.S. top 10)"
-  ],
-  "us_releases_missing_from_grid": []
+  "grid_includes_international_types": [],
+  "us_releases_missing_from_grid": [],
+  "reclassified": {
+   "R23": {
+    "source_type": "Worldwide release (U.S. top 10)",
+    "type": "Full season (U.S. top 10)"
+   }
+  }
  },
  "counts": {
   "releases_total": 53,
   "releases_with_entries": 52,
-  "us_lists_with_entries": 49,
+  "us_lists_with_entries": 50,
   "players": 102,
-  "player_pages_indexable": 62,
-  "player_pages_noindex": 40,
+  "player_pages_indexable": 63,
+  "player_pages_noindex": 39,
   "team_pages": 30,
   "team_pages_noindex": [
    "utah-jazz"
@@ -28,7 +32,9 @@
    "2000-01",
    "2001-02"
   ],
-  "sitemap_urls": 117,
+  "sitemap_urls": 118,
+  "share_images": 160,
+  "share_images_rendered": 0,
   "release_sources_found": 32,
   "release_sources_blank": [
    "R01",
@@ -52,6 +58,493 @@
    "R30",
    "R50"
   ]
+ },
+ "season_rankings": {
+  "2000-01": {
+   "kind": "no1",
+   "depth": 1,
+   "lists": [
+    "R01"
+   ],
+   "top5": [
+    "Kobe Bryant"
+   ]
+  },
+  "2001-02": {
+   "kind": "no1",
+   "depth": 1,
+   "lists": [
+    "R02"
+   ],
+   "top5": [
+    "Kobe Bryant"
+   ]
+  },
+  "2002-03": {
+   "kind": "full",
+   "depth": 20,
+   "lists": [
+    "R03"
+   ],
+   "top5": [
+    "Kobe Bryant",
+    "Allen Iverson",
+    "Tracy McGrady",
+    "Michael Jordan",
+    "Paul Pierce"
+   ]
+  },
+  "2003-04": {
+   "kind": "full",
+   "depth": 25,
+   "lists": [
+    "R04"
+   ],
+   "top5": [
+    "LeBron James",
+    "Carmelo Anthony",
+    "Stephon Marbury",
+    "Tracy McGrady",
+    "Allen Iverson"
+   ]
+  },
+  "2004-05": {
+   "kind": "full",
+   "depth": 25,
+   "lists": [
+    "R06"
+   ],
+   "top5": [
+    "Shaquille O'Neal",
+    "Tracy McGrady",
+    "LeBron James",
+    "Stephon Marbury",
+    "Kobe Bryant"
+   ]
+  },
+  "2005-06": {
+   "kind": "full",
+   "depth": 25,
+   "lists": [
+    "R07",
+    "R08"
+   ],
+   "top5": [
+    "Dwyane Wade",
+    "LeBron James",
+    "Allen Iverson",
+    "Kobe Bryant",
+    "Stephon Marbury"
+   ]
+  },
+  "2006-07": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R10",
+    "R11"
+   ],
+   "top5": [
+    "Kobe Bryant",
+    "Dwyane Wade",
+    "LeBron James",
+    "Allen Iverson",
+    "Steve Nash"
+   ]
+  },
+  "2007-08": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R13",
+    "R14"
+   ],
+   "top5": [
+    "Kevin Garnett",
+    "Kobe Bryant",
+    "LeBron James",
+    "Allen Iverson",
+    "Steve Nash"
+   ]
+  },
+  "2008-09": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R15",
+    "R16"
+   ],
+   "top5": [
+    "Kobe Bryant",
+    "LeBron James",
+    "Kevin Garnett",
+    "Chris Paul",
+    "Allen Iverson"
+   ]
+  },
+  "2009-10": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R17",
+    "R18"
+   ],
+   "top5": [
+    "Kobe Bryant",
+    "LeBron James",
+    "Dwight Howard",
+    "Derrick Rose",
+    "Kevin Garnett"
+   ]
+  },
+  "2010-11": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R19"
+   ],
+   "top5": [
+    "LeBron James",
+    "Kobe Bryant",
+    "Rajon Rondo",
+    "Amar'e Stoudemire",
+    "Derrick Rose"
+   ]
+  },
+  "2011-12": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R20"
+   ],
+   "top5": [
+    "Derrick Rose",
+    "Jeremy Lin",
+    "Kobe Bryant",
+    "LeBron James",
+    "Carmelo Anthony"
+   ]
+  },
+  "2012-13": {
+   "kind": "full",
+   "depth": 10,
+   "lists": [
+    "R21",
+    "R22",
+    "R23"
+   ],
+   "top5": [
+    "LeBron James",
+    "Kevin Durant",
+    "Carmelo Anthony",
+    "Kobe Bryant",
+    "Derrick Rose"
+   ]
+  },
+  "2013-14": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R24",
+    "R25"
+   ],
+   "top5": [
+    "LeBron James",
+    "Kobe Bryant",
+    "Kevin Durant",
+    "Derrick Rose",
+    "Stephen Curry"
+   ]
+  },
+  "2014-15": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R26",
+    "R27",
+    "R28"
+   ],
+   "top5": [
+    "LeBron James",
+    "Stephen Curry",
+    "Derrick Rose",
+    "Kobe Bryant",
+    "Kyrie Irving"
+   ]
+  },
+  "2015-16": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R29",
+    "R30",
+    "R31"
+   ],
+   "top5": [
+    "Stephen Curry",
+    "LeBron James",
+    "Kobe Bryant",
+    "Kevin Durant",
+    "Russell Westbrook"
+   ]
+  },
+  "2016-17": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R32",
+    "R33",
+    "R34"
+   ],
+   "top5": [
+    "Stephen Curry",
+    "LeBron James",
+    "Kevin Durant",
+    "Russell Westbrook",
+    "Kyrie Irving"
+   ]
+  },
+  "2017-18": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R35",
+    "R36",
+    "R37"
+   ],
+   "top5": [
+    "Stephen Curry",
+    "LeBron James",
+    "Kevin Durant",
+    "Giannis Antetokounmpo",
+    "Kyrie Irving"
+   ]
+  },
+  "2018-19": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R38"
+   ],
+   "top5": [
+    "LeBron James",
+    "Stephen Curry",
+    "Giannis Antetokounmpo",
+    "Kyrie Irving",
+    "Joel Embiid"
+   ]
+  },
+  "2019-20": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R39",
+    "R40"
+   ],
+   "top5": [
+    "LeBron James",
+    "Giannis Antetokounmpo",
+    "Luka Doncic",
+    "Jayson Tatum",
+    "Stephen Curry"
+   ]
+  },
+  "2020-21": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R41",
+    "R42"
+   ],
+   "top5": [
+    "LeBron James",
+    "Luka Doncic",
+    "Kevin Durant",
+    "Giannis Antetokounmpo",
+    "Stephen Curry"
+   ]
+  },
+  "2021-22": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R43",
+    "R44"
+   ],
+   "top5": [
+    "LeBron James",
+    "Stephen Curry",
+    "Kevin Durant",
+    "Giannis Antetokounmpo",
+    "Jayson Tatum"
+   ]
+  },
+  "2022-23": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R45",
+    "R46"
+   ],
+   "top5": [
+    "LeBron James",
+    "Stephen Curry",
+    "Giannis Antetokounmpo",
+    "Luka Doncic",
+    "Jayson Tatum"
+   ]
+  },
+  "2023-24": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R47",
+    "R48"
+   ],
+   "top5": [
+    "Stephen Curry",
+    "LeBron James",
+    "Jayson Tatum",
+    "Victor Wembanyama",
+    "Giannis Antetokounmpo"
+   ]
+  },
+  "2024-25": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R49",
+    "R51"
+   ],
+   "top5": [
+    "Stephen Curry",
+    "LeBron James",
+    "Jayson Tatum",
+    "Luka Doncic",
+    "Jalen Brunson"
+   ]
+  },
+  "2025-26": {
+   "kind": "full",
+   "depth": 15,
+   "lists": [
+    "R52",
+    "R53"
+   ],
+   "top5": [
+    "Stephen Curry",
+    "Luka Doncic",
+    "Jalen Brunson",
+    "Victor Wembanyama",
+    "LeBron James"
+   ]
+  }
+ },
+ "award_coverage": {
+  "2001": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2002": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 18
+  },
+  "2003": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2004": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 16
+  },
+  "2005": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 16
+  },
+  "2006": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 11
+  },
+  "2007": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2008": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2009": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2010": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 15
+  },
+  "2011": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2012": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 15
+  },
+  "2013": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 16
+  },
+  "2014": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 17
+  },
+  "2015": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2016": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 10
+  },
+  "2017": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 11
+  },
+  "2018": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2019": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2020": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2021": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 15
+  },
+  "2022": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2023": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 13
+  },
+  "2024": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 9
+  },
+  "2025": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 12
+  },
+  "2026": {
+   "all_nba_players": 15,
+   "mvp_vote_players": 8
+  }
  },
  "crossover_misses": {
   "career-map": [
@@ -99,8 +592,5 @@
   "Kevin Durant 2026",
   "Klay Thompson 2027",
   "Victor Wembanyama 2026"
- ],
- "polymarket_mvp_seasons": {
-  "2026-27": 60
- }
+ ]
 }

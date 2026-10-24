@@ -10,6 +10,8 @@ import sys
 import tempfile
 import unittest
 
+from PIL import Image
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 SITE = "https://hoopsmatic.com/jerseys/"
@@ -38,6 +40,7 @@ class BuildTests(unittest.TestCase):
         cls.sitemap = re.findall(r"<loc>([^<]+)</loc>", open(os.path.join(DOCS, "sitemap.xml")).read())
         cls.players = json.load(open(os.path.join(DOCS, "data", "players.json")))
         cls.report = json.load(open(os.path.join(ROOT, "data", "build_report.json")))
+        cls.seasons = json.load(open(os.path.join(DOCS, "data", "season-rankings.json")))
 
     def test_source_rows(self):
         with open(glob.glob(os.path.join(ROOT, "data", "source", "*Player ranks.csv"))[0], encoding="utf-8-sig") as f:
@@ -105,18 +108,76 @@ class BuildTests(unittest.TestCase):
                 continue
             self.assertIn('href="%s"' % url[len(SITE):], hub, url)
 
-    def test_race_csv(self):
+    def test_race_csvs(self):
+        for fn, key, n_rows in (("jersey-points-race.csv", "points", None),
+                                ("jersey-points-race-all-lists.csv", "list_points", self.report["counts"]["us_lists_with_entries"])):
+            with open(os.path.join(DOCS, "data", fn), encoding="utf-8") as f:
+                rows = list(csv.reader(f))
+            self.assertEqual(rows[0][0], "date")
+            if n_rows:
+                self.assertEqual(len(rows) - 1, n_rows, fn)
+            else:
+                self.assertEqual(len(rows) - 1, len(self.seasons), fn)
+            for j in range(1, len(rows[0])):
+                col = [int(r[j]) for r in rows[1:]]
+                self.assertEqual(col, sorted(col), rows[0][j])
+            total = {rows[0][j]: int(rows[-1][j]) for j in range(1, len(rows[0]))}
+            for p in self.players:
+                if p[key]:
+                    self.assertEqual(total[p["name"]], p[key], (fn, p["name"]))
         with open(os.path.join(DOCS, "data", "jersey-points-race.csv"), encoding="utf-8") as f:
-            rows = list(csv.reader(f))
-        self.assertEqual(rows[0][0], "date")
-        self.assertEqual(len(rows) - 1, self.report["counts"]["us_lists_with_entries"])
-        for j in range(1, len(rows[0])):
-            col = [int(r[j]) for r in rows[1:]]
-            self.assertEqual(col, sorted(col), rows[0][j])
-        total = {rows[0][j]: int(rows[-1][j]) for j in range(1, len(rows[0]))}
+            self.assertIn("Amar'e Stoudemire", f.readline())
+
+    def test_season_counts_match_rankings(self):
         for p in self.players:
-            if p["points"]:
-                self.assertEqual(total[p["name"]], p["points"], p["name"])
+            pos = list(p["s"].values())
+            self.assertEqual(p["no1_seasons"], sum(1 for x in pos if x == 1), p["name"])
+            self.assertEqual(p["top5_seasons"], sum(1 for x in pos if x <= 5), p["name"])
+            self.assertEqual(p["top10_seasons"], sum(1 for x in pos if x <= 10), p["name"])
+            self.assertEqual(p["points"], sum(11 - x for x in pos if x <= 10), p["name"])
+        for s, v in self.seasons.items():
+            self.assertTrue(all(r["pos"] <= v["depth"] for r in v["rows"]), s)
+
+    def test_2013_list_is_us(self):
+        rel = {r["id"]: r for r in json.load(open(os.path.join(DOCS, "data", "releases.json")))["releases"]}
+        self.assertTrue(rel["R23"]["us"])
+        self.assertIn("R23", self.seasons["2012-13"]["lists"])
+        self.assertEqual(self.seasons["2012-13"]["depth"], 10)
+        self.assertEqual(sorted(r["type"] for r in rel.values() if not r["us"]), ["Europe only", "Philippines only"])
+        for r in rel.values():
+            if not r["us"]:
+                self.assertTrue(all(e["m"] is None for e in r["entries"]))
+                self.assertIsNone(r["compare"])
+
+    def test_og_image_every_page(self):
+        for url, h in self.pages.items():
+            img = meta(h, "property", "og:image")
+            self.assertTrue(img and img.startswith(SITE + "share/") and img.endswith(".png"), url)
+            self.assertEqual(meta(h, "property", "og:image:width"), "1200", url)
+            self.assertEqual(meta(h, "property", "og:image:height"), "630", url)
+            self.assertTrue(meta(h, "property", "og:image:alt"), url)
+            self.assertEqual(meta(h, "name", "twitter:card"), "summary_large_image", url)
+            path = os.path.join(DOCS, img[len(SITE):])
+            self.assertTrue(os.path.exists(path), path)
+            self.assertLess(os.path.getsize(path), 300 * 1024, path)
+            with Image.open(path) as im:
+                self.assertEqual(im.size, (1200, 630), path)
+        shares = glob.glob(os.path.join(DOCS, "share", "**", "*.png"), recursive=True)
+        self.assertEqual(len(shares), len(self.pages))
+
+    def test_hub_title_and_order(self):
+        h = self.pages[SITE]
+        self.assertTrue(re.search(r"<title>NBA Jersey Sales Rankings", h))
+        order = ['class="stories"', 'id="latest"', 'id="ruled"', 'id="find-section"', 'id="time-machine"', 'id="pva"', 'id="methodology"']
+        pos = [h.index(x) for x in order]
+        self.assertEqual(pos, sorted(pos))
+        self.assertNotIn("Popularity vs. production", h)
+
+    def test_no_eyebrow_or_sales_volume_language(self):
+        for url, h in self.pages.items():
+            self.assertNotIn('class="eyebrow"', h, url)
+            self.assertNotIn('class="kicker"', h, url)
+            self.assertNotIn("units sold</", h, url)
 
     def test_grid_matches(self):
         self.assertEqual(self.report["grid_vs_player_ranks"]["mismatches"], [])
@@ -131,6 +192,8 @@ class BuildTests(unittest.TestCase):
                                   stdout=subprocess.DEVNULL)
             after = json.load(open(hashes))
             self.assertEqual(before, after, "a rebuild with no content change moved a lastmod (or docs are stale: rebuild)")
+            rep = json.load(open(os.path.join(ROOT, "data", "build_report.json")))
+            self.assertEqual(rep["counts"]["share_images_rendered"], 0, "a rebuild with no content change redrew a share image")
         finally:
             shutil.copy(backup, hashes)
             subprocess.check_call([sys.executable, os.path.join(ROOT, "scripts", "build_jerseys.py")], stdout=subprocess.DEVNULL)
