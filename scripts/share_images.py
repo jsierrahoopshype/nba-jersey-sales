@@ -2,7 +2,8 @@
 
 A card is redrawn only when its content hash changes (data/share_hashes.json): the hash covers
 the card text, the team color, the headshot bytes and TEMPLATE. No NBA or team logos, no
-jersey images. Player cards use the committed face-tight headshot (data/share/headshots/).
+jersey images. Player cards use the committed face2 headshot crop (data/share/headshots/, 400px
+from nba-headshots face2); the pages themselves keep the face-tight images.
 """
 import hashlib
 import json
@@ -10,7 +11,7 @@ import os
 
 from PIL import Image, ImageDraw, ImageFont
 
-TEMPLATE = "v3"  # bump whenever the layout code changes, so every card is redrawn
+TEMPLATE = "v4"  # bump whenever the layout code changes, so every card is redrawn
 W, H = 1200, 630
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOLD = os.path.join(HERE, "fonts", "Inter-Bold.otf")

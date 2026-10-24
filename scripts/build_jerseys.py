@@ -577,8 +577,8 @@ def since_head(m, r):
     if not r.get("compare_id"):
         return "Change"
     prev = m.byid[r["compare_id"]]
-    full = "Compared with the %s list (%s). This list: %s. Moves count only within the top %d both lists share." % (
-        prev["type"], prev["label"], r["label"], r["compare_len"])
+    full = "Compared with the %s list (%s). This list: %s. Exact move for every player on both lists." % (
+        prev["type"], prev["label"], r["label"])
     return '<button type="button" class="since" data-tip="%s" title="%s">Change since %s</button>' % (esc(full), esc(full), esc(prev["my"]))
 
 
@@ -1136,16 +1136,21 @@ def stacked_chart(m, seasons, by_season, top):
     """Stacked bars of ranking points per season: top contributors plus Other."""
     vals = [sum(by_season.get(s, {}).values()) for s in seasons]
     vmax = max([10] + vals)
-    colw, top_pad, h, left = 26, 14, 150, 32
+    # The y-axis is its own small SVG outside the scroller, so it stays pinned on phones.
+    colw, top_pad, h, left = 26, 14, 150, 4
     width = left + colw * len(seasons) + 10
     height = top_pad + h + 58
+    A = ['<svg class="yax" width="30" height="%d" viewBox="0 0 30 %d" aria-hidden="true">' % (height, height)]
     P = ['<svg class="bchart" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (
         width, height, width, height, esc("HoopsMatic ranking points by season, stacked by player"))]
     base = top_pad + h
-    P.append('<line class="grid" x1="%d" x2="%d" y1="%d" y2="%d"/>' % (left, width - 10, base, base))
+    P.append('<line class="grid" x1="0" x2="%d" y1="%d" y2="%d"/>' % (width - 10, base, base))
     for t in sorted({0, vmax // 2, vmax}):
         yy = base - h * t / vmax
-        P.append('<text class="ytk" x="%d" y="%.1f">%d</text>' % (left - 6, yy + 4, t))
+        A.append('<text class="ytk" x="26" y="%.1f">%d</text>' % (yy + 4, t))
+        if t:
+            P.append('<line class="grid" x1="0" x2="%d" y1="%.1f" y2="%.1f"/>' % (width - 10, yy, yy))
+    A.append("</svg>")
     for i, s in enumerate(seasons):
         cx = left + colw * i + 3
         yy = base
@@ -1166,7 +1171,8 @@ def stacked_chart(m, seasons, by_season, top):
     leg = "".join('<span><i style="background:%s"></i>%s</span>' % (STACK_COLORS[i], esc(n)) for i, n in enumerate(top))
     if any(n not in top for s in seasons for n in by_season.get(s, {})):
         leg += '<span><i style="background:%s"></i>Other</span>' % OTHER_COLOR
-    return '<div class="chart-scroll">%s</div><div class="legend">%s</div>' % ("".join(P), leg)
+    return '<div class="chart-frame"><div class="yaxis">%s</div><div class="chart-scroll">%s</div></div><div class="legend">%s</div>' % (
+        "".join(A), "".join(P), leg)
 
 
 def bar_chart(values, label_fn, aria, unit=""):
@@ -1404,7 +1410,7 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
             esc(r["type"]), esc(r["label"] + (" (season final)" if r["final"] else "")), tag, source_link(r),
             ('<p class="hint">%s</p>' % esc(note)) if note else "", inner))
     b.append(section("Every list this season", '<div class="lcards">%s</div>' % "".join(cards),
-                     "Side by side; swipe sideways on phones. Change compares with the previous complete U.S. list, only within the top spots both lists share."))
+                     "Side by side; swipe sideways on phones. Change compares with the previous complete U.S. list: the exact move for every player on both lists."))
     mv_blocks = []
     for r in us_lists:
         if not r["compare_id"]:
@@ -1418,7 +1424,7 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
         mv_blocks.append('<h3 class="h3">%s to %s</h3>%s' % (esc(ctx.rel_name(prev)), esc(ctx.rel_name(r)),
                                                              table([("Player", "name left"), ("Before / after", "num"), ("Move", "mvc")], rws)))
     if mv_blocks:
-        b.append(section("Movers", "".join(mv_blocks), "Players within the top spots both lists share, biggest climb first."))
+        b.append(section("Movers", "".join(mv_blocks), "Players on both lists, biggest climb first."))
     if debuts:
         rws = []
         for n in debuts:
@@ -1430,17 +1436,18 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
     first_el = next((r for r in us_lists if r["status"] == "full"), None)
     if first_el and first_el["compare_id"]:
         prev = m.byid[first_el["compare_id"]]
-        L = min([prev["n"]] + [r["n"] for r in us_lists if r["status"] == "full"])
+        # Dropped only if the previous rank fits inside one of this season's complete lists.
+        L = max(r["n"] for r in us_lists if r["status"] == "full")
         names = {e["player"] for r in us_lists for e in r["entries"]}
         dropped = [e for e in prev["entries"] if e["rank"] <= L and e["player"] not in names]
         if dropped:
             rws = [[ctx.plink(e["player"]), "No. %d" % e["rank"], ctx.team_cell(e)] for e in dropped]
             b.append(section("Dropped off", table([("Player", "name left"), ("Last rank", "num"), ("Team", "team left")], rws),
-                             "In the top %d of the %s list and on no U.S. list in %s." % (L, esc(ctx.rel_name(prev)), esc(season))))
+                             "No. %d or better on the %s list and on no U.S. list in %s." % (L, esc(ctx.rel_name(prev)), esc(season))))
     s = pva.get(season)
     if s and s["rows"]:
         b.append(section("Popularity vs. awards", pva_table(ctx, s),
-                         "Season jersey rank against the league-wide award rank: MVP vote share plus All-NBA (1st team = 3, 2nd = 2, 3rd = 1). Gap = award rank minus jersey rank; positive means the jersey ranked above the player's awards."))
+                         "Season jersey rank against the league-wide award rank: All-NBA team, then MVP voting place. Gap = award rank minus jersey rank; positive means the jersey ranked above the player's awards."))
     nav = []
     i = m.seasons.index(season)
     if i > 0:
@@ -1531,7 +1538,7 @@ def build_records(site, ctx, rec, m):
             '<div class="pairs">%s</div>' % pairs,
             [("Player", "name left"), ("Before", "num"), ("After", "num"), ("Lists", "left")],
             [[face(x["player"]), "No. %d" % x["from"], "No. %d" % x["to"], esc(x["prev"]["my"] + " to " + x["cur"]["my"])] for x in L],
-            "Adjacent complete U.S. lists only, and only within the top spots both lists share (lists ran 25, 20, 15 and 10 deep)."))
+            "Adjacent complete U.S. lists only, with the exact move for a player on both (lists ran 25, 20, 15 and 10 deep)."))
     L = rec["points"]
     b.append(rec_block("points", "Jersey ranking points since 2001",
                        "%s leads with %s. Scoring: in each season's HoopsMatic ranking, No. 1 earns 10 points, No. 2 earns 9, down to 1 point for No. 10." % (
@@ -1618,7 +1625,7 @@ def what_changed(m, r):
         s = "; ".join(bits)
         out.append(s[0].upper() + s[1:] + ".")
     if r["dropped"]:
-        out.append("Dropped out of the top %d: %s." % (L, join_names(x["player"] for x in r["dropped"])))
+        out.append("Dropped out: %s." % join_names(x["player"] for x in r["dropped"]))
     # Notable unchanged stretch: same rank on 3+ eligible lists in a row (within each pair's shared length).
     best = None
     idx = m.eligible.index(r)
@@ -1741,7 +1748,7 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
                             table([("Player", "name left"), ("Median gap", "num"), ("Seasons", "num")], rows_lo),
                             table([("Player", "name left"), ("Seasons", "num")], rows_nv))))
     b.append(section("Popularity vs. awards", pva_html,
-                     "Each season's HoopsMatic jersey ranking against a league-wide award rank: MVP vote share plus All-NBA (1st team = 3, 2nd = 2, 3rd = 1). Players with no MVP votes and no All-NBA team show No award votes. Gap = award rank minus jersey rank. Career uses the median gap over 3+ seasons with both ranks.", sid="pva"))
+                     "Each season's HoopsMatic jersey ranking against a league-wide award rank: All-NBA team, then MVP voting place. Players with no MVP votes and no All-NBA team show No award votes. Gap = award rank minus jersey rank. Career uses the median gap over 3+ seasons with both ranks.", sid="pva"))
     # (7) Methodology, archive, downloads.
     gaps = []
     for r in us:
@@ -1756,10 +1763,10 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
             "<li>Season ranking (the main measure): for each season, every complete U.S. list of that season is averaged. A player missing from a list counts one spot below its last place (missing from a 15-player list = 16). The ranking goes as deep as the season's shortest complete list. Ties: better single best rank, then better rank on the later list; still tied = shared position. Lists with only a No. 1 (2001, 2002) give that season's No. 1 only; the Jun 2006 No. 1 only list is not counted because 2005-06 has two complete lists. The empty Jan 2005 list is skipped. International lists never count.</li>"
             "<li>No. 1, Top 5 and Top 10 seasons count season rankings. No. 1, Top 5 and Top 10 lists count every U.S. list.</li>"
             "<li>Jersey ranking points: 11 minus rank for the top 10 of each season ranking (No. 1 = 10, No. 10 = 1). Every-list points apply the same scoring to each U.S. list. Team points go to the team on the player's last list of the season.</li>"
-            "<li>Change compares two adjacent complete U.S. lists, only within the shorter list's length: a player at No. 12 on a 15-player list who is absent from the next 10-player list did not drop out. First appearance is a first U.S. list; Re-entry is a return after missing the previous complete list. International lists get no change.</li>"
+            "<li>Change compares two adjacent complete U.S. lists. A player on both gets the exact move, whatever the two lengths (No. 12 on a 15-player list to No. 8 on a 10-player list = up 4). A player absent from the next list dropped out only if the previous rank fits inside that list; No. 12, then absent from a 10-player list, is not compared. First appearance is a first U.S. list; Re-entry is a return after missing the previous complete list. International lists get no change.</li>"
             "<li>Complete U.S. list lengths in the source: %s spots. Known gaps, shown as they are: %s. A team's stretch without a ranked player counts complete lists only.</li>"
             "<li>Players listed with more than one team (traded during the sales period) count for each team listed. Rows with a small note carry the source flag.</li>"
-            "<li>Popularity vs. awards: league-wide award rank per season from MVP vote share plus All-NBA (1st team = 3, 2nd = 2, 3rd = 1), from nba-player-data (awards.json and awardVotes.json). awardVotes.json records each player's MVP vote rank, not the share; because the share is always below 1 and falls with the vote rank, ranking by All-NBA points and then MVP vote rank gives the same order. Award data covers %s to %s, every season with a jersey list. No All-Star data.</li>"
+            "<li>Popularity vs. awards: each season, every player with an All-NBA team or MVP votes gets a league-wide award rank: All-NBA team, then MVP voting place (1st team ahead of 2nd, 2nd ahead of 3rd, any team ahead of none). Players with neither show No award votes. Data from nba-player-data (awards.json and awardVotes.json); it covers %s to %s, every season with a jersey list. No All-Star data.</li>"
             "<li>Salary, birthplace and road attendance come from other HoopsMatic datasets; a player or season that did not match cleanly is left blank.</li>"
             "</ul>") % (esc(join_names(str(x) for x in lengths)), esc("; ".join(gaps)),
                         ("%d-%02d" % (cov_years[0] - 1, cov_years[0] % 100)) if cov_years else "none",
@@ -1838,8 +1845,11 @@ def tm_body(ctx, r):
     if r["entries"]:
         body += list_table(ctx, r)
     if r.get("dropped"):
-        body += '<p class="hint">Dropped out of the top %d since the previous complete U.S. list: %s.</p>' % (r["compare_len"], ", ".join(
-            "%s (No. %d)" % (ctx.plink(e["player"]), e["rank"]) for e in r["dropped"]))
+        body += '<p class="hint">Dropped out since the previous complete U.S. list: %s.</p>' % ", ".join(
+            "%s (No. %d)" % (ctx.plink(e["player"]), e["rank"]) for e in r["dropped"])
+    if r.get("not_compared"):
+        body += '<p class="hint">Not compared (ranked deeper than this list\'s %d spots before): %s.</p>' % (r["n"], ", ".join(
+            "%s (No. %d)" % (ctx.plink(e["player"]), e["rank"]) for e in r["not_compared"]))
     return head + body
 
 
@@ -1869,6 +1879,7 @@ def export_data(m, rec, pva, career):
                          "f": flag_html(e) and (e["flag"] + ("; " if e["flag"] and e["multi"] else "") + ("Listed with more than one team; counts for each team listed" if e["multi"] else "")),
                          "m": e["move"], "img": cross.img(e["player"])} for e in r["entries"]],
             "dropped": [{"p": e["player"], "s": e["slug"], "r": e["rank"]} for e in r["dropped"]],
+            "not_compared": [{"p": e["player"], "s": e["slug"], "r": e["rank"]} for e in r.get("not_compared", [])],
         } for r in releases]})
     write_json("players.json", [{
         "name": p["name"], "slug": p["slug"], "us_lists": p["lists"], "no1_seasons": p["no1_seasons"], "top5_seasons": p["top5_seasons"],

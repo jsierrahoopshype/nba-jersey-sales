@@ -70,24 +70,26 @@ class SeasonRanking(unittest.TestCase):
 
 
 class Moves(unittest.TestCase):
-    def test_list_length_rule(self):
+    def test_exact_moves_and_not_compared(self):
         a = lst("A", ["P%d" % i for i in range(1, 16)])                    # 15 deep
-        b = lst("B", ["P2", "P1", "P3", "P4", "N", "P6", "P7", "P12", "P9", "P10"])  # 10 deep, no P5, P8, P11..15
-        c = lst("C", ["P1", "P2", "P3", "P4", "P6", "P7", "P9", "P10", "P13", "N", "P5", "P8", "Q", "P20", "P14"])  # 15 deep
+        b = lst("B", ["P2", "P1", "P3", "P4", "N", "P6", "P7", "P12", "P9", "P10"])  # 10 deep, no P5, P8, P11, P13..15
+        c = lst("C", ["P1", "P2", "P3", "P4", "P6", "P7", "P9", "P10", "P13", "N", "P5", "P8", "Q", "P20", "P12"])  # 15 deep
         M.compute_moves([a, b, c])
         mb = {e["player"]: e["move"] for e in b["entries"]}
-        self.assertEqual(b["compare_len"], 10)
         self.assertEqual((mb["P2"]["kind"], mb["P2"]["delta"]), ("up", 1))
+        self.assertEqual((mb["P12"]["kind"], mb["P12"]["delta"], mb["P12"]["from"]), ("up", 4, 12))  # 15-list No. 12 -> 10-list No. 8
         self.assertEqual(mb["N"]["kind"], "new")
-        self.assertEqual(mb["P12"]["kind"], "none")                      # No. 12 -> 8: outside the shared top 10
-        dropped = {e["player"] for e in b["dropped"]}
-        self.assertEqual(dropped, {"P5", "P8"})                          # No. 12-15 absent from a 10-list did not drop out
+        self.assertEqual({e["player"] for e in b["dropped"]}, {"P5", "P8"})            # within 10 before, absent now
+        self.assertEqual({e["player"] for e in b["not_compared"]}, {"P11", "P13", "P14", "P15"})  # deeper than 10: not compared
         mc = {e["player"]: e["move"] for e in c["entries"]}
-        self.assertEqual(c["compare_len"], 10)
-        self.assertEqual(mc["P5"]["kind"], "none")                       # No. 11 now, beyond the 10 both share
-        self.assertEqual(mc["Q"]["kind"], "new")                         # never seen: a first appearance
-        self.assertEqual(mc["P13"]["kind"], "back")                      # within 10 now, absent from B, seen on A
+        self.assertEqual((mc["P12"]["kind"], mc["P12"]["delta"]), ("down", 7))       # 10-list No. 8 -> 15-list No. 15
+        self.assertEqual((mc["N"]["kind"], mc["N"]["delta"]), ("down", 5))
+        self.assertEqual(mc["P5"]["kind"], "back")                                     # missed the 10-list, back at No. 11
+        self.assertEqual(mc["P13"]["kind"], "back")
+        self.assertEqual(mc["Q"]["kind"], "new")
         self.assertEqual(mc["P20"]["kind"], "new")
+        self.assertEqual(c["dropped"], [])
+        self.assertEqual(c["not_compared"], [])                                        # nobody on B is deeper than 15
 
     def test_partial_and_empty_lists_are_not_compared(self):
         a = lst("A", ["X", "Y", "Z"])

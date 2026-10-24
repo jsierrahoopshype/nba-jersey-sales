@@ -14,35 +14,34 @@ from collections import OrderedDict
 # --------------------------------------------------------------------------
 
 def compute_moves(us_lists):
-    """Set e["move"] on every entry of the U.S. lists (in date order) and r["dropped"], r["compare_id"], r["compare_len"].
+    """Set e["move"] on every entry of the U.S. lists (in date order) and r["dropped"], r["not_compared"],
+    r["compare_id"], r["compare_len"].
 
-    A move is computed only between adjacent eligible lists and only inside the shorter list's
-    length L: both ranks must be within L. A player within L now and absent from the previous
-    eligible list is a re-entry (or a first appearance if never on any earlier U.S. list). A drop-out
-    is a player within L on the previous list and absent now. Everything else is not compared.
+    A move is computed only between adjacent eligible lists. A player on both lists gets the exact
+    move, whatever the two lengths (No. 12 on a 15-player list to No. 8 on a 10-player list = up 4).
+    A player on this list and absent from the previous one is a re-entry, or a first appearance if
+    never on any earlier U.S. list. A player on the previous list and absent from this one dropped
+    out when the previous rank is within this list's length; when it was deeper (No. 12, then absent
+    from a 10-player list) the player is not compared.
     """
     seen = set()
     prev = None
     for r in us_lists:
-        r["compare_id"], r["compare_len"], r["dropped"] = None, None, []
+        r["compare_id"], r["compare_len"], r["dropped"], r["not_compared"] = None, None, [], []
         if r["status"] == "full" and prev is not None:
-            L = min(prev["n"], r["n"])
-            r["compare_id"], r["compare_len"] = prev["id"], L
+            r["compare_id"], r["compare_len"] = prev["id"], min(prev["n"], r["n"])
             pm = {x["player"]: x["rank"] for x in prev["entries"]}
             cur = {x["player"] for x in r["entries"]}
             for e in r["entries"]:
                 p = e["player"]
-                if e["rank"] <= L and p in pm and pm[p] <= L:
+                if p in pm:
                     d = pm[p] - e["rank"]
                     e["move"] = {"kind": "up" if d > 0 else ("down" if d < 0 else "same"), "delta": abs(d), "vs": prev["id"], "from": pm[p]}
-                elif e["rank"] <= L and p not in pm:
-                    e["move"] = {"kind": "back" if p in seen else "new", "delta": 0, "vs": prev["id"]}
-                elif p not in seen:
-                    e["move"] = {"kind": "new", "delta": 0, "vs": None}
                 else:
-                    e["move"] = {"kind": "none", "delta": 0, "vs": prev["id"],
-                                 "why": "outside the top %d both lists share" % L}
-            r["dropped"] = [x for x in prev["entries"] if x["rank"] <= L and x["player"] not in cur]
+                    e["move"] = {"kind": "back" if p in seen else "new", "delta": 0, "vs": prev["id"]}
+            gone = [x for x in prev["entries"] if x["player"] not in cur]
+            r["dropped"] = [x for x in gone if x["rank"] <= r["n"]]
+            r["not_compared"] = [x for x in gone if x["rank"] > r["n"]]
         else:
             for e in r["entries"]:
                 if e["player"] not in seen:
@@ -135,9 +134,8 @@ def season_points(pos):
 def award_ranking(season_votes):
     """season_votes: {player: {"all_nba": 1|2|3|None, "mvp_rank": int|None}} for one season.
 
-    Score = MVP vote share + All-NBA points. The share is below 1 and falls as the MVP vote rank
-    falls, so ordering by All-NBA points and then by MVP vote rank gives exactly the order of that
-    score. Players with neither are not ranked ("No award votes").
+    Award rank: All-NBA team (1st, then 2nd, then 3rd, then none), then MVP voting place; equal
+    keys share a position. Players with neither are not ranked ("No award votes").
     """
     rows = []
     for p, v in season_votes.items():

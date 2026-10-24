@@ -12,16 +12,20 @@ Writes:
                                       All-NBA team or MVP votes, league-wide
   data/crossover/seasons_played.json  jersey players: regular seasons with 1+ game
   data/crossover/team_logos.json      team_id -> current logo svg exists in nba-headshots
-  data/share/headshots/<slug>.webp    face-tight headshots for the share cards
+  data/share/headshots/<slug>.webp    face2 headshots (520px, cropped to head and shoulders) for the
+                                      share cards only; the pages keep linking face-tight
 """
 import argparse
 import csv
+import io
 import json
 import os
 import re
 import subprocess
 import unicodedata
 from collections import defaultdict
+
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "source", "nba-jersey-sales-rankings-2001-2026 - Player ranks.csv")
@@ -104,21 +108,27 @@ def main():
             played[n].add(int(r["YEAR"]))
     write("seasons_played.json", {n: sorted(v) for n, v in played.items()})
 
-    # ---- nba-headshots: current team logos + face-tight headshots for the share cards.
+    # ---- nba-headshots: current team logos + face2 headshots for the share cards.
     hs = R("nba-headshots")
     tree = set(subprocess.check_output(["git", "-C", hs, "ls-tree", "-r", "--name-only", "HEAD"]).decode().split())
     teams = load_json(os.path.join(OUT, "teams.json"))
     write("team_logos.json", {str(t["team_id"]): ("teams/logos/current/svg/%d.svg" % t["team_id"]) in tree for t in teams})
     os.makedirs(SHOTS, exist_ok=True)
+    for fn in os.listdir(SHOTS):
+        os.remove(os.path.join(SHOTS, fn))
     shots = load_json(os.path.join(OUT, "headshots.json"))
-    base = "https://jsierrahoopshype.github.io/nba-headshots/"
     for n, h in shots.items():
-        path = h["image"][len(base):]
+        # Same file stem as the face-tight image the pages use (<nba_id>-<slug>), in face2/.
+        stem = h["image"].rsplit("/", 1)[1].rsplit(".", 1)[0]
+        path = "players/headshots/face2/%s.png" % stem
         if path not in tree:
             continue
         data = subprocess.check_output(["git", "-C", hs, "show", "HEAD:" + path])
-        with open(os.path.join(SHOTS, slugify(n) + ".webp"), "wb") as f:
-            f.write(data)
+        im = Image.open(io.BytesIO(data)).convert("RGB")
+        # face2 is 520x520 with the face centered and an empty band at the bottom: keep the
+        # 400px square around the head and shoulders, stored as WebP to keep the repo small.
+        im = im.crop((60, 30, 460, 430))
+        im.save(os.path.join(SHOTS, slugify(n) + ".webp"), "WEBP", quality=90, method=6)
     print("award seasons", len(seasons), "played", len(played), "of", len(players), "headshots", len(os.listdir(SHOTS)))
 
 
