@@ -1177,7 +1177,7 @@ def build_hub(site, ctx, model, players, team_summ, season_summ, pvp, career, re
             "<li>A list with only the No. 1, or no data, does not break or extend a player's run and is skipped when comparing moves.</li>"
             "<li>Players listed with more than one team (traded during the sales period) count for each team listed.</li>"
             "<li>Rows marked with a small note carry the source flag (for example, from a 2025 HoopsHype article only, or a team filled in).</li>"
-            "<li>Production rank: league rank in points + rebounds + assists per game that regular season, min. %d games (nba-player-data). Salary, awards, MVP votes, birthplace and road attendance come from other HoopsMatic datasets; a player or season that did not match cleanly is left blank.</li>"
+            "<li>Production rank: the player's league rank in points + rebounds + assists per game that regular season, minimum %d games (stats from nba-player-data). Salary, awards, MVP votes, birthplace and road attendance come from other HoopsMatic datasets; a player or season that did not match cleanly is left blank.</li>"
             "</ul>") % (esc(join_names(str(x) for x in lengths)), esc("; ".join(gaps)), cross.prod_min_gp)
     b.append(section("Methodology", meth, sid="methodology"))
     site.add("", url, page("", url, title, desc, "\n".join(b), indexable=True, nav="hub"), True)
