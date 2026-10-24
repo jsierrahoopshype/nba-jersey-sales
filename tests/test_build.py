@@ -173,6 +173,35 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(pos, sorted(pos))
         self.assertNotIn("Popularity vs. production", h)
 
+    def test_award_rank_wording(self):
+        for url, h in self.pages.items():
+            text = re.sub(r"<[^>]+>", " ", h).lower()
+            self.assertNotIn("vote share", text, url)
+            self.assertNotIn("share plus", text, url)
+        hub = self.pages[SITE]
+        meth = hub[hub.index('id="methodology"'):]
+        meth = meth[:meth.index("</section>")]
+        self.assertIn("All-NBA team, then MVP voting place", meth)
+        self.assertIn("All-NBA team, then MVP voting place", hub[hub.index('id="pva"'):])
+        season = self.pages[SITE + "season/2015-16/"]
+        self.assertIn("All-NBA team, then MVP voting place", season)
+
+    def test_moves_exact_when_both_ranks_known(self):
+        rel = {r["id"]: r for r in json.load(open(os.path.join(DOCS, "data", "releases.json")))["releases"]}
+        # Apr 2013 (15 deep) to Oct 2013 (10 deep): every player on both lists has an exact move.
+        prev = {e["p"]: e["r"] for e in rel["R22"]["entries"]}
+        for e in rel["R23"]["entries"]:
+            if e["p"] in prev:
+                self.assertIn(e["m"]["kind"], ("up", "down", "same"), e["p"])
+                self.assertEqual(e["m"]["from"], prev[e["p"]], e["p"])
+        cur = {e["p"] for e in rel["R23"]["entries"]}
+        self.assertEqual(sorted(d["p"] for d in rel["R23"]["not_compared"]),
+                         sorted(p for p, r in prev.items() if p not in cur and r > 10))
+        self.assertTrue(all(d["r"] <= 10 for d in rel["R23"]["dropped"]))
+        for r in rel.values():
+            if r["us"] and r["compare"]:
+                self.assertTrue(all(e["m"]["kind"] != "none" for e in r["entries"]), r["id"])
+
     def test_no_eyebrow_or_sales_volume_language(self):
         for url, h in self.pages.items():
             self.assertNotIn('class="eyebrow"', h, url)

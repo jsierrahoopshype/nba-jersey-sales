@@ -335,7 +335,7 @@
       if (r.entries.length) {
         var since = 'Change';
         if (r.compare) {
-          var full = 'Compared with the ' + r.compare.type + ' list (' + r.compare.label + '). This list: ' + r.label + '. Moves count only within the top ' + r.compare.len + ' both lists share.';
+          var full = 'Compared with the ' + r.compare.type + ' list (' + r.compare.label + '). This list: ' + r.label + '. Exact move for every player on both lists.';
           since = '<button type="button" class="since" data-tip="' + esc(full) + '" title="' + esc(full) + '">Change since ' + esc(r.compare.my) + '</button>';
         }
         h += '<div class="table-wrap"><table class="lb"><thead><tr><th class="rank">No.</th><th class="name left">Player</th>' +
@@ -350,7 +350,12 @@
         h += '</tbody></table></div>';
       }
       if (r.dropped && r.dropped.length) {
-        h += '<p class="hint">Dropped out of the top ' + r.compare.len + ' since the previous complete U.S. list: ' + r.dropped.map(function (d) {
+        h += '<p class="hint">Dropped out since the previous complete U.S. list: ' + r.dropped.map(function (d) {
+          return '<a href="' + ROOT + 'player/' + d.s + '/">' + esc(d.p) + '</a> (No. ' + d.r + ')';
+        }).join(', ') + '.</p>';
+      }
+      if (r.not_compared && r.not_compared.length) {
+        h += '<p class="hint">Not compared (ranked deeper than this list\'s ' + r.entries.length + ' spots before): ' + r.not_compared.map(function (d) {
           return '<a href="' + ROOT + 'player/' + d.s + '/">' + esc(d.p) + '</a> (No. ' + d.r + ')';
         }).join(', ') + '.</p>';
       }

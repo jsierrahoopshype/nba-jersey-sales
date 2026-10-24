@@ -40,7 +40,7 @@ Outputs: `docs/` pages, `docs/data/*.json`, `docs/data/jersey-points-race.csv` (
 - Season ranking (main measure): average rank across the season's complete U.S. lists; missing from a list = one spot below its last place; depth = the shortest complete list; ties by best single rank, then the later list, else shared. No. 1 only lists (2001, 2002) give only the No. 1. The empty Jan 2005 list is skipped.
 - No. 1 / Top 5 / Top 10 seasons are the headline counts; list counts sit next to them, labeled.
 - Jersey ranking points = 11 minus season rank, top 10 only. Every-list points use the same scoring on each U.S. list.
-- Change is computed only between adjacent complete U.S. lists and only within the shorter list's length.
-- Popularity vs. awards: MVP vote share + All-NBA (3/2/1), ranked league-wide. The data holds the MVP vote rank, which gives the same order as the share.
+- Change is computed only between adjacent complete U.S. lists: the exact move for a player on both; a player missing from the next list dropped out only if the previous rank fits inside it, otherwise not compared.
+- Popularity vs. awards: league-wide award rank per season, All-NBA team, then MVP voting place.
 - Player pages are indexable only with 3+ U.S. lists; the rest carry `noindex, follow` and stay out of the sitemap. Season pages with only a No. 1 and the team page with no ranked player are noindex too.
 - All page text is a template filled from data.
