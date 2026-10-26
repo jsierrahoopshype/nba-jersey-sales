@@ -202,6 +202,47 @@ class BuildTests(unittest.TestCase):
             if r["us"] and r["compare"]:
                 self.assertTrue(all(e["m"]["kind"] != "none" for e in r["entries"]), r["id"])
 
+    def test_index_pages(self):
+        sm = set(self.sitemap)
+        for path, n in (("teams/", 30), ("seasons/", len(self.seasons))):
+            url = SITE + path
+            h = self.pages[url]
+            self.assertIn(url, sm)
+            self.assertIn('class="crumbs"', h)
+            self.assertIn('"@type": "BreadcrumbList"', h)
+            self.assertEqual(len(re.findall(r'href="\.\./%s/[^"/]+/"' % ("team" if path == "teams/" else "season"), h)) >= n, True, url)
+        self.assertEqual(self.pages[SITE + "teams/"].count('class="tcard"'), 30)
+        hub = self.pages[SITE]
+        for anchor, link in (('id="teams"', 'href="teams/"'), ('id="seasons"', 'href="seasons/"')):
+            sec = hub[hub.index(anchor):]
+            sec = sec[:sec.index("</section>")]
+            self.assertIn(link, sec)
+            self.assertLessEqual(sec.count("<tr>") + sec.count("<tr "), 6)
+        for url, h in self.pages.items():
+            if "/team/" in url or "/season/" in url:
+                self.assertIn('href="../../teams/"', h, url)
+                self.assertIn('href="../../seasons/"', h, url)
+
+    def test_pva_table_columns(self):
+        for url in (SITE, SITE + "season/2015-16/"):
+            h = self.pages[url]
+            sec = h[h.index("Popularity vs. awards"):]
+            heads = re.findall(r"<th[^>]*>([^<]*)</th>", sec[:sec.index("</thead>")])
+            self.assertEqual(heads, ["Player", "Jersey", "Awards", "Gap"], url)
+            body = sec[:sec.index("</table>")]
+            for row in re.findall(r"<tr[^>]*>(.*?)</tr>", body)[1:]:
+                cells = re.findall(r"<td[^>]*>(.*?)</td>", row)
+                self.assertRegex(cells[1], r"^No\. \d+$")
+                self.assertRegex(re.sub(r"<[^>]+>", "", cells[2]), r"^(No\. \d+|-)$")
+                self.assertIn('class="face"', cells[0])
+                self.assertIn('class="tline sub3"', cells[0])
+                self.assertNotIn("No award votes", cells[2])
+
+    def test_names_are_name_links(self):
+        h = self.pages[SITE + "season/2015-16/"]
+        self.assertIn('<a class="nm" href="../../player/stephen-curry/">Stephen Curry</a>', h)
+        self.assertIn('<a class="nm" href="../../team/golden-state-warriors/">', h)
+
     def test_no_eyebrow_or_sales_volume_language(self):
         for url, h in self.pages.items():
             self.assertNotIn('class="eyebrow"', h, url)

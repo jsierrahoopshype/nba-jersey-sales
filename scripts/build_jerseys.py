@@ -433,7 +433,7 @@ class Cross:
 def page(root, url, title, desc, body, indexable=True, nav="hub", share=None, share_alt=""):
     robots = "" if indexable else '<meta name="robots" content="noindex, follow">\n'
     tabs = [("hub", root, "Rankings"), ("records", root + "records/", "Records"),
-            ("seasons", root + "#seasons", "Seasons"), ("teams", root + "#teams", "Teams")]
+            ("seasons", root + "seasons/", "Seasons"), ("teams", root + "teams/", "Teams")]
     navhtml = "".join('<a href="%s"%s>%s</a>' % (esc(h), ' class="active"' if k == nav else "", esc(t)) for k, h, t in tabs)
     og = ""
     if share:
@@ -472,7 +472,7 @@ class Ctx:
         p = self.players.get(name)
         if not p:
             return esc(name)
-        return '<a href="%splayer/%s/">%s</a>' % (self.root, p["slug"], esc(name))
+        return '<a class="nm" href="%splayer/%s/">%s</a>' % (self.root, p["slug"], esc(name))
 
     def face(self, name, size=32, cls="face"):
         return '<img class="%s" src="%s" alt="%s" width="%d" height="%d" loading="lazy">' % (
@@ -492,7 +492,7 @@ class Ctx:
         """Team as published, each franchise linked, with a logo or swatch per team."""
         bits = []
         for nm, sl, lg in zip(e["team_names"], e["team_slugs"], e["logos"]):
-            bits.append('%s<a href="%steam/%s/">%s</a>' % (self.mark(sl, lg), self.root, sl, esc(nm)))
+            bits.append('%s<a class="nm" href="%steam/%s/">%s</a>' % (self.mark(sl, lg), self.root, sl, esc(nm)))
         return " / ".join(bits)
 
     def team_logo(self, slug):
@@ -501,7 +501,7 @@ class Ctx:
 
     def tlink(self, slug):
         t = self.teams[slug]
-        return '%s<a href="%steam/%s/">%s</a>' % (self.mark(slug, self.team_logo(slug)), self.root, slug, esc(t["full_name"]))
+        return '%s<a class="nm" href="%steam/%s/">%s</a>' % (self.mark(slug, self.team_logo(slug)), self.root, slug, esc(t["full_name"]))
 
     def slink(self, season):
         return '<a href="%sseason/%s/">%s</a>' % (self.root, season, esc(season))
@@ -591,8 +591,6 @@ def list_table(ctx, r, compact=False):
     for e in r["entries"]:
         who = ctx.face(e["player"], 28) + '<span class="pwrap">' + ctx.plink(e["player"]) + \
             '<span class="tline">%s</span>' % ctx.team_cell(e) + flag_html(e) + '</span>'
-        if compact:
-            who = '<span class="pwrap">' + ctx.plink(e["player"]) + '<span class="tline">%s</span>' % ctx.team_cell(e) + flag_html(e) + '</span>'
         cells = [str(e["rank"]), who]
         if with_moves:
             cells.append(move_html(e.get("move")))
@@ -611,6 +609,24 @@ def stat_cards(items):
         '<div class="stat-card"><div class="lbl">%s</div><div class="num%s">%s</div>%s</div>' % (
             esc(lbl), " sm" if len(re.sub("<[^>]+>", "", num)) > 7 else "", num,
             ('<div class="sub">%s</div>' % sub) if sub else "") for lbl, num, sub in items)
+
+
+def crumbs(root, items):
+    """Breadcrumb links plus BreadcrumbList JSON-LD. items: (label, path relative to the section root or None)."""
+    trail = [("NBA jersey sales", "")] + list(items)
+    links = []
+    for k, (lab, path) in enumerate(trail):
+        last = k == len(trail) - 1
+        links.append(('<span aria-current="page">%s</span>' % esc(lab)) if last else '<a href="%s%s">%s</a>' % (root, path, esc(lab)))
+    ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        dict({"@type": "ListItem", "position": k + 1, "name": lab}, **({"item": SITE + path} if path is not None else {}))
+        for k, (lab, path) in enumerate(trail)]}
+    return '<nav class="crumbs" aria-label="Breadcrumb">%s</nav><script type="application/ld+json">%s</script>' % (
+        ' <span class="sep" aria-hidden="true">&#8250;</span> '.join(links), json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
+
+
+def index_links(root):
+    return '<p class="pager">More: <a href="%steams/">All teams</a> &middot; <a href="%sseasons/">All seasons</a></p>' % (root, root)
 
 
 def section(title, inner, hint="", sid=None, cls="section"):
@@ -721,6 +737,27 @@ def tip_text(mode, col, val, who):
     return "%s: no data, empty list" % base
 
 
+MIN_COL = 28  # px per column: below this a chart keeps its minimum width and scrolls sideways
+
+
+def xp(v):
+    """An x position or width as a percentage of the chart's width."""
+    return "%.3f%%" % v
+
+
+def fluid_svg(cls, n, height, aria):
+    """An SVG that fills its container; x positions are percentages, so text never stretches.
+    Its min-width keeps every column at least MIN_COL wide, and the scroller takes over below that."""
+    return '<svg class="%s fluid" width="100%%" height="%d" style="min-width:%dpx" role="img" aria-label="%s">' % (
+        cls, height, n * MIN_COL + 8, esc(aria))
+
+
+def x_label(at, y, lab):
+    """A rotated column label at x = `at` percent (a nested SVG carries the percentage)."""
+    return '<svg x="%s" y="0" width="1" height="1" overflow="visible"><text class="xtk" transform="translate(4,%d) rotate(-60)">%s</text></svg>' % (
+        xp(at), y, esc(lab))
+
+
 def render_chart(cols, mode, series, markers):
     """SVG for one or two series. Mirrors drawChart() in jerseys.js."""
     cs = cols[mode]
@@ -732,30 +769,30 @@ def render_chart(cols, mode, series, markers):
     vals = [v for s in series for c in win for v in [s[mode[0]].get(c["k"])] if v]
     maxr = max([15] + [c["depth"] for c in win if c["kind"] == "full"] + vals)
     maxr = 25 if maxr > 20 else (20 if maxr > 15 else 15)
-    colw, top, h, left = (30 if mode == "season" else 24), 26, 200, 4
+    top, h = 26, 200
     band = top + h + 22
-    width = left + colw * len(win) + 10
     height = band + 70
+    n = len(win)
+    cp = 100.0 / n
     y = lambda rk: top + (rk - 1) * h / (maxr - 1)
-    x = lambda i: left + colw * i + colw / 2
+    x = lambda i: (i + .5) * cp
     A = ['<svg class="yax" width="30" height="%d" viewBox="0 0 30 %d" aria-hidden="true">' % (height, height)]
-    P = ['<svg class="rchart" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (
-        width, height, width, height, esc("%s rank by %s, No. 1 at the top" % (" and ".join(s["name"] for s in series), "season" if mode == "season" else "list")))]
+    P = [fluid_svg("rchart", n, height, "%s rank by %s, No. 1 at the top" % (" and ".join(s["name"] for s in series), "season" if mode == "season" else "list"))]
     for rk in [1, 5, 10, 15, 20, 25]:
         if rk <= maxr:
-            P.append('<line class="grid" x1="0" x2="%d" y1="%.1f" y2="%.1f"/>' % (width - 10, y(rk), y(rk)))
+            P.append('<line class="grid" x1="0" x2="100%%" y1="%.1f" y2="%.1f"/>' % (y(rk), y(rk)))
             A.append('<text class="ytk" x="26" y="%.1f">%d</text>' % (y(rk) + 4, rk))
     A.append('<text class="ytk" x="26" y="%.1f">Out</text></svg>' % (band + 4))
     for i, c in enumerate(win):
-        cx = x(i)
+        bx, bw = xp((i + .07) * cp), xp(.86 * cp)
         if c["kind"] in ("empty", "none"):
-            P.append('<rect class="nodata" x="%.1f" y="%d" width="%d" height="%d"/>' % (cx - colw / 2 + 2, top - 6, colw - 4, band - top + 14))
+            P.append('<rect class="nodata" x="%s" y="%d" width="%s" height="%d"/>' % (bx, top - 6, bw, band - top + 14))
         elif c["kind"] in ("partial", "no1"):
-            P.append('<rect class="gap" x="%.1f" y="%d" width="%d" height="%d"/>' % (cx - colw / 2 + 2, top - 6, colw - 4, band - top + 14))
+            P.append('<rect class="gap" x="%s" y="%d" width="%s" height="%d"/>' % (bx, top - 6, bw, band - top + 14))
         elif c["depth"] < maxr:
-            P.append('<rect class="short" x="%.1f" y="%.1f" width="%d" height="%.1f"/>' % (
-                cx - colw / 2 + 2, y(c["depth"]) + 6, colw - 4, max(0, top + h - y(c["depth"]) - 6)))
-        P.append('<text class="xtk" transform="translate(%.1f,%d) rotate(-60)">%s</text>' % (cx + 4, band + 16, esc(c["lab"])))
+            P.append('<rect class="short" x="%s" y="%.1f" width="%s" height="%.1f"/>' % (
+                bx, y(c["depth"]) + 6, bw, max(0, top + h - y(c["depth"]) - 6)))
+        P.append(x_label(x(i), band + 16, c["lab"]))
     for si, s in enumerate(series):
         key = mode[0]
         cls = "s%d" % si
@@ -765,8 +802,8 @@ def render_chart(cols, mode, series, markers):
             st = col_state(c, v)
             if st == "ranked":
                 if prev is not None:
-                    P.append('<line class="seg %s%s" x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f"/>' % (
-                        cls, " bridge" if prev[2] else "", x(prev[0]), y(prev[1]), x(i), y(v)))
+                    P.append('<line class="seg %s%s" x1="%s" y1="%.1f" x2="%s" y2="%.1f"/>' % (
+                        cls, " bridge" if prev[2] else "", xp(x(prev[0])), y(prev[1]), xp(x(i)), y(v)))
                 prev = (i, v, False)
             elif st == "outside":
                 prev = None
@@ -777,20 +814,20 @@ def render_chart(cols, mode, series, markers):
             st = col_state(c, v)
             tip = esc(tip_text(mode, c, v, s["name"]))
             if st == "ranked":
-                P.append('<g class="pt %s%s" tabindex="0" data-tip="%s"><circle cx="%.1f" cy="%.1f" r="5"/><title>%s</title></g>' % (
-                    cls, " one" if v == 1 else "", tip, x(i), y(v), tip))
+                P.append('<g class="pt %s%s" tabindex="0" data-tip="%s"><circle cx="%s" cy="%.1f" r="5"/><title>%s</title></g>' % (
+                    cls, " one" if v == 1 else "", tip, xp(x(i)), y(v), tip))
             elif si == 0 and st == "outside":
-                P.append('<g class="pt out" tabindex="0" data-tip="%s"><circle cx="%.1f" cy="%.1f" r="3.5"/><title>%s</title></g>' % (tip, x(i), band, tip))
+                P.append('<g class="pt out" tabindex="0" data-tip="%s"><circle cx="%s" cy="%.1f" r="3.5"/><title>%s</title></g>' % (tip, xp(x(i)), band, tip))
             elif si == 0 and st == "unknown":
-                P.append('<g class="pt unk" tabindex="0" data-tip="%s"><text x="%.1f" y="%.1f">?</text><title>%s</title></g>' % (tip, x(i), band + 4, tip))
+                P.append('<g class="pt unk" tabindex="0" data-tip="%s"><text x="%s" y="%.1f">?</text><title>%s</title></g>' % (tip, xp(x(i)), band + 4, tip))
     if markers:
         k2i = {c["k"]: i for i, c in enumerate(win)}
-        for n, mk in enumerate(markers, 1):
+        for k, mk in enumerate(markers, 1):
             if mk["k"] not in k2i:
                 continue
-            cx = x(k2i[mk["k"]])
-            P.append('<g class="mk%s" data-tip="%s"><line x1="%.1f" x2="%.1f" y1="%d" y2="%d"/><circle cx="%.1f" cy="%d" r="7"/><text x="%.1f" y="%d">%d</text></g>' % (
-                " mx" if n > 4 else "", esc(mk["t"]), cx, cx, top - 12, band, cx, top - 16, cx, top - 12, n))
+            cx = xp(x(k2i[mk["k"]]))
+            P.append('<g class="mk%s" data-tip="%s"><line x1="%s" x2="%s" y1="%d" y2="%d"/><circle cx="%s" cy="%d" r="7"/><text x="%s" y="%d">%d</text></g>' % (
+                " mx" if k > 4 else "", esc(mk["t"]), cx, cx, top - 12, band, cx, top - 16, cx, top - 12, k))
     P.append("</svg>")
     return '<div class="yaxis">%s</div><div class="chart-scroll">%s</div>' % ("".join(A), "".join(P))
 
@@ -816,8 +853,8 @@ def award_label(a):
     if a["all_nba"]:
         bits.append("All-NBA %s team" % {1: "1st", 2: "2nd", 3: "3rd"}[a["all_nba"]])
     if a["mvp_rank"]:
-        bits.append("%s in MVP voting" % ordinal(a["mvp_rank"]))
-    return ", ".join(bits)
+        bits.append("MVP %s" % ordinal(a["mvp_rank"]))
+    return " \u00b7 ".join(bits)
 
 
 def popularity_vs_awards(m):
@@ -1079,8 +1116,8 @@ def build_player_page(site, p, ctx, m, pva):
                 srk = ctx.cross.salary_rank(name, end)
                 inner.append('<div><span class="k">Salary</span>%s%s</div>' % (esc(money(sal)), esc(" (No. %d in the NBA)" % srk) if srk else ""))
             a = m.awards[season]["by"].get(name)
-            inner.append('<div><span class="k">Awards</span>%s</div>' % esc(award_label(a)))
-            inner.append('<div><span class="k">Award rank</span>%s</div>' % (esc("No. %d of %d with votes" % (a["rank"], len(m.awards[season]["rows"]))) if a else "No award votes"))
+            inner.append('<div><span class="k">Awards</span>%s</div>' % esc(
+                ("No. %d of %d with votes (%s)" % (a["rank"], len(m.awards[season]["rows"]), award_label(a))) if a else "No award votes"))
             hon = [x for x in ctx.cross.honors(name, end) if not x.startswith("All-NBA") and x != "Most Valuable Player"]
             if hon:
                 inner.append('<div><span class="k">Other honors</span>%s</div>' % esc(", ".join(hon)))
@@ -1137,39 +1174,38 @@ def stacked_chart(m, seasons, by_season, top):
     vals = [sum(by_season.get(s, {}).values()) for s in seasons]
     vmax = max([10] + vals)
     # The y-axis is its own small SVG outside the scroller, so it stays pinned on phones.
-    colw, top_pad, h, left = 26, 14, 150, 4
-    width = left + colw * len(seasons) + 10
+    top_pad, h = 14, 150
     height = top_pad + h + 58
+    n = len(seasons)
+    cp = 100.0 / n
     A = ['<svg class="yax" width="30" height="%d" viewBox="0 0 30 %d" aria-hidden="true">' % (height, height)]
-    P = ['<svg class="bchart" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (
-        width, height, width, height, esc("HoopsMatic ranking points by season, stacked by player"))]
+    P = [fluid_svg("bchart", n, height, "HoopsMatic ranking points by season, stacked by player")]
     base = top_pad + h
-    P.append('<line class="grid" x1="0" x2="%d" y1="%d" y2="%d"/>' % (width - 10, base, base))
+    P.append('<line class="grid" x1="0" x2="100%%" y1="%d" y2="%d"/>' % (base, base))
     for t in sorted({0, vmax // 2, vmax}):
         yy = base - h * t / vmax
         A.append('<text class="ytk" x="26" y="%.1f">%d</text>' % (yy + 4, t))
         if t:
-            P.append('<line class="grid" x1="0" x2="%d" y1="%.1f" y2="%.1f"/>' % (width - 10, yy, yy))
+            P.append('<line class="grid" x1="0" x2="100%%" y1="%.1f" y2="%.1f"/>' % (yy, yy))
     A.append("</svg>")
     for i, s in enumerate(seasons):
-        cx = left + colw * i + 3
         yy = base
         parts = by_season.get(s, {})
-        segs = [(n, parts[n]) for n in top if parts.get(n)]
-        other = sum(v for n, v in parts.items() if n not in top)
+        segs = [(k, parts[k]) for k in top if parts.get(k)]
+        other = sum(v for k, v in parts.items() if k not in top)
         if other:
             segs.append(("Other", other))
-        for n, v in segs:
+        for k, v in segs:
             hh = h * v / vmax
             yy -= hh
-            col = STACK_COLORS[top.index(n)] if n in top else OTHER_COLOR
-            tip = "%s, %s: %s" % (s, n, plural(v, "point"))
-            P.append('<rect x="%d" y="%.1f" width="%d" height="%.1f" fill="%s" tabindex="0" data-tip="%s"><title>%s</title></rect>' % (
-                cx, yy, colw - 6, max(hh, .5), col, esc(tip), esc(tip)))
-        P.append('<text class="xtk" transform="translate(%d,%d) rotate(-60)">%s</text>' % (cx + 12, base + 12, esc(s)))
+            col = STACK_COLORS[top.index(k)] if k in top else OTHER_COLOR
+            tip = "%s, %s: %s" % (s, k, plural(v, "point"))
+            P.append('<rect x="%s" y="%.1f" width="%s" height="%.1f" fill="%s" tabindex="0" data-tip="%s"><title>%s</title></rect>' % (
+                xp((i + .1) * cp), yy, xp(.8 * cp), max(hh, .5), col, esc(tip), esc(tip)))
+        P.append(x_label((i + .5) * cp, base + 12, s))
     P.append("</svg>")
-    leg = "".join('<span><i style="background:%s"></i>%s</span>' % (STACK_COLORS[i], esc(n)) for i, n in enumerate(top))
-    if any(n not in top for s in seasons for n in by_season.get(s, {})):
+    leg = "".join('<span><i style="background:%s"></i>%s</span>' % (STACK_COLORS[i], esc(k)) for i, k in enumerate(top))
+    if any(k not in top for s in seasons for k in by_season.get(s, {})):
         leg += '<span><i style="background:%s"></i>Other</span>' % OTHER_COLOR
     return '<div class="chart-frame"><div class="yaxis">%s</div><div class="chart-scroll">%s</div></div><div class="legend">%s</div>' % (
         "".join(A), "".join(P), leg)
@@ -1181,29 +1217,29 @@ def bar_chart(values, label_fn, aria, unit=""):
     vmax = max([1] + [abs(v) for v in nums])
     vmin = min([0] + nums)
     # The y-axis is its own small SVG outside the scroller, so it stays pinned on phones.
-    colw, top, h, left, axw = 30, 14, 150, 4, 40
-    width = left + colw * len(values) + 10
+    top, h, axw = 14, 150, 40
     height = top + h + 58
+    n = len(values)
+    cp = 100.0 / n
     neg = vmin < 0
     zero = top + (h * (vmax / (vmax - vmin)) if neg else h)
     scale = (h / (vmax - vmin)) if neg else h / vmax
     axis = ('<svg class="yax" width="%d" height="%d" viewBox="0 0 %d %d" aria-hidden="true">'
             '<text class="ytk" x="%d" y="%.1f">0</text><text class="ytk" x="%d" y="%.1f">%s</text></svg>') % (
         axw, height, axw, height, axw - 4, zero + 4, axw - 4, top + 8, esc(label_fn(vmax)))
-    parts = ['<svg class="bchart" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s">' % (
-        width, height, width, height, esc(aria))]
-    parts.append('<line class="grid" x1="0" x2="%d" y1="%.1f" y2="%.1f"/>' % (width - 10, zero, zero))
+    parts = [fluid_svg("bchart", n, height, aria)]
+    parts.append('<line class="grid" x1="0" x2="100%%" y1="%.1f" y2="%.1f"/>' % (zero, zero))
     for i, (lab, v) in enumerate(values):
-        cx = left + colw * i + 3
+        bx, bw = xp((i + .1) * cp), xp(.8 * cp)
         if v is None:
-            parts.append('<rect class="gap" x="%d" y="%d" width="%d" height="%d"><title>%s</title></rect>' % (
-                cx, top, colw - 6, h, esc(lab + ": no data")))
+            parts.append('<rect class="gap" x="%s" y="%d" width="%s" height="%d"><title>%s</title></rect>' % (
+                bx, top, bw, h, esc(lab + ": no data")))
         else:
             bh = abs(v) * scale
             yy = zero - bh if v >= 0 else zero
-            parts.append('<rect class="bar%s" x="%d" y="%.1f" width="%d" height="%.1f"><title>%s</title></rect>' % (
-                " neg" if v < 0 else "", cx, yy, colw - 6, max(bh, 0.5), esc("%s: %s%s" % (lab, label_fn(v), unit))))
-        parts.append('<text class="xtk" transform="translate(%d,%d) rotate(-60)">%s</text>' % (cx + 14, top + h + 12, esc(lab)))
+            parts.append('<rect class="bar%s" x="%s" y="%.1f" width="%s" height="%.1f"><title>%s</title></rect>' % (
+                " neg" if v < 0 else "", bx, yy, bw, max(bh, 0.5), esc("%s: %s%s" % (lab, label_fn(v), unit))))
+        parts.append(x_label((i + .5) * cp, top + h + 12, lab))
     parts.append("</svg>")
     return '<div class="chart-frame"><div class="yaxis wide">%s</div><div class="chart-scroll">%s</div></div>' % (axis, "".join(parts))
 
@@ -1245,7 +1281,8 @@ def build_team_page(site, t, ctx, m, team_entries, tp_season, tp_lists):
     logo = ctx.team_logo(slug)
     mark = ('<img class="logo big" src="%s" alt="" width="48" height="48">' % esc(logo)) if logo else \
         '<span class="sw big" style="background:%s"></span>' % esc(t.get("color") or "#999")
-    b = ['<div class="ehead">%s<h1>%s jersey sales rankings</h1></div>' % (mark, esc(full))]
+    b = [crumbs(ctx.root, [("Teams", "teams/"), (full, "team/%s/" % slug)]),
+         '<div class="ehead">%s<h1>%s jersey sales rankings</h1></div>' % (mark, esc(full))]
     if total:
         topn, topv = ranked_contrib[0]
         if topv == total:
@@ -1328,6 +1365,7 @@ def build_team_page(site, t, ctx, m, team_entries, tp_season, tp_lists):
                          "Not counted in any U.S. number on this page."))
     alt = "%s NBA jersey sales card: %s" % (full, ("%s leads with %d%% of HoopsMatic ranking points" % (ranked_contrib[0][0], pct(ranked_contrib[0][1], total))) if total
                                              else plural(len(players_set), "player") + " on U.S. lists")
+    b.append(index_links(ctx.root))
     site.add("team/" + slug, url, page("../../", url, title, desc, "\n".join(b), indexable=indexable, nav="teams",
                                        share="team/" + slug, share_alt=alt), indexable)
     site.cards.append({"key": "team/" + slug, "kind": "team", "name": full, "color": t.get("color") or "#3b82f6",
@@ -1335,21 +1373,32 @@ def build_team_page(site, t, ctx, m, team_entries, tp_season, tp_lists):
                                  ("Largest contributor", ranked_contrib[0][0] if total else "None"),
                                  ("Best season", best_season[0] if best_season else "None")],
                        "line": "NBA jersey sales rankings" + (", %s" % span if span else "")})
-    return {"slug": slug, "name": full, "points": total, "players": len(players_set), "lists": len(on),
+    # Best player: most ranking points with this team; then best season rank, then most lists.
+    best_player = None
+    if us_ent:
+        bp = {}
+        for n in players_set:
+            rows_n = [row for sr in m.sr.values() for row in sr["rows"] if row["player"] == n and slug in row["team_slugs"]]
+            bp[n] = (-contrib.get(n, 0), min([row["pos"] for row in rows_n] or [999]), -sum(1 for _, e in us_ent if e["player"] == n), n)
+        best_player = min(bp, key=lambda n: bp[n])
+    return {"slug": slug, "name": full, "points": total, "players": len(players_set), "lists": len(on), "best": best_player,
+            "best_pts": contrib.get(best_player, 0) if best_player else 0,
             "list_points": (tp_lists.get(slug) or {}).get("pts", 0), "list_fed": len((tp_lists.get(slug) or {}).get("lists", ())),
             "drought": drought_n, "indexable": indexable, "color": t.get("color")}
 
 
 def pva_table(ctx, s):
+    # Jersey and Awards are both plain ranks; the honors behind the award rank sit under the name.
     rows = []
     for x in s["rows"]:
         if x["award"] is None:
-            aw, gap = '<span class="dash">No award votes</span>', '<span class="dash">&middot;</span>'
+            aw, gap = '<span class="dash">-</span>', '<span class="dash">-</span>'
         else:
-            aw = "No. %d<span class=\"sub2\">%s</span>" % (x["award"], esc(x["detail"]))
+            aw = "No. %d" % x["award"]
             gap = '<span class="%s">%+d</span>' % ("pos" if x["gap"] > 0 else ("neg" if x["gap"] < 0 else "flat"), x["gap"])
-        rows.append([ctx.plink(x["player"]), "No. %d" % x["jersey"], aw, gap])
-    out = table([("Player", "name left"), ("Jersey", "num"), ("Awards", "left aw"), ("Gap", "num")], rows)
+        who = ctx.face(x["player"], 28) + '<span class="pwrap">%s<span class="tline sub3">%s</span></span>' % (ctx.plink(x["player"]), esc(x["detail"]))
+        rows.append([who, "No. %d" % x["jersey"], aw, gap])
+    out = table([("Player", "name left"), ("Jersey", "num"), ("Awards", "num"), ("Gap", "num")], rows, cls="lb pvat")
     if s["award_top10_missing"]:
         out += '<p class="hint">Award top 10 outside this jersey ranking: %s.</p>' % esc(", ".join(
             "%s (No. %d)" % (x["player"], x["rank"]) for x in s["award_top10_missing"]))
@@ -1377,7 +1426,8 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
     else:
         desc = "Best-selling NBA jersey of %s: %s was No. 1. Only the No. 1 of the season's list is in the source data." % (season, no1)
         tk = "%s was No. 1 on the only %s list in the source data, which has just the No. 1." % (no1, season)
-    b = ['<h1>%s NBA jersey sales rankings</h1>' % esc(season), '<p class="takeaway">%s</p>' % esc(tk)]
+    b = [crumbs(ctx.root, [("Seasons", "seasons/"), (season, "season/%s/" % season)]),
+         '<h1>%s NBA jersey sales rankings</h1>' % esc(season), '<p class="takeaway">%s</p>' % esc(tk)]
     # Season ranking.
     head = [("No.", "rank"), ("Player", "name left")]
     for r in sr["fed"]:
@@ -1422,7 +1472,7 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
         mv.sort(key=lambda x: -(x[1] - x[2]))
         if not mv:
             continue
-        rws = [[ctx.plink(n), '<span class="pair">No. %d <span class="arr">&#8594;</span> No. %d</span>' % (a, c), move_html({"kind": "up" if a > c else "down", "delta": abs(a - c), "from": a})] for n, a, c in mv]
+        rws = [[ctx.face(n, 28) + ctx.plink(n), '<span class="pair">No. %d <span class="arr">&#8594;</span> No. %d</span>' % (a, c), move_html({"kind": "up" if a > c else "down", "delta": abs(a - c), "from": a})] for n, a, c in mv]
         mv_blocks.append('<h3 class="h3">%s to %s</h3>%s' % (esc(ctx.rel_name(prev)), esc(ctx.rel_name(r)),
                                                              table([("Player", "name left"), ("Before / after", "num"), ("Move", "mvc")], rws)))
     if mv_blocks:
@@ -1443,7 +1493,7 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
         names = {e["player"] for r in us_lists for e in r["entries"]}
         dropped = [e for e in prev["entries"] if e["rank"] <= L and e["player"] not in names]
         if dropped:
-            rws = [[ctx.plink(e["player"]), "No. %d" % e["rank"], ctx.team_cell(e)] for e in dropped]
+            rws = [[ctx.face(e["player"], 28) + ctx.plink(e["player"]), "No. %d" % e["rank"], ctx.team_cell(e)] for e in dropped]
             b.append(section("Dropped off", table([("Player", "name left"), ("Last rank", "num"), ("Team", "team left")], rws),
                              "No. %d or better on the %s list and on no U.S. list in %s." % (L, esc(ctx.rel_name(prev)), esc(season))))
     s = pva.get(season)
@@ -1457,6 +1507,7 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
     if i < len(m.seasons) - 1:
         nav.append('<a href="../%s/">%s</a>' % (m.seasons[i + 1], esc(m.seasons[i + 1])))
     b.append('<p class="pager">%s</p>' % " &middot; ".join(nav))
+    b.append(index_links(ctx.root))
     alt = "%s NBA jersey sales card: %s No. 1 in the HoopsMatic season ranking" % (season, no1)
     site.add("season/" + season, url, page("../../", url, title, desc, "\n".join(b), indexable=indexable, nav="seasons",
                                            share="season/" + season, share_alt=alt), indexable)
@@ -1465,7 +1516,8 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
                        "color": team_color(m, tslug) if tslug else "#3b82f6",
                        "stats": [("No. %d" % x["pos"], x["player"]) for x in rows[:3]],
                        "line": "HoopsMatic season ranking from %s" % plural(len(sr["fed"]), "U.S. list")})
-    return {"season": season, "lists": len(lists), "no1": no1, "indexable": indexable}
+    return {"season": season, "lists": len(lists), "lists_with_entries": sum(1 for r in lists if r["entries"]), "fed": len(sr["fed"]),
+            "kind": sr["kind"], "no1": no1, "top3": rows[:3], "indexable": indexable}
 
 
 def rec_block(sid, title, headline, visual, full_head, full_rows, hint=""):
@@ -1579,7 +1631,7 @@ def build_records(site, ctx, rec, m):
                        "%s and %s shared %s with the %s." % (ctx.plink(d0["a"]), ctx.plink(d0["b"]), esc(plural(len(d0["lists"]), "U.S. list")), ctx.tlink(d0["team"])),
                        '<div class="duos">%s</div>' % pairs,
                        [("Duo", "name left"), ("Team", "team left"), ("Lists", "num")],
-                       [[ctx.plink(d["a"]) + " &amp; " + ctx.plink(d["b"]) + '<span class="sub2">%s</span>' % esc(
+                       [[ctx.face(d["a"], 24) + ctx.face(d["b"], 24) + ctx.plink(d["a"]) + " &amp; " + ctx.plink(d["b"]) + '<span class="sub2">%s</span>' % esc(
                            d["lists"][0]["my"] + (" to " + d["lists"][-1]["my"] if len(d["lists"]) > 1 else "")), ctx.tlink(d["team"]), str(len(d["lists"]))] for d in L],
                        "Two players from the same team on the same U.S. list."))
     site.add("records", url, page("../", url, title, desc, "\n".join(b), indexable=True, nav="records", share="records",
@@ -1648,6 +1700,68 @@ def what_changed(m, r):
     return out[:4]
 
 
+def build_teams_index(site, ctx, m, team_summ):
+    url = SITE + "teams/"
+    ts = sorted(team_summ, key=lambda t: (-t["points"], -t["list_points"], t["name"]))
+    lead = [t for t in ts if t["points"]]
+    title = "NBA Jersey Sales by Team: All %d Teams Ranked | HoopsMatic" % len(ts)
+    desc = "NBA jersey sales by team since 2001: %s lead with %d HoopsMatic ranking points, then %s and %s. Every team's best-selling players." % (
+        lead[0]["name"], lead[0]["points"], lead[1]["name"], lead[2]["name"])
+    b = [crumbs(ctx.root, [("Teams", "teams/")]), '<h1>NBA jersey sales by team</h1>',
+         '<p class="takeaway">%s</p>' % esc("%s lead all %d teams with %d HoopsMatic jersey ranking points since 2001, most of them from %s." % (
+             lead[0]["name"], len(ts), lead[0]["points"], lead[0]["best"]))]
+    cards = []
+    for rank, t in enumerate(ts, 1):
+        logo = ctx.team_logo(t["slug"])
+        mark = ('<img class="logo big" src="%s" alt="" width="40" height="40" loading="lazy">' % esc(logo)) if logo else \
+            '<span class="sw big" style="background:%s"></span>' % esc(t["color"] or "#999")
+        best = ('<span class="tc-best">%s%s</span>' % (ctx.face(t["best"], 24), ctx.plink(t["best"]))) if t["best"] else '<span class="tc-best dash">No ranked player</span>'
+        cards.append('<li class="tcard" data-pts="%d" data-rank="%d" data-name="%s">%s<div class="tc-body"><a class="nm tc-name" href="%steam/%s/">%s</a>'
+                     '<span class="tc-pts">%s</span>%s<span class="sub2">%s &middot; every list: %s from %s</span></div></li>' % (
+                         t["points"], rank, esc(t["name"]), mark, ctx.root, t["slug"], esc(t["name"]), esc(plural(t["points"], "point")), best,
+                         esc(plural(t["players"], "ranked player")), esc(plural(t["list_points"], "pt")), esc(plural(t["list_fed"], "list"))))
+    sort = ('<div class="seg-btns" role="group" aria-label="Sort teams">'
+            '<button type="button" class="segb" data-sort="pts" aria-pressed="true">By points</button>'
+            '<button type="button" class="segb" data-sort="name" aria-pressed="false">By name</button></div>')
+    b.append(section("All %d teams" % len(ts), sort + '<ul class="tgrid">%s</ul>' % "".join(cards),
+                     "Points: HoopsMatic jersey ranking points from the season rankings (No. 1 = 10 down to No. 10 = 1), credited to the team on the player's last list of the season. Top player: most of those points with the team. Every list: the same scoring on each U.S. list. HoopsMatic ranking points, not units sold or official team merchandise rankings.", sid="teams"))
+    b.append('<p class="pager"><a href="../seasons/">All seasons</a> &middot; <a href="../records/">Records</a></p>')
+    site.add("teams", url, page(ctx.root, url, title, desc, "\n".join(b), indexable=True, nav="teams", share="teams",
+                               share_alt="NBA jersey sales by team card: %s lead with %d HoopsMatic ranking points" % (lead[0]["name"], lead[0]["points"])), True)
+    site.cards.append({"key": "teams", "kind": "teams", "name": "NBA jersey sales by team", "color": lead[0]["color"] or "#3b82f6",
+                       "stats": [(lead[0]["name"], "%d pts" % lead[0]["points"]), (lead[1]["name"], "%d pts" % lead[1]["points"]),
+                                 ("Teams with points", "%d of %d" % (len(lead), len(ts)))],
+                       "line": "HoopsMatic jersey ranking points since 2001"})
+
+
+def build_seasons_index(site, ctx, m, season_summ):
+    url = SITE + "seasons/"
+    ss = list(reversed(season_summ))
+    first, last = season_summ[0], season_summ[-1]
+    title = "NBA Jersey Sales by Season, %s to %s | HoopsMatic" % (first["season"], last["season"])
+    desc = "Best-selling NBA jerseys of every season since %s: the No. 1 and top 3 of each HoopsMatic season ranking, from %s in %s back to %s." % (
+        first["season"], last["no1"], last["season"], first["no1"])
+    b = [crumbs(ctx.root, [("Seasons", "seasons/")]), '<h1>NBA jersey sales by season</h1>',
+         '<p class="takeaway">%s</p>' % esc("%s different No. 1s across %d seasons, newest first. %s was No. 1 in %s." % (
+             len({x["no1"] for x in ss if x["no1"]}), len(ss), last["no1"], last["season"]))]
+    rows = []
+    for x in ss:
+        top = x["top3"]
+        no1 = (ctx.face(top[0]["player"], 28) + '<span class="pwrap">%s<span class="tline sub3">%s</span></span>' % (
+            ctx.plink(top[0]["player"]), "".join('<span class="t3">No. %d %s</span>' % (r["pos"], ctx.plink(r["player"])) for r in top[1:]) or "Only the No. 1 is known")) if top else ""
+        rows.append([ctx.slink(x["season"]) + '<span class="sub2">%s</span>' % esc("%s, %d in ranking" % (plural(x["lists_with_entries"], "list"), x["fed"])),
+                     no1])
+    b.append(section("Every season", table([("Season", "left sc"), ("No. 1 and top 3", "name left")], rows, cls="lb seasons-t", limit=0),
+                     "Top 3 of each season's HoopsMatic ranking, built from that season's complete U.S. lists. Lists: published lists with entries that season (U.S. and international); in ranking: the U.S. lists that fed it.", sid="seasons"))
+    b.append('<p class="pager"><a href="../teams/">All teams</a> &middot; <a href="../records/">Records</a></p>')
+    site.add("seasons", url, page(ctx.root, url, title, desc, "\n".join(b), indexable=True, nav="seasons", share="seasons",
+                                 share_alt="NBA jersey sales by season card: %s No. 1 in %s" % (last["no1"], last["season"])), True)
+    site.cards.append({"key": "seasons", "kind": "seasons", "name": "NBA jersey sales by season", "color": team_color(m, last["top3"][0]["team_slugs"][0]),
+                       "stats": [("%s No. 1" % last["season"], last["no1"]), ("Seasons", str(len(ss))),
+                                 ("Different No. 1s", str(len({x["no1"] for x in ss if x["no1"]})))],
+                       "line": "Every season since %s" % first["season"]})
+
+
 def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
     url = SITE
     releases, us = m.releases, m.us
@@ -1706,8 +1820,9 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
     b.append(section("Who ruled jersey sales?", '<div class="ruled">%s</div><div class="tl-axis"><span>%s</span><span>%s</span></div><ol class="reigns">%s</ol>' % (
         cells, esc(m.seasons[0]), esc(m.seasons[-1]), lst), "No. 1 of each season's HoopsMatic ranking, newest first. Tap a season for its page.", sid="ruled"))
     # (4) Search + directory.
-    idx = [{"n": p["name"], "u": "player/%s/" % p["slug"], "t": "Player"} for p in m.players.values()] + \
-          [{"n": t["name"], "u": "team/%s/" % t["slug"], "t": "Team"} for t in team_summ]
+    # i: the face-tight headshot (silhouette fallback) or the team's logo (swatch color when none).
+    idx = [{"n": p["name"], "u": "player/%s/" % p["slug"], "t": "Player", "i": m.cross.img(p["name"])} for p in m.players.values()] + \
+          [{"n": t["name"], "u": "team/%s/" % t["slug"], "t": "Team", "i": ctx.team_logo(t["slug"]) or "", "c": t["color"] or "#999"} for t in team_summ]
     prow = sorted(m.players.values(), key=lambda p: p["name"].split(" ", 1)[-1] + p["name"])
     directory = details("All %d players" % len(prow), '<ul class="linkgrid small">%s</ul>' % "".join(
         '<li>%s<span class="sub2">%s</span></li>' % (ctx.plink(p["name"]), esc(plural(p["lists"], "U.S. list"))) for p in prow))
@@ -1774,22 +1889,17 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
                         ("%d-%02d" % (cov_years[0] - 1, cov_years[0] % 100)) if cov_years else "none",
                         ("%d-%02d" % (cov_years[-1] - 1, cov_years[-1] % 100)) if cov_years else "none")
     b.append(section("Methodology", meth, sid="methodology"))
-    srows = []
-    for s in season_summ:
-        srows.append('<li><a href="season/%s/">%s</a><span class="sub2">%s%s</span></li>' % (
-            s["season"], esc(s["season"]), esc(plural(s["lists"], "list")), esc(", No. 1: " + s["no1"]) if s["no1"] else ""))
-    b.append(section("Seasons", '<ul class="linkgrid">%s</ul>' % "".join(srows), sid="seasons"))
-    ts = sorted(team_summ, key=lambda t: (-t["points"], -t["list_points"], t["name"]))
-    t_season = table([("Team", "team left"), ("Pts", "num"), ("Players", "num")],
-                     [[ctx.tlink(t["slug"]), str(t["points"]), str(t["players"])] for t in ts], limit=0)
-    tl_ = sorted(team_summ, key=lambda t: (-t["list_points"], t["name"]))
-    t_lists = table([("Team", "team left"), ("Pts", "num"), ("Lists fed", "num")],
-                    [[ctx.tlink(t["slug"]), str(t["list_points"]), str(t["list_fed"])] for t in tl_], limit=0)
-    toggle = ('<div class="seg-btns" role="group" aria-label="Team points basis">'
-              '<button type="button" class="segb" data-pane="tp-season" aria-pressed="true">Season rankings</button>'
-              '<button type="button" class="segb" data-pane="tp-lists" aria-pressed="false">Every list</button></div>'
-              '<div class="tp-pane" id="tp-season">%s</div><div class="tp-pane" id="tp-lists" hidden>%s</div>') % (t_season, t_lists)
-    b.append(section("Teams", toggle, "Season rankings by default: points from each season's HoopsMatic ranking. Every list: the same scoring on each U.S. list, with the number of lists that fed each total. Franchise totals: Seattle SuperSonics count for Oklahoma City, Charlotte Bobcats for Charlotte, New Orleans Hornets for New Orleans, New Jersey Nets for Brooklyn.", sid="teams"))
+    # Short previews; the full lists live on /seasons/ and /teams/. The #seasons and #teams anchors stay here.
+    latest5 = list(reversed(season_summ))[:5]
+    srows = [[ctx.slink(x["season"]), (ctx.face(x["no1"], 28) + ctx.plink(x["no1"])) if x["no1"] else "", str(x["lists_with_entries"])] for x in latest5]
+    b.append(section("Seasons", table([("Season", "left nw"), ("No. 1", "name left"), ("Lists", "num")], srows, limit=0) +
+                     '<p class="more-link"><a href="seasons/">See all %d seasons</a></p>' % len(season_summ),
+                     "The five latest seasons. Every season since 2000-01 is on the seasons page.", sid="seasons"))
+    ts = sorted(team_summ, key=lambda t: (-t["points"], -t["list_points"], t["name"]))[:5]
+    trows = [[ctx.tlink(t["slug"]), str(t["points"]), (ctx.face(t["best"], 28) + ctx.plink(t["best"])) if t["best"] else ""] for t in ts]
+    b.append(section("Teams", table([("Team", "team left"), ("Pts", "num"), ("Top player", "name left")], trows, limit=0) +
+                     '<p class="more-link"><a href="teams/">See all %d teams</a></p>' % len(team_summ),
+                     "Top 5 by HoopsMatic jersey ranking points (season rankings, No. 1 = 10 down to No. 10 = 1).", sid="teams"))
     intl = [r for r in releases if not r["us"]]
     cards = "".join('<div class="lcard"><div class="lhead"><h3>%s</h3><span class="sub2">%s</span>%s</div>%s</div>' % (
         esc(r["type"]), esc(r["label"] + ", " + r["season"]), source_link(r), list_table(ctx, r, compact=True)) for r in intl)
@@ -1955,7 +2065,7 @@ def main():
     m = build_model(releases, cross.teams, cross, report)
 
     # Clean generated output (keep docs/assets, which is hand-written, and docs/share, which is cached by hash).
-    for d in ("player", "team", "season", "records", "data"):
+    for d in ("player", "team", "season", "records", "teams", "seasons", "data"):
         shutil.rmtree(os.path.join(DOCS, d), ignore_errors=True)
     site = Site(args.today)
     pva, career, no_votes = popularity_vs_awards(m)
@@ -1976,6 +2086,8 @@ def main():
             first_season_of.setdefault(e["player"], r["season"])
     season_summ = [build_season_page(site, s, Ctx("../../", m), m, pva, first_season_of) for s in m.seasons]
     build_records(site, Ctx("../", m), rec, m)
+    build_teams_index(site, Ctx("../", m), m, team_summ)
+    build_seasons_index(site, Ctx("../", m), m, season_summ)
     build_hub(site, Ctx("", m), m, team_summ, season_summ, pva, career, no_votes, rec)
     export_data(m, rec, pva, career)
     site.write()
