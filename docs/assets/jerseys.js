@@ -95,6 +95,21 @@
     });
   });
 
+  // ---- Teams index: sort the grid by points (default) or name.
+  document.querySelectorAll('.segb[data-sort]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var grid = document.querySelector('.tgrid');
+      if (!grid) return;
+      var by = b.getAttribute('data-sort'), items = Array.prototype.slice.call(grid.children);
+      items.sort(function (x, y) {
+        return by === 'name' ? x.getAttribute('data-name').localeCompare(y.getAttribute('data-name'))
+          : (+x.getAttribute('data-rank')) - (+y.getAttribute('data-rank'));
+      });
+      items.forEach(function (li) { grid.appendChild(li); });
+      b.parentNode.querySelectorAll('.segb').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
+
   // ---- Popularity vs awards season picker.
   document.querySelectorAll('.pva-select').forEach(function (sel) {
     sel.addEventListener('change', function () {
@@ -118,7 +133,9 @@
       var hits = idx.filter(function (x) { return words.every(function (w) { return x.k.indexOf(w) >= 0; }); });
       hits.sort(function (a, b) { return (a.k.indexOf(words[0]) - b.k.indexOf(words[0])) || a.n.localeCompare(b.n); });
       res.innerHTML = hits.slice(0, 8).map(function (x) {
-        return '<li><a href="' + ROOT + x.u + '">' + esc(x.n) + '</a><span class="tag">' + esc(x.t) + '</span></li>';
+        var pic = x.t === 'Player' ? '<img class="face" src="' + esc(x.i) + '" alt="" width="28" height="28" loading="lazy">' :
+          (x.i ? '<img class="logo" src="' + esc(x.i) + '" alt="" width="16" height="16" loading="lazy">' : '<span class="sw" style="background:' + esc(x.c) + '"></span>');
+        return '<li>' + pic + '<a class="nm" href="' + ROOT + x.u + '">' + esc(x.n) + '</a><span class="tag">' + esc(x.t) + '</span></li>';
       }).join('') || '<li class="dash">No match</li>';
     };
     find.addEventListener('input', run);
@@ -165,43 +182,45 @@
       series.forEach(function (s) { if (s[key][c.k]) maxr = Math.max(maxr, s[key][c.k]); });
     });
     maxr = maxr > 20 ? 25 : (maxr > 15 ? 20 : 15);
-    var colw = mode === 'season' ? 30 : 24, top = 26, h = 200, left = 4, band = top + h + 22;
-    var width = left + colw * win.length + 10, height = band + 70;
+    // x positions are percentages so the chart fills its container; min-width keeps columns >= 28px
+    // (MIN_COL in build_jerseys.py) and the scroller takes over below that.
+    var top = 26, h = 200, band = top + h + 22, height = band + 70, n = win.length, cp = 100 / n;
     var y = function (rk) { return top + (rk - 1) * h / (maxr - 1); };
-    var x = function (i) { return left + colw * i + colw / 2; };
-    var f = function (n) { return (Math.round(n * 10) / 10).toString(); };
+    var f = function (v) { return (Math.round(v * 10) / 10).toString(); };
+    var pc = function (v) { return v.toFixed(3) + '%'; };
+    var x = function (i) { return pc((i + 0.5) * cp); };
     var A = ['<svg class="yax" width="30" height="' + height + '" viewBox="0 0 30 ' + height + '" aria-hidden="true">'];
-    var P = ['<svg class="rchart" width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '" role="img" aria-label="' +
+    var P = ['<svg class="rchart fluid" width="100%" height="' + height + '" style="min-width:' + (n * 28 + 8) + 'px" role="img" aria-label="' +
       esc(series.map(function (s) { return s.name; }).join(' and ') + ' rank by ' + (mode === 'season' ? 'season' : 'list') + ', No. 1 at the top') + '">'];
     [1, 5, 10, 15, 20, 25].forEach(function (rk) {
       if (rk <= maxr) {
-        P.push('<line class="grid" x1="0" x2="' + (width - 10) + '" y1="' + f(y(rk)) + '" y2="' + f(y(rk)) + '"/>');
+        P.push('<line class="grid" x1="0" x2="100%" y1="' + f(y(rk)) + '" y2="' + f(y(rk)) + '"/>');
         A.push('<text class="ytk" x="26" y="' + f(y(rk) + 4) + '">' + rk + '</text>');
       }
     });
     A.push('<text class="ytk" x="26" y="' + f(band + 4) + '">Out</text></svg>');
     win.forEach(function (c, i) {
-      var cx = x(i);
-      if (c.kind === 'empty' || c.kind === 'none') P.push('<rect class="nodata" x="' + f(cx - colw / 2 + 2) + '" y="' + (top - 6) + '" width="' + (colw - 4) + '" height="' + (band - top + 14) + '"/>');
-      else if (c.kind === 'partial' || c.kind === 'no1') P.push('<rect class="gap" x="' + f(cx - colw / 2 + 2) + '" y="' + (top - 6) + '" width="' + (colw - 4) + '" height="' + (band - top + 14) + '"/>');
-      else if (c.depth < maxr) P.push('<rect class="short" x="' + f(cx - colw / 2 + 2) + '" y="' + f(y(c.depth) + 6) + '" width="' + (colw - 4) + '" height="' + f(Math.max(0, top + h - y(c.depth) - 6)) + '"/>');
-      P.push('<text class="xtk" transform="translate(' + f(cx + 4) + ',' + (band + 16) + ') rotate(-60)">' + esc(c.lab) + '</text>');
+      var bx = pc((i + 0.07) * cp), bw = pc(0.86 * cp);
+      if (c.kind === 'empty' || c.kind === 'none') P.push('<rect class="nodata" x="' + bx + '" y="' + (top - 6) + '" width="' + bw + '" height="' + (band - top + 14) + '"/>');
+      else if (c.kind === 'partial' || c.kind === 'no1') P.push('<rect class="gap" x="' + bx + '" y="' + (top - 6) + '" width="' + bw + '" height="' + (band - top + 14) + '"/>');
+      else if (c.depth < maxr) P.push('<rect class="short" x="' + bx + '" y="' + f(y(c.depth) + 6) + '" width="' + bw + '" height="' + f(Math.max(0, top + h - y(c.depth) - 6)) + '"/>');
+      P.push('<svg x="' + x(i) + '" y="0" width="1" height="1" overflow="visible"><text class="xtk" transform="translate(4,' + (band + 16) + ') rotate(-60)">' + esc(c.lab) + '</text></svg>');
     });
     series.forEach(function (s, si) {
       var cls = 's' + si, prev = null;
       win.forEach(function (c, i) {
         var v = s[key][c.k], st = colState(c, v);
         if (st === 'ranked') {
-          if (prev) P.push('<line class="seg ' + cls + (prev[2] ? ' bridge' : '') + '" x1="' + f(x(prev[0])) + '" y1="' + f(y(prev[1])) + '" x2="' + f(x(i)) + '" y2="' + f(y(v)) + '"/>');
+          if (prev) P.push('<line class="seg ' + cls + (prev[2] ? ' bridge' : '') + '" x1="' + x(prev[0]) + '" y1="' + f(y(prev[1])) + '" x2="' + x(i) + '" y2="' + f(y(v)) + '"/>');
           prev = [i, v, false];
         } else if (st === 'outside') prev = null;
         else if (prev) prev = [prev[0], prev[1], true];
       });
       win.forEach(function (c, i) {
         var v = s[key][c.k], st = colState(c, v), t = esc(tipText(mode, c, v, s.name));
-        if (st === 'ranked') P.push('<g class="pt ' + cls + (v === 1 ? ' one' : '') + '" tabindex="0" data-tip="' + t + '"><circle cx="' + f(x(i)) + '" cy="' + f(y(v)) + '" r="5"/><title>' + t + '</title></g>');
-        else if (si === 0 && st === 'outside') P.push('<g class="pt out" tabindex="0" data-tip="' + t + '"><circle cx="' + f(x(i)) + '" cy="' + f(band) + '" r="3.5"/><title>' + t + '</title></g>');
-        else if (si === 0 && st === 'unknown') P.push('<g class="pt unk" tabindex="0" data-tip="' + t + '"><text x="' + f(x(i)) + '" y="' + f(band + 4) + '">?</text><title>' + t + '</title></g>');
+        if (st === 'ranked') P.push('<g class="pt ' + cls + (v === 1 ? ' one' : '') + '" tabindex="0" data-tip="' + t + '"><circle cx="' + x(i) + '" cy="' + f(y(v)) + '" r="5"/><title>' + t + '</title></g>');
+        else if (si === 0 && st === 'outside') P.push('<g class="pt out" tabindex="0" data-tip="' + t + '"><circle cx="' + x(i) + '" cy="' + f(band) + '" r="3.5"/><title>' + t + '</title></g>');
+        else if (si === 0 && st === 'unknown') P.push('<g class="pt unk" tabindex="0" data-tip="' + t + '"><text x="' + x(i) + '" y="' + f(band + 4) + '">?</text><title>' + t + '</title></g>');
       });
     });
     if (markers) {
@@ -209,7 +228,7 @@
       win.forEach(function (c, i) { k2i[c.k] = i; });
       markers.forEach(function (mk, n) {
         if (!(mk.k in k2i)) return;
-        var cx = f(x(k2i[mk.k]));
+        var cx = x(k2i[mk.k]);
         P.push('<g class="mk' + (n >= 4 ? ' mx' : '') + '" data-tip="' + esc(mk.t) + '"><line x1="' + cx + '" x2="' + cx + '" y1="' + (top - 12) + '" y2="' + band + '"/><circle cx="' + cx + '" cy="' + (top - 16) + '" r="7"/><text x="' + cx + '" y="' + (top - 12) + '">' + (n + 1) + '</text></g>');
       });
     }
@@ -237,7 +256,7 @@
       btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-mode') === state.mode ? 'true' : 'false'); });
       if (other) {
         vsKey.hidden = false;
-        vsKey.innerHTML = '<span><i class="lg-s0"></i>' + esc(data.me.name) + '</span><span><i class="lg-s1"></i><a href="' + ROOT + 'player/' + esc(other.slug) + '/">' + esc(other.name) + '</a></span>';
+        vsKey.innerHTML = '<span><i class="lg-s0"></i>' + esc(data.me.name) + '</span><span><i class="lg-s1"></i><a class="nm" href="' + ROOT + 'player/' + esc(other.slug) + '/">' + esc(other.name) + '</a></span>';
       } else {
         vsKey.hidden = true;
         vsKey.innerHTML = '';
@@ -291,7 +310,7 @@
       var sl = e.ts[i], t = teams[sl] || {}, lg = e.lg[i];
       var mark = lg ? '<img class="logo" src="' + esc(lg) + '" alt="" width="16" height="16" loading="lazy">' :
         '<span class="sw" style="background:' + esc(t.color || '#999') + '"></span>';
-      return mark + '<a href="' + ROOT + 'team/' + sl + '/">' + esc(nm) + '</a>';
+      return mark + '<a class="nm" href="' + ROOT + 'team/' + sl + '/">' + esc(nm) + '</a>';
     }).join(' / ');
   }
 
@@ -343,7 +362,7 @@
         r.entries.forEach(function (e) {
           var k = e.m && e.m.kind, cls = e.r === 1 ? 'lead' : ((k === 'same' || k === 'none') ? 'quiet' : '');
           h += '<tr' + (cls ? ' class="' + cls + '"' : '') + '><td class="rank">' + e.r + '</td><td class="name left"><img class="face" src="' + esc(e.img) + '" alt="' + esc(e.p) +
-            '" width="28" height="28" loading="lazy"><span class="pwrap"><a href="' + ROOT + 'player/' + e.s + '/">' + esc(e.p) + '</a><span class="tline">' + teamHtml(e, DATA.teams) + '</span>' +
+            '" width="28" height="28" loading="lazy"><span class="pwrap"><a class="nm" href="' + ROOT + 'player/' + e.s + '/">' + esc(e.p) + '</a><span class="tline">' + teamHtml(e, DATA.teams) + '</span>' +
             (e.f ? '<span class="note">' + esc(e.f) + '</span>' : '') + '</span></td>' +
             (r.us ? '<td class="mvc">' + moveHtml(e.m) + '</td>' : '') + '</tr>';
         });
@@ -351,12 +370,12 @@
       }
       if (r.dropped && r.dropped.length) {
         h += '<p class="hint">Dropped out since the previous complete U.S. list: ' + r.dropped.map(function (d) {
-          return '<a href="' + ROOT + 'player/' + d.s + '/">' + esc(d.p) + '</a> (No. ' + d.r + ')';
+          return '<a class="nm" href="' + ROOT + 'player/' + d.s + '/">' + esc(d.p) + '</a> (No. ' + d.r + ')';
         }).join(', ') + '.</p>';
       }
       if (r.not_compared && r.not_compared.length) {
         h += '<p class="hint">Not compared (ranked deeper than this list\'s ' + r.entries.length + ' spots before): ' + r.not_compared.map(function (d) {
-          return '<a href="' + ROOT + 'player/' + d.s + '/">' + esc(d.p) + '</a> (No. ' + d.r + ')';
+          return '<a class="nm" href="' + ROOT + 'player/' + d.s + '/">' + esc(d.p) + '</a> (No. ' + d.r + ')';
         }).join(', ') + '.</p>';
       }
       body.innerHTML = h;

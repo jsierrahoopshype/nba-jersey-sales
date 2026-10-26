@@ -23,7 +23,7 @@ No API keys, no network. The build reads only committed files:
 
 Code: `scripts/build_jerseys.py` (pages and exports), `scripts/jersey_model.py` (ranking rules, unit-tested in `tests/test_rules.py`), `scripts/share_images.py` (1200x630 PNG cards, Pillow, Inter font in `scripts/fonts/`, OFL).
 
-Outputs: `docs/` pages, `docs/data/*.json`, `docs/data/jersey-points-race.csv` (season ranking points, bar chart race input), `docs/data/jersey-points-race-all-lists.csv` (every-list points), `docs/share/**.png` (og:image per page), `docs/sitemap.xml`, and `data/build_report.json` (grid cross-check, counts, season rankings, award coverage, crossover misses).
+Outputs: `docs/` pages (hub, records, /teams/ and /seasons/ index pages, player, team and season pages), `docs/data/*.json`, `docs/data/jersey-points-race.csv` (season ranking points, bar chart race input), `docs/data/jersey-points-race-all-lists.csv` (every-list points), `docs/share/**.png` (og:image per page), `docs/sitemap.xml`, and `data/build_report.json` (grid cross-check, counts, season rankings, award coverage, crossover misses).
 
 ## New lists
 

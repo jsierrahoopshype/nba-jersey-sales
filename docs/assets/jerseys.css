@@ -317,5 +317,40 @@ table.sx th.lc{white-space:normal;min-width:2.6rem}
 table.sx td.name{min-width:9rem}
 .pp{display:flex;align-items:center;min-width:0}
 ol.top5 li,ol.reigns li{align-items:center}
-@media (max-width:640px){table.sx td.name .face{display:none}table.sx td.name{min-width:7.5rem}}
+@media (max-width:640px){table.sx td.name{min-width:8.5rem}}
 .chart-frame .yaxis.wide{width:40px}
+
+/* ---- v3: names, breadcrumbs, index pages, fluid charts ---- */
+/* Player and team names: black and semibold like the NBA Polymarket tracker; underline only on hover/focus. */
+a.nm{color:var(--text);font-weight:600;text-decoration:none}
+a.nm:hover,a.nm:focus-visible{text-decoration:underline;text-underline-offset:2px}
+a.nm:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.tline a.nm{font-weight:600}
+.sub3{display:block;font-size:.68rem;font-weight:500;color:var(--text-secondary);font-family:'DM Sans',sans-serif;line-height:1.35;margin-top:.1rem}
+.sub3 a.nm{font-weight:600;color:var(--text-secondary)}
+.crumbs{font:500 .72rem 'JetBrains Mono',monospace;color:var(--text-secondary);margin:-.2rem 0 .7rem;display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
+.crumbs a{color:var(--text-secondary)}
+.crumbs a:hover,.crumbs a:focus-visible{color:var(--accent)}
+.crumbs [aria-current]{color:var(--text)}
+.more-link{margin-top:.6rem;font:600 .78rem 'JetBrains Mono',monospace}
+.tgrid{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.6rem;margin-top:.3rem}
+.tcard{display:flex;gap:.7rem;align-items:flex-start;border:1px solid var(--border);border-radius:12px;padding:.75rem .8rem;min-width:0}
+.tcard .logo.big,.tcard .sw.big{width:40px;height:40px;flex:none}
+.tc-body{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+.tc-name{font-size:.92rem}
+.tc-pts{font:700 .95rem 'JetBrains Mono',monospace}
+.tc-best{font-size:.82rem;display:flex;align-items:center}
+.tc-best .face{width:24px;height:24px}
+svg.fluid{display:block;overflow:visible}
+@media (max-width:640px){.tgrid{grid-template-columns:1fr}}
+/* popularity vs. awards: compact rank columns so names never break mid-word */
+table.pvat td.name{overflow-wrap:normal;word-break:normal;hyphens:manual}
+table.pvat td.num{width:1%;white-space:nowrap}
+@media (max-width:640px){
+  table.pvat td.num{font-size:.7rem;padding:.4rem .2rem}
+  table.pvat thead th{padding:.5rem .2rem;font-size:.56rem}
+  table.pvat td.name .face{width:22px;height:22px;margin-right:.25rem}
+}
+.sub3 .t3{display:block}
+table.seasons-t td.name{overflow-wrap:normal;word-break:normal}
+table.seasons-t td.sc{width:6.2rem}table.seasons-t td.sc .sub2{white-space:normal}
