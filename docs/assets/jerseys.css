@@ -11,7 +11,7 @@
 html{font-size:115%}
 body{font-feature-settings:'calt' 0;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);
   color:var(--text);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.container{max-width:1100px;margin:0 auto;padding:1.5rem 1.5rem 3rem}
+.container{max-width:1400px;margin:0 auto;padding:1.5rem 1.5rem 3rem}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 [hidden]{display:none!important}
 
@@ -360,3 +360,64 @@ table.seasons-t td.sc{width:6.2rem}table.seasons-t td.sc .sub2{white-space:norma
 .story .st-h:hover,.story .st-h:focus-visible{text-decoration:underline}
 .preset{display:inline-block;font-size:.8rem;margin:.15rem .7rem .15rem 0;line-height:1.9}.preset a.nm{white-space:nowrap}.preset .chip{margin-left:.2rem}
 .ms-item{display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;margin:.1rem .5rem .1rem 0;white-space:nowrap}
+
+/* ---- v4: list tables with the record as of each list ---- */
+/* Page width matches the NBA Polymarket tracker (.container 1400px). */
+table.lt td.num,table.lt th.num{text-align:right;font-family:'JetBrains Mono',monospace;white-space:nowrap}
+table.lt th.num,table.lt th.trend{color:var(--text-secondary)}
+table.lt td.num{font-size:.8rem;color:var(--text)}
+table.lt td.best{min-width:6.6rem}
+table.lt td.trend,table.lt th.trend{width:76px;padding-left:.3rem;padding-right:.3rem}
+table.lt a.aw{color:var(--text);text-decoration:underline dotted;text-underline-offset:3px}
+table.lt a.aw:hover,table.lt a.aw:focus-visible{color:var(--accent)}
+.th-tip{cursor:help;border-bottom:1px dotted currentColor}
+svg.spark{display:block;overflow:visible}
+svg.spark .sp-base{stroke:var(--border);stroke-width:1;stroke-dasharray:2 2}
+svg.spark .sp-l{stroke:var(--text-secondary);stroke-width:1.4;fill:none}
+svg.spark .sp-d{fill:var(--text-secondary)}
+svg.spark .sp-h{fill:var(--surface);stroke:var(--text-secondary);stroke-width:1.2}
+svg.spark .sp-c{fill:var(--accent)}
+table.lt tr.xrow{display:none!important}
+.lstack{display:flex;flex-direction:column;gap:1.2rem}
+.lstack .lcard{min-width:0}
+@media (max-width:640px){
+  table.lt th.dx,table.lt td.dx{display:none}
+  table.lt tr.xrow:not([hidden]){display:table-row!important;background:var(--surface-hover)}
+  table.lt tr.xrow td{text-align:left;font:500 .72rem 'JetBrains Mono',monospace;padding:.35rem .5rem .5rem 2.5rem;line-height:1.7}
+  table.lt tr.xrow td>span{display:inline-block;margin-right:.9rem;white-space:nowrap}
+  table.lt tr.xrow b{font-weight:600;color:var(--text-secondary);margin-right:.25rem}
+  table.lt tr.xr{cursor:pointer}
+  table.lt tr.xr[aria-expanded="true"]{background:var(--surface-hover)}
+  table.lt tr.xr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  table.lt td.trend,table.lt th.trend{width:72px;padding-left:.15rem;padding-right:.15rem}
+}
+table.lt td.name{width:34%}
+@media (max-width:640px){
+  table.lt td.name{width:auto;overflow-wrap:normal;word-break:normal}
+  table.lt td.name .pwrap{max-width:calc(100% - 30px)}
+  table.lt td.name .face{width:22px;height:22px;margin-right:.25rem}
+  table.lt td.trend,table.lt th.trend{width:58px}
+  table.lt svg.spark{width:56px;height:20px}
+  table.lt td.mvc,table.lt th.mvc{width:3.3rem}
+  table.lt .since{max-width:3.3rem;font-size:.54rem}
+  table.lt td.rank{width:1.6rem;padding-left:.3rem;padding-right:.2rem}
+}
+/* wide-screen-only columns (records full rankings, /seasons/) */
+@media (max-width:640px){table.lb th.dx,table.lb td.dx{display:none}}
+td.dw .sub2,.sub2.dw{white-space:normal;max-width:16rem}
+.tc-meta{font-size:.74rem;color:var(--text-secondary)}
+.tc-meta a{color:var(--text-secondary)}
+/* team page season rows: season | top player | points | share | players on lists, then the full list */
+details.trow>summary{grid-template-columns:4.6rem minmax(0,1.4fr) 5.4rem 6.4rem 5.4rem;align-items:center}
+details.trow>summary .sr-l{grid-column:2/-1}
+.sr-top{display:flex;align-items:center;flex-wrap:wrap;gap:0 .2rem;font-weight:600}
+.sr-top .sub2{flex-basis:100%;padding-left:28px}
+.sr-n{display:flex;flex-direction:column;text-align:right;font-family:'JetBrains Mono',monospace}
+.sr-n b{font-weight:700;font-size:.86rem}
+.sr-n i{font-style:normal;font-size:.6rem;color:var(--text-secondary)}
+@media (max-width:640px){
+  details.trow>summary{grid-template-columns:4rem minmax(0,1fr) 3.4rem 3.6rem}
+  details.trow>summary .sr-n:nth-of-type(5){display:none}
+  details.trow>summary .sr-l{grid-column:1/-1}
+}
+@media (max-width:640px){table.lt .mv.new,table.lt .mv.back{max-width:3.1rem;font-size:.5rem;padding:.08rem .2rem}}

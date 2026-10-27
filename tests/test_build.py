@@ -258,6 +258,56 @@ class BuildTests(unittest.TestCase):
         probe = {SITE + "records/": "<p>LeBron James and the Seattle SuperSonics</p>"}
         self.assertEqual(sorted(x[1] for x in namecheck.unlinked(probe)), ["LeBron James", "Seattle SuperSonics"])
 
+    def test_list_columns_as_of_date(self):
+        """Trend, Streak, Lists and Best use only lists up to that list's date."""
+        rel = json.load(open(os.path.join(DOCS, "data", "releases.json")))["releases"]
+        byid = {r["id"]: r for r in rel}
+        ranks = {p["name"]: p["l"] for p in self.players}
+        nonempty_us = [r for r in rel if r["us"] and r["status"] != "empty"]
+        # Apr 2013 (R22): Stephen Curry had no U.S. list yet; his first is Dec 2013 (R24, No. 6).
+        sys.path.insert(0, os.path.join(ROOT, "scripts"))
+        import build_jerseys as B
+        import jersey_model as JM
+        rep = {}
+        m = B.build_model(B.load_releases(rep), B.Cross().teams, B.Cross(), rep)
+        r22 = m.byid["R22"]
+        x = JM.player_as_of(JM.history_as_of(m.us, r22["date"]), "Stephen Curry")
+        self.assertEqual((x["lists"], x["best"], x["streak"]), (0, None, 0))
+        x = JM.player_as_of(JM.history_as_of(m.us, m.byid["R24"]["date"]), "Stephen Curry")
+        self.assertEqual((x["lists"], x["best"], x["best_year"], x["streak"]), (1, 6, "2013", 1))
+        # Every row of every list: Lists and Best equal a count over earlier lists only.
+        for r in rel:
+            for e in r["entries"]:
+                mine = {k: v for k, v in ranks.get(e["p"], {}).items()}
+                upto = [q["id"] for q in rel if q["us"] and q["status"] != "empty" and q["id"] in mine and
+                        m.byid[q["id"]]["date"] <= m.byid[r["id"]]["date"]]
+                self.assertEqual(e["x"]["ls"], len(upto), (r["id"], e["p"]))
+                self.assertEqual(e["x"]["b"], min((mine[q] for q in upto), default=None), (r["id"], e["p"]))
+        # The rendered Apr 2013 table: LeBron James's Lists cell counts lists up to Apr 9, 2013.
+        h = self.pages[SITE + "season/2012-13/"]
+        card = h[h.index("End of regular season</h3>"):]
+        row = re.search(r'<tr class="xr[^"]*">(.*?)</tr>', card[card.index("player/lebron-james/") - 600:], re.S).group(1)
+        cells = re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)
+        n_upto = sum(1 for q in nonempty_us if q["id"] in ranks["LeBron James"] and m.byid[q["id"]]["date"] <= r22["date"])
+        self.assertEqual(int(cells[4]), n_upto)
+        self.assertLess(n_upto, len(ranks["LeBron James"]))
+
+    def test_sparkline_labels(self):
+        rel = json.load(open(os.path.join(DOCS, "data", "releases.json")))["releases"]
+        ranks = {p["name"]: p["l"] for p in self.players}
+        nonempty_us = [r for r in rel if r["us"] and r["status"] != "empty"]
+        latest = [r for r in nonempty_us if r["status"] == "full"][-1]
+        last8 = nonempty_us[-8:]
+        want = "Rank over last 8 lists: " + ", ".join(
+            str(ranks["Stephen Curry"][q["id"]]) if q["id"] in ranks["Stephen Curry"] else "out" for q in last8)
+        self.assertIn('aria-label="%s"' % want, self.pages[SITE])
+        # Early lists: fewer than 8 slots, "unknown" on a No. 1 only list without the player.
+        h = self.pages[SITE + "season/2002-03/"]
+        self.assertIn('aria-label="Rank over last 3 lists: unknown, unknown, 2"', h)  # Allen Iverson, Apr 2003
+        for url, page in self.pages.items():
+            for lab in re.findall(r'<svg class="spark"[^>]*aria-label="([^"]+)"', page):
+                self.assertRegex(lab, r"^Rank over last (list|\d lists): ((\d+|out|unknown)(, |$))+$")
+
     def test_no_eyebrow_or_sales_volume_language(self):
         for url, h in self.pages.items():
             self.assertNotIn('class="eyebrow"', h, url)

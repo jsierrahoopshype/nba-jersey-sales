@@ -180,3 +180,45 @@ def longest_drought(us_lists, has_player):
         if cur > best[0]:
             best = (cur, start, r)
     return best
+
+
+# --------------------------------------------------------------------------
+# A player's U.S. record as of a list's date (never uses later lists)
+# --------------------------------------------------------------------------
+
+def history_as_of(us_lists, date):
+    """Non-empty U.S. lists dated on or before `date`, in date order."""
+    return [r for r in us_lists if r["status"] != "empty" and r["date"] <= date]
+
+
+def player_as_of(hist, player, window=8):
+    """Trend over the last `window` lists of hist, the current streak, lists made and best rank.
+
+    trend items: {"r": rank or None, "s": "ranked" | "out" | "unknown", "p": partial list}
+      out: absent from a complete list; unknown: absent from a list with only the No. 1.
+    streak: consecutive lists made up to the last list of hist; a No. 1 only list without the
+      player neither breaks nor extends it (same rule as a player's longest run).
+    """
+    rank = {}
+    for r in hist:
+        e = next((x for x in r["entries"] if x["player"] == player), None)
+        if e:
+            rank[r["id"]] = e["rank"]
+    trend = []
+    for r in hist[-window:]:
+        v = rank.get(r["id"])
+        trend.append({"r": v, "s": "ranked" if v else ("out" if r["status"] == "full" else "unknown"), "p": r["status"] == "partial"})
+    streak = 0
+    for r in reversed(hist):
+        if r["id"] in rank:
+            streak += 1
+        elif r["status"] == "full":
+            break
+    best = min(rank.values()) if rank else None
+    best_year = next((r["date"][:4] for r in hist if rank.get(r["id"]) == best), None) if best else None
+    return {"trend": trend, "streak": streak, "lists": len(rank), "best": best, "best_year": best_year}
+
+
+def trend_label(trend):
+    words = [str(t["r"]) if t["r"] else ("out" if t["s"] == "out" else "unknown") for t in trend]
+    return "Rank over last %s: %s" % ("list" if len(trend) == 1 else "%d lists" % len(trend), ", ".join(words))

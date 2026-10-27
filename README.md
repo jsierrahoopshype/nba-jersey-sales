@@ -42,5 +42,6 @@ Outputs: `docs/` pages (hub, records, /teams/ and /seasons/ index pages, player,
 - Jersey ranking points = 11 minus season rank, top 10 only. Every-list points use the same scoring on each U.S. list.
 - Change is computed only between adjacent complete U.S. lists: the exact move for a player on both; a player missing from the next list dropped out only if the previous rank fits inside it, otherwise not compared.
 - Popularity vs. awards: league-wide award rank per season, All-NBA team, then MVP voting place.
+- List tables show each player's record as of that list's date (trend over the last 8 U.S. lists, streak, lists made, best rank, the season's award rank), never using later lists.
 - Player pages are indexable only with 3+ U.S. lists; the rest carry `noindex, follow` and stay out of the sitemap. Season pages with only a No. 1 and the team page with no ranked player are noindex too.
 - All page text is a template filled from data.
