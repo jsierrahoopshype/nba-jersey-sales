@@ -244,7 +244,7 @@
     var other = null;
 
     function markerKey(list) {
-      return list.map(function (mk, n) { return '<li' + (n >= 4 ? ' class="mx"' : '') + '>' + esc(mk.t) + '</li>'; }).join('');
+      return list.map(function (mk, n) { return '<li' + (n >= 4 ? ' class="mx"' : '') + '>' + (mk.h || esc(mk.t)) + '</li>'; }).join('');
     }
     function render() {
       var series = [data.me];
@@ -363,7 +363,7 @@
           var k = e.m && e.m.kind, cls = e.r === 1 ? 'lead' : ((k === 'same' || k === 'none') ? 'quiet' : '');
           h += '<tr' + (cls ? ' class="' + cls + '"' : '') + '><td class="rank">' + e.r + '</td><td class="name left"><img class="face" src="' + esc(e.img) + '" alt="' + esc(e.p) +
             '" width="28" height="28" loading="lazy"><span class="pwrap"><a class="nm" href="' + ROOT + 'player/' + e.s + '/">' + esc(e.p) + '</a><span class="tline">' + teamHtml(e, DATA.teams) + '</span>' +
-            (e.f ? '<span class="note">' + esc(e.f) + '</span>' : '') + '</span></td>' +
+            (e.fh ? '<span class="note">' + e.fh + '</span>' : '') + '</span></td>' +
             (r.us ? '<td class="mvc">' + moveHtml(e.m) + '</td>' : '') + '</tr>';
         });
         h += '</tbody></table></div>';
