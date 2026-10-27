@@ -624,22 +624,84 @@ def since_head(m, r):
     return '<button type="button" class="since" data-tip="%s" title="%s">Change since %s</button>' % (esc(full), esc(full), esc(prev["my"]))
 
 
+COL_TIPS = {
+    "trend": "Rank on the last 8 U.S. lists up to this one, No. 1 at the top. A gap: outside a complete list. Hollow dot: a list with only the No. 1 known.",
+    "streak": "Consecutive U.S. lists made up to this list.",
+    "lists": "U.S. lists made up to this list.",
+    "best": "Best U.S. rank up to this list, with the year it was first reached.",
+    "awards": "That season's league-wide award rank (All-NBA team, then MVP voting place). Opens popularity vs. awards for the season.",
+}
+
+
+def head_tip(label, key):
+    return '<span class="th-tip" tabindex="0" data-tip="%s">%s</span>' % (esc(COL_TIPS[key]), esc(label))
+
+
+def sparkline(trend):
+    """Ordinal sparkline: No. 1 at the top, a gap where the player was outside a complete list, a
+    hollow dot on a No. 1 only list, the current list highlighted. Mirrors spark() in jerseys.js."""
+    n = len(trend)
+    mx = max([15] + [t["r"] for t in trend if t["r"]])
+    mx = 25 if mx > 20 else (20 if mx > 15 else 15)
+    step, w, h = 8, 68, 22
+    x = lambda i: 4 + (8 - n + i) * step
+    y = lambda v: 3 + (v - 1) * (h - 6) / (mx - 1)
+    label = M.trend_label(trend)
+    P = ['<svg class="spark" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s"><title>%s</title>' % (w, h, w, h, esc(label), esc(label)),
+         '<line class="sp-base" x1="2" x2="%d" y1="3" y2="3"/>' % (w - 2)]
+    for i in range(1, n):
+        a, b = trend[i - 1], trend[i]
+        if a["r"] and b["r"]:
+            P.append('<line class="sp-l" x1="%d" y1="%.1f" x2="%d" y2="%.1f"/>' % (x(i - 1), y(a["r"]), x(i), y(b["r"])))
+    for i, t in enumerate(trend):
+        if t["r"]:
+            cls = "sp-c" if i == n - 1 else ("sp-h" if t["p"] else "sp-d")
+            P.append('<circle class="%s" cx="%d" cy="%.1f" r="%s"/>' % (cls, x(i), y(t["r"]), "2.8" if i == n - 1 else "2"))
+    P.append("</svg>")
+    return "".join(P)
+
+
+def award_cell(ctx, r, player):
+    a = ctx.m.awards[r["season"]]["by"].get(player)
+    if not a:
+        return '<span class="dash">-</span>'
+    if ctx.m.sr[r["season"]]["kind"] == "full":
+        return '<a class="aw" href="%s?pva=%s#pva">No. %d</a>' % (ctx.root, r["season"], a["rank"])
+    return "No. %d" % a["rank"]
+
+
+def best_text(x):
+    return ("No. %d (%s)" % (x["best"], x["best_year"])) if x["best"] else "-"
+
+
 def list_table(ctx, r, compact=False):
+    """A list with the player's record as of this list's date: trend, streak, lists, best and awards.
+    On phones the four number columns move into a row that opens on tap."""
     with_moves = r["us"]
-    head = [("No.", "rank"), ("Player", "name left")]
+    hist = M.history_as_of(ctx.m.us, r["date"])
+    head = [("No.", "rank"), ("Player", "name left"), (head_tip("Trend", "trend"), "trend"),
+            (head_tip("Streak", "streak"), "num dx"), (head_tip("Lists", "lists"), "num dx"),
+            (head_tip("Best", "best"), "num dx best"), (head_tip("Awards", "awards"), "num dx")]
     if with_moves:
         head.append((since_head(ctx.m, r), "mvc"))
-    rows, cls = [], []
+    th = "".join('<th class="%s">%s</th>' % (c, h) for h, c in head)
+    trs = []
     for e in r["entries"]:
+        x = M.player_as_of(hist, e["player"])
         who = ctx.face(e["player"], 28) + '<span class="pwrap">' + ctx.plink(e["player"]) + \
             '<span class="tline">%s</span>' % ctx.team_cell(e) + flag_html(e, ctx) + '</span>'
-        cells = [str(e["rank"]), who]
+        aw = award_cell(ctx, r, e["player"])
+        cells = [str(e["rank"]), who, sparkline(x["trend"]), str(x["streak"]), str(x["lists"]), esc(best_text(x)), aw]
         if with_moves:
             cells.append(move_html(e.get("move")))
-        rows.append(cells)
         k = (e.get("move") or {}).get("kind")
-        cls.append("lead" if e["rank"] == 1 else ("quiet" if k in ("same", "none") else ""))
-    return table(head, rows, row_cls=cls)
+        cl = "lead" if e["rank"] == 1 else ("quiet" if k in ("same", "none") else "")
+        tds = "".join('<td class="%s">%s</td>' % (head[j][1], v) for j, v in enumerate(cells))
+        trs.append('<tr class="xr%s">%s</tr>' % ((" " + cl) if cl else "", tds))
+        trs.append('<tr class="xrow" hidden><td colspan="%d"><span><b>Streak</b> %d</span><span><b>Lists</b> %d</span>'
+                   '<span><b>Best</b> %s</span><span><b>Awards</b> %s</span></td></tr>' % (
+                       len(head), x["streak"], x["lists"], esc(best_text(x)), aw))
+    return '<div class="table-wrap"><table class="lb lt"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (th, "".join(trs))
 
 
 def details(summary, inner, cls="more-block", open_=False):
@@ -1379,18 +1441,25 @@ def build_team_page(site, t, ctx, m, team_entries, tp_season, tp_lists):
             rows_s = [row for row in m.sr[s]["rows"] if slug in row["team_slugs"]]
             if not lists:
                 continue
-            lead = ", ".join("%s No. %d" % (ctx.plink(row["player"]), row["pos"]) for row in rows_s) or "No player in the season ranking"
+            lead = ("Also ranked: " + ", ".join("%s No. %d" % (ctx.plink(row["player"]), row["pos"]) for row in rows_s[1:])) if len(rows_s) > 1 else ""
             inner = []
             for r in lists:
                 names = ", ".join("%s No. %d%s" % (ctx.plink(e["player"]), e["rank"],
                                                    ' <span class="note">%s</span>' % ctx.names("shared listing: " + e["team"]) if e["multi"] else "")
                                   for e in sorted(on[r["id"]], key=lambda e: e["rank"]))
                 inner.append('<div class="ln"><span class="k2">%s</span>%s</div>' % (esc(r["type"] + ", " + r["label"]), names))
-            summary = '<span class="sr-s">%s</span><span class="sr-r">%s</span><span class="sr-l">%s</span>' % (
-                esc(s), esc(plural(sum(by_season.get(s, {}).values()), "pt")), lead)
-            blocks.append(details(summary, '<div class="sr-body">%s<p class="hint">%s</p></div>' % ("".join(inner), ctx.slink(s) + " season page"), cls="srow"))
+            spts = sum(by_season.get(s, {}).values())
+            listed = sorted({e["player"] for r in lists for e in on[r["id"]]})
+            top_row = rows_s[0] if rows_s else None
+            topc = ('<span class="sr-top">%s%s<span class="sub2">No. %d in the season</span></span>' % (
+                ctx.face(top_row["player"], 24), ctx.plink(top_row["player"]), top_row["pos"])) if top_row else '<span class="sr-top dash">No player in the season ranking</span>'
+            summary = ('<span class="sr-s">%s</span>%s<span class="sr-n"><b>%s</b><i>points</i></span>'
+                       '<span class="sr-n"><b>%s</b><i>of team total</i></span><span class="sr-n"><b>%d</b><i>on lists</i></span>'
+                       '<span class="sr-l">%s</span>') % (
+                esc(s), topc, spts, ("%d%%" % pct(spts, total)) if total else "-", len(listed), lead)
+            blocks.append(details(summary, '<div class="sr-body">%s<p class="hint">%s</p></div>' % ("".join(inner), ctx.slink(s) + " season page"), cls="srow trow"))
         b.append(section("Ranked players by season", '<div class="season-rows">%s</div>' % "".join(blocks),
-                         "Season ranking first; expand for every U.S. list. Players listed with more than one team (traded during the sales period) count for each team listed."))
+                         "Each season: the team's top player in the HoopsMatic season ranking, its ranking points, their share of the team's total since 2001, and how many of its players made a U.S. list. Expand for every list. Players listed with more than one team (traded during the sales period) count for each team listed."))
         lp = tp_lists.get(slug)
         if lp and lp["pts"]:
             b.append(details("Every-list points: %s from %s" % (esc(plural(lp["pts"], "point")), esc(plural(len(lp["lists"]), "U.S. list"))),
@@ -1429,6 +1498,8 @@ def build_team_page(site, t, ctx, m, team_entries, tp_season, tp_lists):
             bp[n] = (-contrib.get(n, 0), min([row["pos"] for row in rows_n] or [999]), -sum(1 for _, e in us_ent if e["player"] == n), n)
         best_player = min(bp, key=lambda n: bp[n])
     return {"slug": slug, "name": full, "points": total, "players": len(players_set), "lists": len(on), "best": best_player,
+            "best_season": best_season[0] if best_season else None, "best_season_pts": sum(best_season[1].values()) if best_season else 0,
+            "span": span,
             "best_pts": contrib.get(best_player, 0) if best_player else 0,
             "list_points": (tp_lists.get(slug) or {}).get("pts", 0), "list_fed": len((tp_lists.get(slug) or {}).get("lists", ())),
             "drought": drought_n, "indexable": indexable, "color": t.get("color")}
@@ -1508,8 +1579,8 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
         cards.append('<div class="lcard"><div class="lhead"><h3>%s</h3><span class="sub2">%s</span>%s%s</div>%s%s</div>' % (
             esc(r["type"]), esc(r["label"] + (" (season final)" if r["final"] else "")), tag, source_link(r),
             ('<p class="hint">%s</p>' % esc(note)) if note else "", inner))
-    b.append(section("Every list this season", '<div class="lcards">%s</div>' % "".join(cards),
-                     "Side by side; swipe sideways on phones. Change compares with the previous complete U.S. list: the exact move for every player on both lists."))
+    b.append(section("Every list this season", '<div class="lstack">%s</div>' % "".join(cards),
+                     "Each list with every player's record as of that list's date. Change compares with the previous complete U.S. list: the exact move for every player on both lists. On phones, tap a row for streak, lists, best and awards."))
     mv_blocks = []
     for r in us_lists:
         if not r["compare_id"]:
@@ -1564,7 +1635,8 @@ def build_season_page(site, season, ctx, m, pva, first_season_of):
                        "stats": [("No. %d" % x["pos"], x["player"]) for x in rows[:3]],
                        "line": "HoopsMatic season ranking from %s" % plural(len(sr["fed"]), "U.S. list")})
     return {"season": season, "lists": len(lists), "lists_with_entries": sum(1 for r in lists if r["entries"]), "fed": len(sr["fed"]),
-            "kind": sr["kind"], "no1": no1, "top3": rows[:3], "indexable": indexable}
+            "kind": sr["kind"], "no1": no1, "top3": rows[:3], "indexable": indexable, "depth": sr["depth"], "debuts": debuts,
+            "award1": [x["player"] for x in m.awards[season]["rows"] if x["rank"] == 1]}
 
 
 def rec_block(sid, title, headline, visual, full_head, full_rows, hint=""):
@@ -1590,20 +1662,37 @@ def build_records(site, ctx, rec, m):
          '<p class="takeaway">%s</p>' % ctx.names("%s finished No. 1 in %s, more than anyone since 2000-01." % (n1["name"], plural(n1["no1_seasons"], "season"))),
          '<nav class="jump" aria-label="Record categories">%s</nav>' % "".join('<a class="chip" href="#%s">%s</a>' % (k, esc(t)) for k, t in cats)]
     face = lambda n: ctx.face(n, 24) + ctx.plink(n)
+    # Extra columns for the full rankings (wide screens): years on U.S. lists and the teams.
+    SPAN, TEAMS = ("Years", "left dx nw"), ("Team(s)", "team left dx")
+
+    def span(n):
+        y0, y1 = P[n]["years"]
+        return esc(y0 if y0 == y1 else "%s-%s" % (y0, y1))
+
+    def teams(n, k=2):
+        cnt, order = defaultdict(int), []
+        for r, e in P[n]["us"]:
+            for sl in e["team_slugs"]:
+                cnt[sl] += 1
+                if sl not in order:
+                    order.append(sl)
+        top = sorted(order, key=lambda sl: (-cnt[sl], order.index(sl)))
+        more = len(top) - k
+        return "<br>".join(ctx.tlink(sl) for sl in top[:k]) + ('<span class="sub2">+%d more</span>' % more if more > 0 else "")
     # 1. No. 1 seasons.
     L = rec["no1_seasons"]
     b.append(rec_block("no1-seasons", "Most No. 1 seasons",
                        "%s leads with %s (and %s)." % (ctx.plink(n1["name"]), plural(n1["no1_seasons"], "No. 1 season"), plural(n1["no1_lists"], "No. 1 list")),
                        hbars([(face(p["name"]), p["no1_seasons"], "%s &middot; %s" % (plural(p["no1_lists"], "No. 1 list"), plural(p["lists"], "U.S. list"))) for p in L[:TOP_N]]),
-                       [("Player", "name left"), ("No. 1 seasons", "num"), ("No. 1 lists", "num")],
-                       [[face(p["name"]), str(p["no1_seasons"]), str(p["no1_lists"])] for p in L],
+                       [("Player", "name left"), ("No. 1 seasons", "num"), ("No. 1 lists", "num"), SPAN, TEAMS],
+                       [[face(p["name"]), str(p["no1_seasons"]), str(p["no1_lists"]), span(p["name"]), teams(p["name"])] for p in L],
                        "Seasons: one HoopsMatic ranking per season. Lists: every U.S. list."))
     L = rec["top10_seasons"]
     b.append(rec_block("top10-seasons", "Most top 10 seasons",
                        "%s finished in the season top 10 %s." % (ctx.plink(L[0]["name"]), plural(L[0]["top10_seasons"], "time")),
                        hbars([(face(p["name"]), p["top10_seasons"], "%s &middot; %s" % (plural(p["top5_seasons"], "top 5 season"), plural(p["top10_lists"], "top 10 list"))) for p in L[:TOP_N]]),
-                       [("Player", "name left"), ("Top 10 seasons", "num"), ("Top 5 seasons", "num"), ("Top 10 lists", "num"), ("Top 5 lists", "num")],
-                       [[face(p["name"]), str(p["top10_seasons"]), str(p["top5_seasons"]), str(p["top10_lists"]), str(p["top5_lists"])] for p in L]))
+                       [("Player", "name left"), ("Top 10 seasons", "num"), ("Top 5 seasons", "num"), ("Top 10 lists", "num dx"), ("Top 5 lists", "num dx"), SPAN, TEAMS],
+                       [[face(p["name"]), str(p["top10_seasons"]), str(p["top5_seasons"]), str(p["top10_lists"]), str(p["top5_lists"]), span(p["name"]), teams(p["name"])] for p in L]))
     # 3. Reigns as a timeline.
     chrono = rec["reigns_chrono"]
     tot = sum(x["n"] for x in chrono)
@@ -1618,15 +1707,16 @@ def build_records(site, ctx, rec, m):
     b.append(rec_block("reigns", "No. 1 reigns",
                        "%s held No. 1 on %s in a row, %s to %s." % (ctx.plink(reign["player"]), plural(reign["n"], "U.S. list"), esc(reign["start"]["my"]), esc(reign["end"]["my"])),
                        vis + '<ol class="top5">%s</ol>' % top5,
-                       [("Player", "name left"), ("Lists", "num"), ("From / to", "left")],
-                       [[face(x["player"]), str(x["n"]), esc(x["start"]["my"] + (" to " + x["end"]["my"] if x["n"] > 1 else ""))] for x in rec["reigns"]],
+                       [("Player", "name left"), ("Lists", "num"), ("From / to", "left"), ("Team", "team left dx")],
+                       [[face(x["player"]), str(x["n"]), esc(x["start"]["my"] + (" to " + x["end"]["my"] if x["n"] > 1 else "")),
+                         ctx.team_cell(x["start"]["entries"][0])] for x in rec["reigns"]],
                        "Consecutive U.S. lists at No. 1, %s in all. The empty Jan 2005 list is skipped; lists with only the No. 1 count." % plural(tot, "list")))
     L = rec["never_no1"]
     b.append(rec_block("never-no1", "Most lists without a No. 1",
                        "%s made %s without ever reaching No. 1 (best: No. %d)." % (ctx.plink(L[0]["name"]), plural(L[0]["lists"], "U.S. list"), L[0]["peak"]),
                        hbars([(face(p["name"]), p["lists"], "best No. %d" % p["peak"]) for p in L[:TOP_N]]),
-                       [("Player", "name left"), ("Lists", "num"), ("Best", "num")],
-                       [[face(p["name"]), str(p["lists"]), "No. %d" % p["peak"]] for p in L]))
+                       [("Player", "name left"), ("Lists", "num"), ("Best", "num"), SPAN, TEAMS],
+                       [[face(p["name"]), str(p["lists"]), "No. %d" % p["peak"], span(p["name"]), teams(p["name"])] for p in L]))
     for key, sid, ttl in (("jumps", "climbs", "Biggest climbs"), ("falls", "falls", "Biggest falls")):
         L = rec[key]
         if not L:
@@ -1637,16 +1727,17 @@ def build_records(site, ctx, rec, m):
         b.append(rec_block(sid, ttl, "%s went from No. %d to No. %d between the %s and %s lists." % (
             ctx.plink(x0["player"]), x0["from"], x0["to"], esc(x0["prev"]["my"]), esc(x0["cur"]["my"])),
             '<div class="pairs">%s</div>' % pairs,
-            [("Player", "name left"), ("Before", "num"), ("After", "num"), ("Lists", "left")],
-            [[face(x["player"]), "No. %d" % x["from"], "No. %d" % x["to"], esc(x["prev"]["my"] + " to " + x["cur"]["my"])] for x in L],
+            [("Player", "name left"), ("Before", "num"), ("After", "num"), ("Lists", "left"), ("Team then", "team left dx")],
+            [[face(x["player"]), "No. %d" % x["from"], "No. %d" % x["to"], esc(x["prev"]["my"] + " to " + x["cur"]["my"]),
+              ctx.team_cell(next(e for e in x["cur"]["entries"] if e["player"] == x["player"]))] for x in L],
             "Adjacent complete U.S. lists only, with the exact move for a player on both (lists ran 25, 20, 15 and 10 deep)."))
     L = rec["points"]
     b.append(rec_block("points", "Jersey ranking points since 2001",
                        "%s leads with %s. Scoring: in each season's HoopsMatic ranking, No. 1 earns 10 points, No. 2 earns 9, down to 1 point for No. 10." % (
                            ctx.plink(L[0]["name"]), plural(L[0]["season_points"], "point")),
                        hbars([(face(p["name"]), p["season_points"], "%s on every list" % plural(p["list_points"], "point")) for p in L[:TOP_N]]),
-                       [("Player", "name left"), ("Season pts", "num"), ("Every-list pts", "num"), ("Lists", "num")],
-                       [[face(p["name"]), str(p["season_points"]), str(p["list_points"]), str(p["lists"])] for p in L],
+                       [("Player", "name left"), ("Season pts", "num"), ("Every-list pts", "num"), ("Lists", "num"), SPAN, TEAMS],
+                       [[face(p["name"]), str(p["season_points"]), str(p["list_points"]), str(p["lists"]), span(p["name"]), teams(p["name"])] for p in L],
                        'Every-list points apply the same scoring to each U.S. list. Downloads for the <a href="%s">bar chart race tool</a>: <a href="../data/jersey-points-race.csv" download>season ranking points (CSV)</a>, <a href="../data/jersey-points-race-all-lists.csv" download>every-list points (CSV)</a>.' % RACE_TOOL))
     L = rec["early"]
     if L:
@@ -1656,9 +1747,9 @@ def build_records(site, ctx, rec, m):
                                ctx.plink(rk["player"]), rk["rank"], esc(rk["release"]["my"]), "first" if rk["season_no"] == 1 else "second"),
                            '<ol class="top5">%s</ol>' % "".join('<li>%s<span class="pwrap">%s<span class="sub2">No. %d, %s, %s</span></span></li>' % (
                                ctx.face(x["player"], 28), ctx.plink(x["player"]), x["rank"], esc(x["release"]["my"]), "rookie season" if x["season_no"] == 1 else "second season") for x in L[:TOP_N]),
-                           [("Player / first list", "name left"), ("Rank", "num"), ("Season played", "left"), ("First NBA season", "left")],
+                           [("Player / first list", "name left"), ("Rank", "num"), ("Season played", "left"), ("First NBA season", "left dx"), ("Team then", "team left dx")],
                            [[face(x["player"]) + '<span class="sub2">%s</span>' % esc(ctx.rel_name(x["release"])), "No. %d" % x["rank"],
-                             "Rookie season" if x["season_no"] == 1 else "Second season", esc(x["nba_first"])] for x in L],
+                             "Rookie season" if x["season_no"] == 1 else "Second season", esc(x["nba_first"]), ctx.team_cell(P[x["player"]]["us"][0][1])] for x in L],
                            "First U.S. list in the player's first or second season played (a season with at least one regular-season game, from nba-player-data), so a missed first season does not count."))
     L = rec["one_list"]
     cards = "".join('<a class="pcard" href="%splayer/%s/">%s<span class="pc-n">%s</span><span class="pc-r">No. %d</span><span class="sub2">%s</span></a>' % (
@@ -1666,8 +1757,11 @@ def build_records(site, ctx, rec, m):
     b.append(rec_block("one-list", "One-list players",
                        "%s reached No. %d on %s only U.S. list (%s)." % (ctx.plink(L[0][0]), L[0][2]["rank"], "the player's", esc(L[0][1]["my"])),
                        '<div class="pcards">%s</div>' % cards,
-                       [("Player / only list", "name left"), ("Rank", "num"), ("Team", "team left")],
-                       [[face(n) + '<span class="sub2">%s</span>' % esc(ctx.rel_name(r)), "No. %d" % e["rank"], ctx.team_cell(e) + flag_html(e, ctx)] for n, r, e in L],
+                       [("Player / only list", "name left"), ("Rank", "num"), ("Season rank", "num dx"), ("Team", "team left")],
+                       [[face(n) + '<span class="sub2">%s</span>' % esc(ctx.rel_name(r)), "No. %d" % e["rank"],
+                         ("No. %d" % P[n]["season"][r["season"]]["pos"]) if r["season"] in P[n]["season"] else
+                         ('<span class="dash">outside top %d</span>' % m.sr[r["season"]]["depth"] if m.sr[r["season"]]["kind"] == "full" else '<span class="dash">-</span>'),
+                         ctx.team_cell(e) + flag_html(e, ctx)] for n, r, e in L],
                        "Exactly one U.S. list in the source data, best rank first."))
     L = rec["duos"]
     d0 = L[0]
@@ -1677,9 +1771,12 @@ def build_records(site, ctx, rec, m):
     b.append(rec_block("duos", "Same-team duos",
                        "%s and %s shared %s with the %s." % (ctx.plink(d0["a"]), ctx.plink(d0["b"]), esc(plural(len(d0["lists"]), "U.S. list")), ctx.tlink(d0["team"])),
                        '<div class="duos">%s</div>' % pairs,
-                       [("Duo", "name left"), ("Team", "team left"), ("Lists", "num")],
+                       [("Duo", "name left"), ("Team", "team left"), ("Lists", "num"), ("Last list together", "left dx")],
                        [[ctx.face(d["a"], 24) + ctx.face(d["b"], 24) + ctx.plink(d["a"]) + " &amp; " + ctx.plink(d["b"]) + '<span class="sub2">%s</span>' % esc(
-                           d["lists"][0]["my"] + (" to " + d["lists"][-1]["my"] if len(d["lists"]) > 1 else "")), ctx.tlink(d["team"]), str(len(d["lists"]))] for d in L],
+                           d["lists"][0]["my"] + (" to " + d["lists"][-1]["my"] if len(d["lists"]) > 1 else "")), ctx.tlink(d["team"]), str(len(d["lists"])),
+                         esc("%s: No. %d and No. %d" % (d["lists"][-1]["my"],
+                             next(e["rank"] for e in d["lists"][-1]["entries"] if e["player"] == d["a"]),
+                             next(e["rank"] for e in d["lists"][-1]["entries"] if e["player"] == d["b"])))] for d in L],
                        "Two players from the same team on the same U.S. list."))
     site.add("records", url, page("../", url, title, desc, "\n".join(b), indexable=True, nav="records", share="records",
                                   share_alt="NBA jersey sales records card: %s, %s" % (n1["name"], plural(n1["no1_seasons"], "No. 1 season"))), True)
@@ -1764,9 +1861,12 @@ def build_teams_index(site, ctx, m, team_summ):
             '<span class="sw big" style="background:%s"></span>' % esc(t["color"] or "#999")
         best = ('<span class="tc-best">%s%s</span>' % (ctx.face(t["best"], 24), ctx.plink(t["best"]))) if t["best"] else '<span class="tc-best dash">No ranked player</span>'
         cards.append('<li class="tcard" data-pts="%d" data-rank="%d" data-name="%s">%s<div class="tc-body"><a class="nm tc-name" href="%steam/%s/">%s</a>'
-                     '<span class="tc-pts">%s</span>%s<span class="sub2">%s &middot; every list: %s from %s</span></div></li>' % (
+                     '<span class="tc-pts">%s</span>%s<span class="sub2">%s &middot; every list: %s from %s</span>%s</div></li>' % (
                          t["points"], rank, esc(t["name"]), mark, ctx.root, t["slug"], esc(t["name"]), esc(plural(t["points"], "point")), best,
-                         esc(plural(t["players"], "ranked player")), esc(plural(t["list_points"], "pt")), esc(plural(t["list_fed"], "list"))))
+                         esc(plural(t["players"], "ranked player")), esc(plural(t["list_points"], "pt")), esc(plural(t["list_fed"], "list")),
+                         '<span class="tc-meta">%s</span>' % " &middot; ".join(x for x in [
+                             ("Best season %s (%s)" % (ctx.slink(t["best_season"]), esc(plural(t["best_season_pts"], "pt")))) if t["best_season"] else "",
+                             ("On lists %s" % esc(t["span"])) if t["span"] else ""] if x)))
     sort = ('<div class="seg-btns" role="group" aria-label="Sort teams">'
             '<button type="button" class="segb" data-sort="pts" aria-pressed="true">By points</button>'
             '<button type="button" class="segb" data-sort="name" aria-pressed="false">By name</button></div>')
@@ -1796,10 +1896,15 @@ def build_seasons_index(site, ctx, m, season_summ):
         top = x["top3"]
         no1 = (ctx.face(top[0]["player"], 28) + '<span class="pwrap">%s<span class="tline sub3">%s</span></span>' % (
             ctx.plink(top[0]["player"]), "".join('<span class="t3">No. %d %s</span>' % (r["pos"], ctx.plink(r["player"])) for r in top[1:]) or "Only the No. 1 is known")) if top else ""
+        deb = x["debuts"]
+        debc = ('%d<span class="sub2 dw">%s%s</span>' % (len(deb), ", ".join(ctx.plink(n) for n in deb[:3]), (" +%d" % (len(deb) - 3)) if len(deb) > 3 else "")) if deb else "0"
         rows.append([ctx.slink(x["season"]) + '<span class="sub2">%s</span>' % esc("%s, %d in ranking" % (plural(x["lists_with_entries"], "list"), x["fed"])),
-                     no1])
-    b.append(section("Every season", table([("Season", "left sc"), ("No. 1 and top 3", "name left")], rows, cls="lb seasons-t", limit=0),
-                     "Top 3 of each season's HoopsMatic ranking, built from that season's complete U.S. lists. Lists: published lists with entries that season (U.S. and international); in ranking: the U.S. lists that fed it.", sid="seasons"))
+                     no1, ctx.team_cell(top[0]["entry"]) if top else "",
+                     ("Top %d" % x["depth"]) if x["kind"] == "full" else "No. 1 only", debc,
+                     " / ".join(ctx.plink(n) for n in x["award1"]) or '<span class="dash">-</span>'])
+    b.append(section("Every season", table([("Season", "left sc"), ("No. 1 and top 3", "name left"), ("No. 1 team", "team left dx"), ("Ranking", "num dx"),
+                                            ("First appearances", "left dx dw"), ("Award No. 1", "name left dx")], rows, cls="lb seasons-t", limit=0),
+                     "Top 3 of each season's HoopsMatic ranking, built from that season's complete U.S. lists. Lists: published lists with entries that season (U.S. and international); in ranking: the U.S. lists that fed it. On wide screens: the No. 1's team, how deep the ranking goes, players on a U.S. list for the first time, and the season's award No. 1 (All-NBA team, then MVP voting place).", sid="seasons"))
     b.append('<p class="pager"><a href="../teams/">All teams</a> &middot; <a href="../records/">Records</a></p>')
     site.add("seasons", url, page(ctx.root, url, title, desc, "\n".join(b), indexable=True, nav="seasons", share="seasons",
                                  share_alt="NBA jersey sales by season card: %s No. 1 in %s" % (last["no1"], last["season"])), True)
@@ -1951,7 +2056,7 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
     intl = [r for r in releases if not r["us"]]
     cards = "".join('<div class="lcard"><div class="lhead"><h3>%s</h3><span class="sub2">%s</span>%s</div>%s</div>' % (
         esc(r["type"]), esc(r["label"] + ", " + r["season"]), source_link(r), list_table(ctx, r, compact=True)) for r in intl)
-    b.append(section("International lists", '<div class="lcards">%s</div>' % cards,
+    b.append(section("International lists", '<div class="lstack">%s</div>' % cards,
                      "Kept apart from every U.S. count, ranking, move and point total.", sid="international"))
     b.append(section("Records and downloads", '<p><a href="records/">Records: most No. 1 seasons, reigns, climbs, one-list players and same-team duos</a></p>'
                      '<ul class="dl">'
@@ -2024,6 +2129,14 @@ def write_json(rel, obj):
         json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
 
 
+def asof_json(m, r, player):
+    """The list table's as-of columns for the time machine (same numbers as list_table)."""
+    x = M.player_as_of(M.history_as_of(m.us, r["date"]), player)
+    a = m.awards[r["season"]]["by"].get(player)
+    return {"t": [[t["r"] or 0, t["s"][0], 1 if t["p"] else 0] for t in x["trend"]], "st": x["streak"], "ls": x["lists"],
+            "b": x["best"], "by": x["best_year"], "aw": a["rank"] if a else None, "al": m.sr[r["season"]]["kind"] == "full"}
+
+
 def export_data(m, rec, pva, career):
     releases, players, cross = m.releases, m.players, m.cross
     hub_ctx = Ctx("", m)
@@ -2031,12 +2144,14 @@ def export_data(m, rec, pva, career):
     write_json("releases.json", {
         "teams": {s: {"name": t["full_name"], "color": t.get("color")} for s, t in m.teams_by_slug.items()},
         "milestones": [{"id": x["id"], "label": x["label"], "line": x["line"]} for x in ms],
+        "tips": COL_TIPS,
         "releases": [{
             "id": r["id"], "title": r["title"], "label": r["label"], "my": r["my"], "year": r["date"][:4], "season": r["season"], "type": r["type"],
             "us": r["us"], "final": r["final"], "status": r["status"], "source": r["source"], "note": release_note(r),
             "compare": ({"id": r["compare_id"], "my": m.byid[r["compare_id"]]["my"], "label": m.byid[r["compare_id"]]["label"],
                          "type": m.byid[r["compare_id"]]["type"], "len": r["compare_len"]} if r.get("compare_id") else None),
             "entries": [{"r": e["rank"], "p": e["player"], "s": e["slug"], "tn": e["team_names"], "ts": e["team_slugs"], "lg": e["logos"],
+                         "x": asof_json(m, r, e["player"]),
                          "fh": flag_html(e, hub_ctx)[len('<span class="note">'):-len('</span>')] if flag_html(e, hub_ctx) else "",
                          "f": flag_html(e, hub_ctx) and (e["flag"] + ("; " if e["flag"] and e["multi"] else "") + ("Listed with more than one team; counts for each team listed" if e["multi"] else "")),
                          "m": e["move"], "img": cross.img(e["player"])} for e in r["entries"]],

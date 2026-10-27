@@ -95,6 +95,60 @@
     });
   });
 
+  // ---- Ordinal sparkline for the list tables. Mirrors sparkline() in build_jerseys.py.
+  // t: [[rank or 0, state initial (r ranked, o out, u unknown), 1 if a No. 1 only list], ...]
+  function spark(t) {
+    var n = t.length, mx = 15;
+    t.forEach(function (v) { if (v[0]) mx = Math.max(mx, v[0]); });
+    mx = mx > 20 ? 25 : (mx > 15 ? 20 : 15);
+    var w = 68, h = 22, x = function (i) { return 4 + (8 - n + i) * 8; }, y = function (v) { return (3 + (v - 1) * (h - 6) / (mx - 1)).toFixed(1); };
+    var words = t.map(function (v) { return v[0] ? String(v[0]) : (v[1] === 'o' ? 'out' : 'unknown'); });
+    var label = 'Rank over last ' + (n === 1 ? 'list' : n + ' lists') + ': ' + words.join(', ');
+    var P = ['<svg class="spark" width="68" height="22" viewBox="0 0 68 22" role="img" aria-label="' + esc(label) + '"><title>' + esc(label) + '</title>',
+      '<line class="sp-base" x1="2" x2="66" y1="3" y2="3"/>'];
+    for (var i = 1; i < n; i++) if (t[i - 1][0] && t[i][0]) P.push('<line class="sp-l" x1="' + x(i - 1) + '" y1="' + y(t[i - 1][0]) + '" x2="' + x(i) + '" y2="' + y(t[i][0]) + '"/>');
+    t.forEach(function (v, i) {
+      if (!v[0]) return;
+      var last = i === n - 1;
+      P.push('<circle class="' + (last ? 'sp-c' : (v[2] ? 'sp-h' : 'sp-d')) + '" cx="' + x(i) + '" cy="' + y(v[0]) + '" r="' + (last ? '2.8' : '2') + '"/>');
+    });
+    P.push('</svg>');
+    return P.join('');
+  }
+
+  // ---- List tables on phones: the number columns move into a row that opens on tap (or Enter/Space).
+  var phone = window.matchMedia('(max-width: 640px)');
+  function armRows(scope) {
+    (scope || document).querySelectorAll('table.lt tr.xr').forEach(function (tr) {
+      if (phone.matches) {
+        tr.setAttribute('tabindex', '0');
+        tr.setAttribute('aria-expanded', tr.nextElementSibling && !tr.nextElementSibling.hidden ? 'true' : 'false');
+      } else {
+        tr.removeAttribute('tabindex');
+        tr.removeAttribute('aria-expanded');
+      }
+    });
+  }
+  function toggleRow(tr) {
+    var d = tr.nextElementSibling;
+    if (!d || !d.classList.contains('xrow')) return;
+    d.hidden = !d.hidden;
+    tr.setAttribute('aria-expanded', d.hidden ? 'false' : 'true');
+  }
+  document.addEventListener('click', function (ev) {
+    var tr = ev.target.closest && ev.target.closest('table.lt tr.xr');
+    if (!tr || !phone.matches || ev.target.closest('a,button,[data-tip]')) return;
+    toggleRow(tr);
+  });
+  document.addEventListener('keydown', function (ev) {
+    var tr = ev.target.closest && ev.target.closest('table.lt tr.xr');
+    if (!tr || !phone.matches || ev.target !== tr || (ev.key !== 'Enter' && ev.key !== ' ')) return;
+    ev.preventDefault();
+    toggleRow(tr);
+  });
+  armRows(document);
+  if (phone.addEventListener) phone.addEventListener('change', function () { armRows(document); });
+
   // ---- Teams index: sort the grid by points (default) or name.
   document.querySelectorAll('.segb[data-sort]').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -112,11 +166,15 @@
 
   // ---- Popularity vs awards season picker.
   document.querySelectorAll('.pva-select').forEach(function (sel) {
-    sel.addEventListener('change', function () {
+    var show = function () {
       sel.closest('.pva').querySelectorAll('.pva-pane').forEach(function (p) {
         p.hidden = p.getAttribute('data-season') !== sel.value;
       });
-    });
+    };
+    sel.addEventListener('change', show);
+    // ?pva=<season> (from an Awards cell in a list table) opens that season.
+    var want = qs().get('pva');
+    if (want && sel.querySelector('option[value="' + want + '"]')) { sel.value = want; show(); }
   });
 
   // ---- Search (hub).
@@ -357,14 +415,24 @@
           var full = 'Compared with the ' + r.compare.type + ' list (' + r.compare.label + '). This list: ' + r.label + '. Exact move for every player on both lists.';
           since = '<button type="button" class="since" data-tip="' + esc(full) + '" title="' + esc(full) + '">Change since ' + esc(r.compare.my) + '</button>';
         }
-        h += '<div class="table-wrap"><table class="lb"><thead><tr><th class="rank">No.</th><th class="name left">Player</th>' +
+        var tip = function (lab, k) { return '<span class="th-tip" tabindex="0" data-tip="' + esc(DATA.tips[k]) + '">' + lab + '</span>'; };
+        var ncol = r.us ? 8 : 7;
+        h += '<div class="table-wrap"><table class="lb lt"><thead><tr><th class="rank">No.</th><th class="name left">Player</th>' +
+          '<th class="trend">' + tip('Trend', 'trend') + '</th><th class="num dx">' + tip('Streak', 'streak') + '</th><th class="num dx">' + tip('Lists', 'lists') +
+          '</th><th class="num dx best">' + tip('Best', 'best') + '</th><th class="num dx">' + tip('Awards', 'awards') + '</th>' +
           (r.us ? '<th class="mvc">' + since + '</th>' : '') + '</tr></thead><tbody>';
         r.entries.forEach(function (e) {
-          var k = e.m && e.m.kind, cls = e.r === 1 ? 'lead' : ((k === 'same' || k === 'none') ? 'quiet' : '');
-          h += '<tr' + (cls ? ' class="' + cls + '"' : '') + '><td class="rank">' + e.r + '</td><td class="name left"><img class="face" src="' + esc(e.img) + '" alt="' + esc(e.p) +
+          var k = e.m && e.m.kind, cls = e.r === 1 ? ' lead' : ((k === 'same' || k === 'none') ? ' quiet' : '');
+          var x = e.x, best = x.b ? 'No. ' + x.b + ' (' + x.by + ')' : '-';
+          var aw = x.aw == null ? '<span class="dash">-</span>' : (x.al ? '<a class="aw" href="' + ROOT + '?pva=' + r.season + '#pva">No. ' + x.aw + '</a>' : 'No. ' + x.aw);
+          h += '<tr class="xr' + cls + '"><td class="rank">' + e.r + '</td><td class="name left"><img class="face" src="' + esc(e.img) + '" alt="' + esc(e.p) +
             '" width="28" height="28" loading="lazy"><span class="pwrap"><a class="nm" href="' + ROOT + 'player/' + e.s + '/">' + esc(e.p) + '</a><span class="tline">' + teamHtml(e, DATA.teams) + '</span>' +
             (e.fh ? '<span class="note">' + e.fh + '</span>' : '') + '</span></td>' +
-            (r.us ? '<td class="mvc">' + moveHtml(e.m) + '</td>' : '') + '</tr>';
+            '<td class="trend">' + spark(x.t) + '</td><td class="num dx">' + x.st + '</td><td class="num dx">' + x.ls + '</td><td class="num dx best">' + esc(best) +
+            '</td><td class="num dx">' + aw + '</td>' +
+            (r.us ? '<td class="mvc">' + moveHtml(e.m) + '</td>' : '') + '</tr>' +
+            '<tr class="xrow" hidden><td colspan="' + ncol + '"><span><b>Streak</b> ' + x.st + '</span><span><b>Lists</b> ' + x.ls + '</span><span><b>Best</b> ' +
+            esc(best) + '</span><span><b>Awards</b> ' + aw + '</span></td></tr>';
         });
         h += '</tbody></table></div>';
       }
@@ -379,6 +447,7 @@
         }).join(', ') + '.</p>';
       }
       body.innerHTML = h;
+      armRows(body);
       select.value = current;
     }
     function sync() {
