@@ -1,0 +1,23 @@
+{
+ "note": "Players shown in the jersey section with no /jerseys/player/ page. links: their HoopsMatic Salary Season Finder page (slug in the cards manifest's salary set in hoopsmatic-worker data/cards-manifest.json; each confirmed live: 200, page title and canonical name the player, a made-up slug returns 404). no_page: none found, shown as plain text.",
+ "links": {
+  "Andrew Bynum": "https://hoopsmatic.com/salary-season-finder/player/andrew-bynum/",
+  "Chauncey Billups": "https://hoopsmatic.com/salary-season-finder/player/chauncey-billups/",
+  "Chris Bosh": "https://hoopsmatic.com/salary-season-finder/player/chris-bosh/",
+  "DeAndre Jordan": "https://hoopsmatic.com/salary-season-finder/player/deandre-jordan/",
+  "DeMarcus Cousins": "https://hoopsmatic.com/salary-season-finder/player/demarcus-cousins/",
+  "Elton Brand": "https://hoopsmatic.com/salary-season-finder/player/elton-brand/",
+  "Evan Mobley": "https://hoopsmatic.com/salary-season-finder/player/evan-mobley/",
+  "Joakim Noah": "https://hoopsmatic.com/salary-season-finder/player/joakim-noah/",
+  "Julius Randle": "https://hoopsmatic.com/salary-season-finder/player/julius-randle/",
+  "Kevin Love": "https://hoopsmatic.com/salary-season-finder/player/kevin-love/",
+  "LaMarcus Aldridge": "https://hoopsmatic.com/salary-season-finder/player/lamarcus-aldridge/",
+  "Marc Gasol": "https://hoopsmatic.com/salary-season-finder/player/marc-gasol/",
+  "Pascal Siakam": "https://hoopsmatic.com/salary-season-finder/player/pascal-siakam/",
+  "Predrag Stojakovic": "https://hoopsmatic.com/salary-season-finder/player/predrag-stojakovic/",
+  "Rudy Gobert": "https://hoopsmatic.com/salary-season-finder/player/rudy-gobert/",
+  "Sam Cassell": "https://hoopsmatic.com/salary-season-finder/player/sam-cassell/"
+ },
+ "no_page": [],
+ "checked": "2026-10-27"
+}

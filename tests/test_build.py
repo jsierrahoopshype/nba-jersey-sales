@@ -12,6 +12,9 @@ import unittest
 
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import namecheck  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 SITE = "https://hoopsmatic.com/jerseys/"
@@ -242,6 +245,18 @@ class BuildTests(unittest.TestCase):
         h = self.pages[SITE + "season/2015-16/"]
         self.assertIn('<a class="nm" href="../../player/stephen-curry/">Stephen Curry</a>', h)
         self.assertIn('<a class="nm" href="../../team/golden-state-warriors/">', h)
+
+    def test_every_name_is_a_link(self):
+        """Every rendered player or team name links to its own page (see tests/namecheck.py for what is
+        skipped). The only names allowed as plain text are the confirmed no-page players."""
+        bad = namecheck.unlinked(self.pages)
+        self.assertEqual(bad, [], "\n".join("%s: %s -> %s (%s)" % b for b in bad[:30]))
+        ext = json.load(open(os.path.join(ROOT, "data", "external_player_links.json"), encoding="utf-8"))
+        for n, url in ext["links"].items():
+            self.assertTrue(url.startswith("https://hoopsmatic.com/") and "/jerseys/" not in url, n)
+        # The checker itself must catch an unlinked name.
+        probe = {SITE + "records/": "<p>LeBron James and the Seattle SuperSonics</p>"}
+        self.assertEqual(sorted(x[1] for x in namecheck.unlinked(probe)), ["LeBron James", "Seattle SuperSonics"])
 
     def test_no_eyebrow_or_sales_volume_language(self):
         for url, h in self.pages.items():

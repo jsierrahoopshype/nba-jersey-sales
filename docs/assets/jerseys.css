@@ -354,3 +354,9 @@ table.pvat td.num{width:1%;white-space:nowrap}
 .sub3 .t3{display:block}
 table.seasons-t td.name{overflow-wrap:normal;word-break:normal}
 table.seasons-t td.sc{width:6.2rem}table.seasons-t td.sc .sub2{white-space:normal}
+/* names inside sentences, notes and controls keep the name style */
+.note a.nm,.hint a.nm,.findings a.nm,.takeaway a.nm,.headline a.nm,.st-l a.nm,.mkey a.nm,.legend a.nm{color:var(--text);font-weight:600}
+.story .st-h{color:var(--text)}
+.story .st-h:hover,.story .st-h:focus-visible{text-decoration:underline}
+.preset{display:inline-block;font-size:.8rem;margin:.15rem .7rem .15rem 0;line-height:1.9}.preset a.nm{white-space:nowrap}.preset .chip{margin-left:.2rem}
+.ms-item{display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;margin:.1rem .5rem .1rem 0;white-space:nowrap}
