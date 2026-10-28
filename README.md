@@ -16,7 +16,7 @@ No API keys, no network. The build reads only committed files:
 | `data/source/` | The two source CSVs, unchanged. Player ranks is the data; the Grid is only a cross-check. |
 | `data/release_sources.csv` | Release ID -> official NBA/NBPA announcement. Blank when no page was opened and confirmed. |
 | `data/crossover/` | Snapshots of other HoopsMatic datasets (headshots, awards, award votes, seasons played, salaries, Career Map, attendance, team logos). |
-| `data/share/headshots/` | Face-tight headshots for the share cards (from nba-headshots). |
+| `data/share/headshots/` | Face-fill (320px) headshots for the share cards (from nba-headshots). |
 | `data/player_aliases.json` | Same person under another name in a sibling repo (confirmed by NBA id). |
 | `data/page_hashes.json` | Content hash and lastmod per URL. A sitemap date moves only when that page changes. |
 | `data/share_hashes.json` | Content hash per share image. A card is redrawn only when its hash changes. |

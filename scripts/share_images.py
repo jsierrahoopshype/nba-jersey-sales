@@ -2,8 +2,8 @@
 
 A card is redrawn only when its content hash changes (data/share_hashes.json): the hash covers
 the card text, the team color, the headshot bytes and TEMPLATE. No NBA or team logos, no
-jersey images. Player cards use the committed face2 headshot crop (data/share/headshots/, 400px
-from nba-headshots face2); the pages themselves keep the face-tight images.
+jersey images. Player cards use the committed face-fill-320 headshot (data/share/headshots/, the one
+HoopsMatic look: the face fills a light grey circle); the pages use the 160px face-fill images.
 """
 import hashlib
 import json
@@ -11,7 +11,7 @@ import os
 
 from PIL import Image, ImageDraw, ImageFont
 
-TEMPLATE = "v4"  # bump whenever the layout code changes, so every card is redrawn
+TEMPLATE = "v5"  # bump whenever the layout code changes, so every card is redrawn
 W, H = 1200, 630
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOLD = os.path.join(HERE, "fonts", "Inter-Bold.otf")
@@ -58,7 +58,7 @@ def _card(card, shot):
         size = 210
         cx, cy = W - 100 - size // 2, 80 + size // 2
         d.ellipse([cx - size // 2 - 10, cy - size // 2 - 10, cx + size // 2 + 10, cy + size // 2 + 10], fill=color)
-        d.ellipse([cx - size // 2, cy - size // 2, cx + size // 2, cy + size // 2], fill=_mix(color, (255, 255, 255), .82))
+        d.ellipse([cx - size // 2, cy - size // 2, cx + size // 2, cy + size // 2], fill=(0xE8, 0xE8, 0xED))
         if shot:
             face = shot.convert("RGBA").resize((size, size), Image.LANCZOS)
             mask = Image.new("L", (size, size), 0)
@@ -67,7 +67,7 @@ def _card(card, shot):
         else:
             initials = "".join(w[0] for w in card["name"].replace("'", "").split()[:2]).upper()
             fi = _font(BOLD, 84)
-            d.text((cx - d.textlength(initials, font=fi) / 2, cy - 52), initials, font=fi, fill=color)
+            d.text((cx - d.textlength(initials, font=fi) / 2, cy - 52), initials, font=fi, fill=(0x55, 0x55, 0x5C))
         text_right = cx - size // 2 - 40
     f, name = _fit(d, card["name"], BOLD, 72, text_right - left)
     d.text((left, 110), name, font=f, fill=INK)

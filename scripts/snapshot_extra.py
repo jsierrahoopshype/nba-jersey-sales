@@ -12,8 +12,8 @@ Writes:
                                       All-NBA team or MVP votes, league-wide
   data/crossover/seasons_played.json  jersey players: regular seasons with 1+ game
   data/crossover/team_logos.json      team_id -> current logo svg exists in nba-headshots
-  data/share/headshots/<slug>.webp    face2 headshots (520px, cropped to head and shoulders) for the
-                                      share cards only; the pages keep linking face-tight
+  data/share/headshots/<slug>.webp    face-fill-320 headshots (the one HoopsMatic look, transparent)
+                                      for the share cards; the pages link the 160px face-fill
 """
 import argparse
 import csv
@@ -108,7 +108,7 @@ def main():
             played[n].add(int(r["YEAR"]))
     write("seasons_played.json", {n: sorted(v) for n, v in played.items()})
 
-    # ---- nba-headshots: current team logos + face2 headshots for the share cards.
+    # ---- nba-headshots: current team logos + face-fill-320 headshots for the share cards.
     hs = R("nba-headshots")
     tree = set(subprocess.check_output(["git", "-C", hs, "ls-tree", "-r", "--name-only", "HEAD"]).decode().split())
     teams = load_json(os.path.join(OUT, "teams.json"))
@@ -118,16 +118,15 @@ def main():
         os.remove(os.path.join(SHOTS, fn))
     shots = load_json(os.path.join(OUT, "headshots.json"))
     for n, h in shots.items():
-        # Same file stem as the face-tight image the pages use (<nba_id>-<slug>), in face2/.
+        # Same file stem as the face-fill image the pages use (<nba_id>-<slug>), in face-fill-320/.
         stem = h["image"].rsplit("/", 1)[1].rsplit(".", 1)[0]
-        path = "players/headshots/face2/%s.png" % stem
+        path = "players/headshots/face-fill-320/%s.webp" % stem
         if path not in tree:
             continue
         data = subprocess.check_output(["git", "-C", hs, "show", "HEAD:" + path])
-        im = Image.open(io.BytesIO(data)).convert("RGB")
-        # face2 is 520x520 with the face centered and an empty band at the bottom: keep the
-        # 400px square around the head and shoulders, stored as WebP to keep the repo small.
-        im = im.crop((60, 30, 460, 430))
+        # Already square with the face filling it; keep the transparency (the card draws
+        # the grey disc behind it).
+        im = Image.open(io.BytesIO(data)).convert("RGBA")
         im.save(os.path.join(SHOTS, slugify(n) + ".webp"), "WEBP", quality=90, method=6)
     print("award seasons", len(seasons), "played", len(played), "of", len(players), "headshots", len(os.listdir(SHOTS)))
 

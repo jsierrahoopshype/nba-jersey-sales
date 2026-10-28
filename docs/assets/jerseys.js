@@ -8,6 +8,18 @@
       return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
     });
   }
+  // The one HoopsMatic headshot: face-fill in a grey circle, or the player's initials when
+  // there is no photo (src empty) or it fails to load.
+  function initials(n) {
+    var w = String(n || '').replace(/\./g, ' ').split(/\s+/).filter(function (x) { return x && !/^(jr|sr|ii|iii|iv|v),?$/i.test(x); });
+    return w.length ? (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase() : '?';
+  }
+  function faceHtml(src, name, alt) {
+    var ini = esc(initials(name));
+    if (!src) return '<span class="face" role="img" aria-label="' + esc(name) + '">' + ini + '</span>';
+    return '<img class="face" src="' + esc(src) + '" alt="' + esc(alt) + '" width="28" height="28" loading="lazy" data-i="' + ini +
+      '" onerror="this.onerror=null;var s=document.createElement(\'span\');s.className=this.className;s.textContent=this.dataset.i;this.replaceWith(s)">';
+  }
   function qs() { return new URLSearchParams(location.search); }
   function setQs(params) {
     var q = qs();
@@ -191,7 +203,7 @@
       var hits = idx.filter(function (x) { return words.every(function (w) { return x.k.indexOf(w) >= 0; }); });
       hits.sort(function (a, b) { return (a.k.indexOf(words[0]) - b.k.indexOf(words[0])) || a.n.localeCompare(b.n); });
       res.innerHTML = hits.slice(0, 8).map(function (x) {
-        var pic = x.t === 'Player' ? '<img class="face" src="' + esc(x.i) + '" alt="" width="28" height="28" loading="lazy">' :
+        var pic = x.t === 'Player' ? faceHtml(x.i, x.n, '') :
           (x.i ? '<img class="logo" src="' + esc(x.i) + '" alt="" width="16" height="16" loading="lazy">' : '<span class="sw" style="background:' + esc(x.c) + '"></span>');
         return '<li>' + pic + '<a class="nm" href="' + ROOT + x.u + '">' + esc(x.n) + '</a><span class="tag">' + esc(x.t) + '</span></li>';
       }).join('') || '<li class="dash">No match</li>';
@@ -425,8 +437,8 @@
           var k = e.m && e.m.kind, cls = e.r === 1 ? ' lead' : ((k === 'same' || k === 'none') ? ' quiet' : '');
           var x = e.x, best = x.b ? 'No. ' + x.b + ' (' + x.by + ')' : '-';
           var aw = x.aw == null ? '<span class="dash">-</span>' : (x.al ? '<a class="aw" href="' + ROOT + '?pva=' + r.season + '#pva">No. ' + x.aw + '</a>' : 'No. ' + x.aw);
-          h += '<tr class="xr' + cls + '"><td class="rank">' + e.r + '</td><td class="name left"><img class="face" src="' + esc(e.img) + '" alt="' + esc(e.p) +
-            '" width="28" height="28" loading="lazy"><span class="pwrap"><a class="nm" href="' + ROOT + 'player/' + e.s + '/">' + esc(e.p) + '</a><span class="tline">' + teamHtml(e, DATA.teams) + '</span>' +
+          h += '<tr class="xr' + cls + '"><td class="rank">' + e.r + '</td><td class="name left">' + faceHtml(e.img, e.p, e.p) +
+            '<span class="pwrap"><a class="nm" href="' + ROOT + 'player/' + e.s + '/">' + esc(e.p) + '</a><span class="tline">' + teamHtml(e, DATA.teams) + '</span>' +
             (e.fh ? '<span class="note">' + e.fh + '</span>' : '') + '</span></td>' +
             '<td class="trend">' + spark(x.t) + '</td><td class="num dx">' + x.st + '</td><td class="num dx">' + x.ls + '</td><td class="num dx best">' + esc(best) +
             '</td><td class="num dx">' + aw + '</td>' +
