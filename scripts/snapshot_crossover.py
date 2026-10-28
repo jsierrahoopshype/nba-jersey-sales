@@ -28,7 +28,8 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "source", "nba-jersey-sales-rankings-2001-2026 - Player ranks.csv")
 OUT = os.path.join(ROOT, "data", "crossover")
-HEADSHOT_BASE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-tight/"
+# The one HoopsMatic headshot look: face-fill (the face fills the circle), 160px.
+HEADSHOT_BASE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-fill/"
 
 # Awards worth showing next to a jersey rank (season = YEAR, the season's end year).
 AWARDS_KEEP = {
@@ -106,9 +107,9 @@ def main():
     # ---- headshots (nba-headshots players_all.json; NBA id is the key, not the slug)
     sources["nba-headshots"] = git_head(R("nba-headshots"))
     hs_all = load_json(R("nba-headshots", "players", "metadata", "players_all.json"))["players"]
-    tight = set(subprocess.check_output(
+    fill = set(subprocess.check_output(
         ["git", "-C", R("nba-headshots"), "ls-tree", "-r", "--name-only", "HEAD",
-         "players/headshots/face-tight"]).decode().split())
+         "players/headshots/face-fill"]).decode().split())
     by_name = defaultdict(list)
     for p in hs_all:
         by_name[norm(p["full_name"])].append(p)
@@ -121,8 +122,8 @@ def main():
         p = cands[0]
         fn = (p.get("headshot") or {}).get("filename") or ""
         stem = fn.rsplit(".", 1)[0]
-        if not stem or ("players/headshots/face-tight/%s.webp" % stem) not in tight:
-            misses["headshots"].append({"player": n, "reason": "no face-tight image", "nba_id": p["nba_id"]})
+        if not stem or ("players/headshots/face-fill/%s.webp" % stem) not in fill:
+            misses["headshots"].append({"player": n, "reason": "no face-fill image", "nba_id": p["nba_id"]})
             continue
         headshots[n] = {"nba_id": p["nba_id"], "full_name": p["full_name"], "image": HEADSHOT_BASE + stem + ".webp"}
     write("headshots.json", headshots)

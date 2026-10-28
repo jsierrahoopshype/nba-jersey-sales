@@ -5,7 +5,7 @@ Inputs (all committed, nothing fetched):
   data/source/*.csv            the two source CSVs, unchanged
   data/release_sources.csv     Release ID -> official announcement URL (blank = none found)
   data/crossover/*.json        snapshots from scripts/snapshot_crossover.py and scripts/snapshot_extra.py
-  data/share/headshots/        face-tight headshots for the share cards (snapshot_extra.py)
+  data/share/headshots/        face-fill-320 headshots for the share cards (snapshot_extra.py)
   data/page_hashes.json        content hash + lastmod per URL (updated here)
   data/share_hashes.json       content hash per share image (updated by share_images.py)
 
@@ -42,7 +42,6 @@ RANKS_CSV = os.path.join(DATA, "source", "nba-jersey-sales-rankings-2001-2026 - 
 GRID_CSV = os.path.join(DATA, "source", "nba-jersey-sales-rankings-2001-2026 - Grid U.S. lists.csv")
 SITE = "https://hoopsmatic.com/jerseys/"
 HEADSHOTS = "https://jsierrahoopshype.github.io/nba-headshots/"
-SILHOUETTE = HEADSHOTS + "fallbacks/player_silhouette.svg"
 LOGO = HEADSHOTS + "teams/logos/current/svg/%s.svg"
 RACE_TOOL = "https://jsierrahoopshype.github.io/bar-chart-race/"
 ATTENDANCE_TOOL = "https://hoopsmatic.com/nba-attendance/"
@@ -67,6 +66,21 @@ FOOTER = ('<footer class="site-foot">'
           '</footer>')
 PRESETS = [("stephen-curry", "lebron-james", "Curry vs. LeBron"), ("luka-doncic", "nikola-jokic", "Luka vs. Jokic"),
            ("victor-wembanyama", "cooper-flagg", "Wembanyama vs. Flagg")]
+
+
+_NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def initials(name):
+    """'Stephen Curry' -> 'SC'; 'Gary Payton II' -> 'GP'."""
+    w = [x for x in (name or "").replace(".", " ").split() if x.lower().strip(",") not in _NAME_SUFFIXES]
+    return (w[0][0] + (w[-1][0] if len(w) > 1 else "")).upper() if w else "?"
+
+
+# Swap a headshot that fails to load for a span with the player's initials (same classes).
+FACE_ONERROR = ("this.onerror=null;var s=document.createElement('span');s.className=this.className;"
+                "s.setAttribute('role','img');s.setAttribute('aria-label',this.alt);"
+                "s.textContent=this.dataset.i;this.replaceWith(s)")
 
 
 def esc(s):
@@ -422,8 +436,9 @@ class Cross:
         self.logos = load_json(os.path.join(C, "team_logos.json"), {})
 
     def img(self, name):
+        """face-fill headshot URL, or None when there is no photo (pages show initials)."""
         h = self.headshots.get(name)
-        return h["image"] if h else SILHOUETTE
+        return h["image"] if h else None
 
     def has_logo(self, team_id):
         return bool(self.logos.get(str(team_id)))
@@ -517,8 +532,14 @@ class Ctx:
         return '<a class="nm" href="%splayer/%s/">%s</a>' % (self.root, p["slug"], esc(name))
 
     def face(self, name, size=32, cls="face"):
-        return '<img class="%s" src="%s" alt="%s" width="%d" height="%d" loading="lazy">' % (
-            cls, esc(self.cross.img(name)), esc(name), size, size)
+        """The one HoopsMatic headshot (face-fill in a grey circle); the player's initials in the
+        same circle when there is no photo or it fails to load."""
+        ini = initials(name)
+        src = self.cross.img(name)
+        if not src:
+            return '<span class="%s" role="img" aria-label="%s">%s</span>' % (cls, esc(name), esc(ini))
+        return ('<img class="%s" src="%s" alt="%s" width="%d" height="%d" loading="lazy" data-i="%s" '
+                'onerror="%s">') % (cls, esc(src), esc(name), size, size, esc(ini), FACE_ONERROR)
 
     def swatch(self, slug):
         t = self.teams.get(slug)
@@ -1972,7 +1993,7 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
     b.append(section("Who ruled jersey sales?", '<div class="ruled">%s</div><div class="tl-axis"><span>%s</span><span>%s</span></div><ol class="reigns">%s</ol>' % (
         cells, esc(m.seasons[0]), esc(m.seasons[-1]), lst), "No. 1 of each season's HoopsMatic ranking, newest first. Tap a season for its page.", sid="ruled"))
     # (4) Search + directory.
-    # i: the face-tight headshot (silhouette fallback) or the team's logo (swatch color when none).
+    # i: the face-fill headshot (empty when there is none: initials) or the team's logo (swatch color when none).
     idx = [{"n": p["name"], "u": "player/%s/" % p["slug"], "t": "Player", "i": m.cross.img(p["name"])} for p in m.players.values()] + \
           [{"n": t["name"], "u": "team/%s/" % t["slug"], "t": "Team", "i": ctx.team_logo(t["slug"]) or "", "c": t["color"] or "#999"} for t in team_summ]
     prow = sorted(m.players.values(), key=lambda p: p["name"].split(" ", 1)[-1] + p["name"])
