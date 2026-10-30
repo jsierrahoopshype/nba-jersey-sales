@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 SITE = "https://hoopsmatic.com/jerseys/"
 FOOTER_TEXT = ["Anything wrong? Email us at hoopsmatic@hoopsmatic.com",
-               "For business inquiries, contact us at ads@hoopsmatic.com"]
+               "For any other inquiry, contact us at ads@hoopsmatic.com"]
 
 
 def pages():

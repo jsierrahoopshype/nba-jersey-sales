@@ -62,7 +62,7 @@ STACK_COLORS = ["#3b82f6", "#f59e0b", "#10b981", "#ef4444", "#8b5cf6"]
 OTHER_COLOR = "#a1a1aa"
 FOOTER = ('<footer class="site-foot">'
           '<p>Anything wrong? Email us at <a href="mailto:hoopsmatic@hoopsmatic.com">hoopsmatic@hoopsmatic.com</a></p>'
-          '<p>For business inquiries, contact us at <a href="mailto:ads@hoopsmatic.com">ads@hoopsmatic.com</a></p>'
+          '<p>For any other inquiry, contact us at <a href="mailto:ads@hoopsmatic.com">ads@hoopsmatic.com</a></p>'
           '</footer>')
 PRESETS = [("stephen-curry", "lebron-james", "Curry vs. LeBron"), ("luka-doncic", "nikola-jokic", "Luka vs. Jokic"),
            ("victor-wembanyama", "cooper-flagg", "Wembanyama vs. Flagg")]
