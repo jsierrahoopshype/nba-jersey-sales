@@ -237,7 +237,8 @@ class BuildTests(unittest.TestCase):
                 cells = re.findall(r"<td[^>]*>(.*?)</td>", row)
                 self.assertRegex(cells[1], r"^No\. \d+$")
                 self.assertRegex(re.sub(r"<[^>]+>", "", cells[2]), r"^(No\. \d+|-)$")
-                self.assertIn('class="face"', cells[0])
+                # a face only when the player has a photo: never an initials circle
+                self.assertNotIn('role="img"', cells[0])
                 self.assertIn('class="tline sub3"', cells[0])
                 self.assertNotIn("No award votes", cells[2])
 
