@@ -8,17 +8,11 @@
       return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
     });
   }
-  // The one HoopsMatic headshot: face-fill in a grey circle, or the player's initials when
-  // there is no photo (src empty) or it fails to load.
-  function initials(n) {
-    var w = String(n || '').replace(/\./g, ' ').split(/\s+/).filter(function (x) { return x && !/^(jr|sr|ii|iii|iv|v),?$/i.test(x); });
-    return w.length ? (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase() : '?';
-  }
+  // The one HoopsMatic headshot: face-fill in a grey circle, or nothing at all when there is
+  // no photo (src empty) or it fails to load (never initials).
   function faceHtml(src, name, alt) {
-    var ini = esc(initials(name));
-    if (!src) return '<span class="face" role="img" aria-label="' + esc(name) + '">' + ini + '</span>';
-    return '<img class="face" src="' + esc(src) + '" alt="' + esc(alt) + '" width="28" height="28" loading="lazy" data-i="' + ini +
-      '" onerror="this.onerror=null;var s=document.createElement(\'span\');s.className=this.className;s.textContent=this.dataset.i;this.replaceWith(s)">';
+    if (!src) return '';
+    return '<img class="face" src="' + esc(src) + '" alt="' + esc(alt) + '" width="28" height="28" loading="lazy" onerror="this.remove()">';
   }
   function qs() { return new URLSearchParams(location.search); }
   function setQs(params) {

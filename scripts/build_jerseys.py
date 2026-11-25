@@ -71,16 +71,13 @@ PRESETS = [("stephen-curry", "lebron-james", "Curry vs. LeBron"), ("luka-doncic"
 _NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
 
 
-def initials(name):
-    """'Stephen Curry' -> 'SC'; 'Gary Payton II' -> 'GP'."""
-    w = [x for x in (name or "").replace(".", " ").split() if x.lower().strip(",") not in _NAME_SUFFIXES]
-    return (w[0][0] + (w[-1][0] if len(w) > 1 else "")).upper() if w else "?"
+# A headshot that fails to load is removed (never initials).
+FACE_ONERROR = "this.remove()"
 
-
-# Swap a headshot that fails to load for a span with the player's initials (same classes).
-FACE_ONERROR = ("this.onerror=null;var s=document.createElement('span');s.className=this.className;"
-                "s.setAttribute('role','img');s.setAttribute('aria-label',this.alt);"
-                "s.textContent=this.dataset.i;this.replaceWith(s)")
+# Headshots are decoration, not content: left out of the lastmod hash, so a change in how faces are
+# drawn (November 25, 2026: no initials circle when a player has no photo) moves no date. Covers the
+# old markup (initials span, data-i) and the new.
+FACE_MARKUP = re.compile(r'<span class="face[^"]*" role="img" aria-label="[^"]*">[^<]*</span>|<img class="face[^"]*"[^>]*>')
 
 
 def esc(s):
@@ -436,7 +433,7 @@ class Cross:
         self.logos = load_json(os.path.join(C, "team_logos.json"), {})
 
     def img(self, name):
-        """face-fill headshot URL, or None when there is no photo (pages show initials)."""
+        """face-fill headshot URL, or None when there is no photo (pages show no picture)."""
         h = self.headshots.get(name)
         return h["image"] if h else None
 
@@ -532,14 +529,13 @@ class Ctx:
         return '<a class="nm" href="%splayer/%s/">%s</a>' % (self.root, p["slug"], esc(name))
 
     def face(self, name, size=32, cls="face"):
-        """The one HoopsMatic headshot (face-fill in a grey circle); the player's initials in the
-        same circle when there is no photo or it fails to load."""
-        ini = initials(name)
+        """The one HoopsMatic headshot (face-fill in a grey circle); nothing at all when there is
+        no photo or it fails to load (never initials)."""
         src = self.cross.img(name)
         if not src:
-            return '<span class="%s" role="img" aria-label="%s">%s</span>' % (cls, esc(name), esc(ini))
-        return ('<img class="%s" src="%s" alt="%s" width="%d" height="%d" loading="lazy" data-i="%s" '
-                'onerror="%s">') % (cls, esc(src), esc(name), size, size, esc(ini), FACE_ONERROR)
+            return ""
+        return ('<img class="%s" src="%s" alt="%s" width="%d" height="%d" loading="lazy" '
+                'onerror="%s">') % (cls, esc(src), esc(name), size, size, FACE_ONERROR)
 
     def swatch(self, slug):
         t = self.teams.get(slug)
@@ -1112,7 +1108,7 @@ class Site:
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, "w", encoding="utf-8") as f:
                 f.write(text)
-            h = hashlib.sha256(text.encode("utf-8")).hexdigest()
+            h = hashlib.sha256(FACE_MARKUP.sub("", text).encode("utf-8")).hexdigest()
             prev = old.get(url)
             lastmod = prev["lastmod"] if prev and prev.get("hash") == h else self.today
             new[url] = {"hash": h, "lastmod": lastmod}
@@ -1993,7 +1989,7 @@ def build_hub(site, ctx, m, team_summ, season_summ, pva, career, no_votes, rec):
     b.append(section("Who ruled jersey sales?", '<div class="ruled">%s</div><div class="tl-axis"><span>%s</span><span>%s</span></div><ol class="reigns">%s</ol>' % (
         cells, esc(m.seasons[0]), esc(m.seasons[-1]), lst), "No. 1 of each season's HoopsMatic ranking, newest first. Tap a season for its page.", sid="ruled"))
     # (4) Search + directory.
-    # i: the face-fill headshot (empty when there is none: initials) or the team's logo (swatch color when none).
+    # i: the face-fill headshot (empty when there is none: no picture) or the team's logo (swatch color when none).
     idx = [{"n": p["name"], "u": "player/%s/" % p["slug"], "t": "Player", "i": m.cross.img(p["name"])} for p in m.players.values()] + \
           [{"n": t["name"], "u": "team/%s/" % t["slug"], "t": "Team", "i": ctx.team_logo(t["slug"]) or "", "c": t["color"] or "#999"} for t in team_summ]
     prow = sorted(m.players.values(), key=lambda p: p["name"].split(" ", 1)[-1] + p["name"])
